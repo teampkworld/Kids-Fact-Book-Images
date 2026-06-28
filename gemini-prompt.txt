@@ -1,50 +1,100 @@
-Fix Repeated Issues and Implement Correct Code Changes
+Add Image Drag-and-Drop System and Control Illustration Text Limits
 
-## Issue: Previous Instructions Were Not Properly Applied
+## 1. Add Drag-and-Drop Feature for All PDF Book Images
 
-The same problems are appearing again even though I already explained and highlighted these issues earlier.
+Implement a complete drag-and-drop image placement system inside the PDF book application.
 
-I provided the details clearly, including the screenshot showing the problems, but the same errors have returned.
+Requirements:
 
-Please review the previously provided instructions and the screenshot carefully before making any further changes.
+* Every image used in the PDF book app must support drag-and-drop functionality.
+* Users should be able to:
 
----
+  * Select an image.
+  * Drag the image.
+  * Drop it directly into the assigned image placeholder area.
+  * Automatically place the image into the correct location.
 
-# Required Action
+The code should ensure:
 
-Do not simply repeat the previous implementation.
+* Smooth drag interaction.
+* Correct placeholder targeting.
+* Image position accuracy.
+* Proper image replacement when a new image is dropped.
+* No broken placements or incorrect image assignments.
 
-You need to:
+This feature should work consistently across:
 
-* Analyze the issues shown in the screenshot.
-* Identify the exact cause of why these problems are recurring.
-* Fix the root cause in the code.
-* Ensure the same issue does not appear again after future updates or resets.
-
----
-
-# Code Implementation Requirements
-
-Please rewrite and apply the code properly with attention to:
-
-* Correct logic implementation.
-* Proper state management.
-* Removing outdated data or UI elements when required.
-* Preventing old issues from reappearing.
-* Ensuring the workflow behaves exactly according to the requested instructions.
+* Current books.
+* Future generated books.
+* All image upload sections.
+* All illustration placeholders.
 
 ---
 
-# Important Reminder
+# 2. "AMAZING FACT DISCOVERY — CUSTOM ILLUSTRATIONS UPLOADER" Text Control System
 
-I already instructed you to remove and fix these issues previously.
+In the section:
 
-Do not leave any previous incorrect behavior in the system.
+**"AMAZING FACT DISCOVERY — CUSTOM ILLUSTRATIONS UPLOADER"**
 
-Before completing the update:
+Apply the following rules permanently for all current and future image prompts.
 
-* Verify the old problems are completely resolved.
-* Confirm that the screenshot-related issues no longer appear.
-* Ensure the new implementation follows the exact requested workflow.
+---
 
-The goal is a permanent fix, not a temporary adjustment.
+## Image Prompt Text Limit
+
+For every generated image prompt:
+
+The total number of text elements must not exceed **3 maximum**.
+
+The three text elements include:
+
+1. Educational text labels
+2. Call-out labels
+3. Explanatory text
+
+Combined total:
+
+**Maximum allowed = 3 text elements per image prompt**
+
+Do not generate images containing excessive text, multiple labels, or crowded educational annotations.
+
+---
+
+# 3. Text Size and Visibility Improvement
+
+Update the code so that all text elements inside generated illustrations appear in a larger font size.
+
+Requirements:
+
+* Increase text readability.
+* Use larger educational labels.
+* Ensure call-out text is clearly visible.
+* Avoid tiny or unreadable text.
+* Maintain clean professional educational design.
+
+The generated illustrations should prioritize:
+
+* Clear visuals.
+* Limited text.
+* Large readable typography.
+* Child-friendly educational presentation.
+
+---
+
+# 4. Apply Rules Permanently
+
+These settings must become default behavior for:
+
+* Current image generation.
+* Future image prompts.
+* New books.
+* New manuscript volumes.
+* All custom illustration uploads.
+
+The system must automatically enforce:
+
+✅ Drag-and-drop images everywhere
+✅ Maximum 3 text elements per illustration
+✅ Larger readable text size
+✅ Clean educational illustration layout
