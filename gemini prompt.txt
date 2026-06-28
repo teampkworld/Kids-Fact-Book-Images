@@ -1,0 +1,50 @@
+Fix Repeated Issues and Implement Correct Code Changes
+
+## Issue: Previous Instructions Were Not Properly Applied
+
+The same problems are appearing again even though I already explained and highlighted these issues earlier.
+
+I provided the details clearly, including the screenshot showing the problems, but the same errors have returned.
+
+Please review the previously provided instructions and the screenshot carefully before making any further changes.
+
+---
+
+# Required Action
+
+Do not simply repeat the previous implementation.
+
+You need to:
+
+* Analyze the issues shown in the screenshot.
+* Identify the exact cause of why these problems are recurring.
+* Fix the root cause in the code.
+* Ensure the same issue does not appear again after future updates or resets.
+
+---
+
+# Code Implementation Requirements
+
+Please rewrite and apply the code properly with attention to:
+
+* Correct logic implementation.
+* Proper state management.
+* Removing outdated data or UI elements when required.
+* Preventing old issues from reappearing.
+* Ensuring the workflow behaves exactly according to the requested instructions.
+
+---
+
+# Important Reminder
+
+I already instructed you to remove and fix these issues previously.
+
+Do not leave any previous incorrect behavior in the system.
+
+Before completing the update:
+
+* Verify the old problems are completely resolved.
+* Confirm that the screenshot-related issues no longer appear.
+* Ensure the new implementation follows the exact requested workflow.
+
+The goal is a permanent fix, not a temporary adjustment.
