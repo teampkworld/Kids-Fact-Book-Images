@@ -1,0 +1,322 @@
+# AI Coding Clarification Prompt: Kids Facts Web App — Multi-Book Manuscript Creation, Saving, and Generation Workflow
+
+## 1. Saved Manuscript Library System
+
+After the user completes and finalizes a full manuscript book:
+
+* Automatically save the complete manuscript inside the **"Saved Manuscript Library"**.
+
+The saved manuscript must preserve all settings and data, including:
+
+* Complete PDF manuscript
+* Book title
+* Book number / volume number
+* Page structure
+* Layout design
+* Grid positions
+* Fact placements
+* Images
+* Image prompts
+* Typography settings
+* Design settings
+* Non-fact pages
+* User selections
+* Generation settings
+
+The user must be able to:
+
+* Reopen the saved manuscript anytime.
+* Edit the manuscript.
+* Continue working from the exact saved state without losing any settings.
+
+---
+
+# 2. Add "Create New Book" Feature
+
+Add a permanent **"Create New Book"** option inside the Kids Facts web app.
+
+This option must work:
+
+* For first-time users creating Book 01.
+* For users who already completed previous books and want to create the next volume.
+
+The system must support creating unlimited books.
+
+Example:
+
+* Book 01
+* Book 02
+* Book 03
+* Book 04
+* Future volumes
+
+---
+
+# 3. New Book Layout Preservation System
+
+Whenever a new book is created:
+
+The new book must follow the exact same structure and design of the previous finalized book.
+
+Maintain:
+
+* Same page size
+* Same layout
+* Same design style
+* Same grid arrangement
+* Same fact locations
+* Same image positions
+* Same spacing
+* Same alignment
+
+Important:
+
+The new facts must appear in the exact same positions where the previous book facts appeared.
+
+Example:
+
+If a fact was placed:
+
+* Grid 01
+* Top section
+* Left text area
+* Right image area
+
+Then the new book must place the new fact in the same location.
+
+---
+
+# 4. 31 Grid Fact Replacement System
+
+The book contains:
+
+**31 Fact Grids**
+
+For every new book:
+
+* Generate a fresh set of facts for all 31 grids.
+* Replace previous book facts.
+* Keep the same grid structure.
+
+Requirements:
+
+* Grid locations remain unchanged.
+* Grid design remains unchanged.
+* Only the fact content changes.
+
+Every new volume must contain:
+
+* New facts
+* New content
+* Unique information
+
+---
+
+# 5. Dummy Fact Preview Workflow
+
+The new book creation workflow should work similar to the existing PDF proof generation process.
+
+When a new book starts:
+
+* Display the standard book layout.
+* Load dummy fact content into the fact pages.
+* Keep the 31 grid structure ready.
+* Maintain the same preview state.
+
+The dummy facts should remain visible until:
+
+User clicks:
+
+**"Compile & Generate PDF Booklet"**
+
+---
+
+# 6. Compile & Generate PDF Booklet Process
+
+When the user clicks:
+
+**"Compile & Generate PDF Booklet"**
+
+The system must:
+
+1. Remove dummy facts.
+2. Insert the actual generated facts.
+3. Apply the user's selected:
+
+   * Number of facts
+   * Number of pages
+   * Book settings
+
+Then:
+
+* Assign the correct unique facts to the 31 grids.
+* Apply the matching user-uploaded images.
+* Generate the final manuscript PDF.
+
+This process must work for:
+
+* Book 01
+* Book 02
+* Book 03
+* All future books
+
+---
+
+# 7. Fresh Facts on Every "Create New Book"
+
+Every time the user clicks:
+
+**"Create New Book"**
+
+The system must:
+
+* Generate a new set of facts for all 31 grids.
+* Create a new book generation cycle.
+* Start with fresh dummy facts.
+* Prepare the next manuscript volume.
+
+The previous book's facts must not automatically appear in the new book.
+
+---
+
+# 8. Unique Fact Management System
+
+Implement a fact tracking system.
+
+Before generating a new book:
+
+Check previously created books.
+
+Rules:
+
+* Do not reuse old facts.
+* Do not duplicate previous facts.
+* Each volume must contain completely unique facts.
+
+Maintain:
+
+* Fact history
+* Used fact records
+* Book-wise fact database
+
+---
+
+# 9. Preserving Original Non-Fact Pages
+
+Review and maintain the protected non-fact pages:
+
+1. **WELCOME TO WONDER!**
+
+2. **HOW TO USE THIS BOOK**
+
+3. **SUPER MASTER CERTIFICATE BADGE**
+
+4. **THANK YOU FOR EXPLORING!**
+
+5. **MORE FUN BOOKS FROM DREAM ORBIT**
+
+For all books:
+
+* Keep these pages unchanged.
+* Preserve the original design.
+* Preserve text.
+* Preserve layout.
+* Preserve images.
+* Preserve formatting.
+
+These pages must remain consistent across:
+
+* Book 01
+* Book 02
+* Book 03
+* All future volumes
+
+---
+
+# 10. Multi-Volume Book Architecture
+
+The system must be designed for continuous book creation.
+
+Each book represents:
+
+* One independent volume.
+
+The system must maintain:
+
+* Same professional series design.
+* Same page structure.
+* Same protected pages.
+* New unique facts.
+* New images.
+* New prompts.
+
+Every generated volume should look like part of the same book series.
+
+---
+
+# 11. Image Prompt Regeneration System
+
+Whenever a new book is created:
+
+The image prompts connected with facts must also be regenerated.
+
+Requirements:
+
+* Previous book image prompts must not be reused.
+* Generate new prompts based on the new facts.
+* Replace old prompts with new relevant prompts.
+
+The new image prompts must follow:
+
+* Same generation style.
+* Same quality standard.
+* Same illustration format.
+* Same design approach as previous books.
+
+---
+
+# 12. Final PDF Generation and Mega Sync Notification
+
+After:
+
+* Final manuscript PDF generation completes.
+* File is successfully synced to the Mega account.
+
+Implement:
+
+A clear and distinct audible notification sound.
+
+Purpose:
+
+Notify the user that:
+
+* PDF generation completed.
+* Sync completed successfully.
+* Final manuscript is ready.
+
+The notification must be:
+
+* Clearly audible.
+* Reliable.
+* Triggered only after successful Mega synchronization.
+
+---
+
+# Final Expected System Behavior
+
+The complete workflow should be:
+
+1. User creates or opens a book.
+2. Manuscript is saved in Saved Manuscript Library.
+3. User clicks "Create New Book".
+4. New volume starts with same design/layout.
+5. Dummy facts appear for preview.
+6. New unique 31-grid facts are prepared.
+7. User clicks "Compile & Generate PDF Booklet".
+8. Dummy facts are replaced with real facts.
+9. New images and prompts are applied.
+10. Final PDF is generated.
+11. PDF is synced to Mega.
+12. Completion sound plays.
+
+This workflow must work consistently for unlimited future books.
