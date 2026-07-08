@@ -1,0 +1,152 @@
+### Required Enhancements and Logic Fixes
+
+Please implement the following changes carefully. These are functional requirements and should be applied exactly as described.
+
+---
+
+## 1. Fix SVG Icon-to-Category Mapping Logic
+
+You have misunderstood this requirement several times. Please read it carefully.
+
+When a user uploads a set of **transparent SVG vector icons** (either **black-and-white** or **color**) for use in the fact pages, the system currently assigns icons incorrectly. Icons are being placed on facts from unrelated categories.
+
+For example, an icon intended for the **Space** category may appear on an **Animal** fact, or a **Science** icon may appear on a **Geography** fact.
+
+### Required Behavior
+
+* Analyze the complete uploaded SVG icon set.
+* Determine which icon best represents each fact category.
+* Create a fixed **Category → Icon Mapping**.
+* Use this mapping consistently throughout the application.
+* Every fact should automatically receive the icon that corresponds to its category.
+* Do not assign icons randomly or sequentially.
+* Do not allow icons from one category to appear on facts belonging to another category.
+and also In 31 facts, map icons according to the category before the title of each fact as per alignment .
+
+### Required Logic
+
+The workflow should be:
+
+```text
+User uploads SVG icon set
+        ↓
+Analyze available icons
+        ↓
+Map each icon to its most appropriate fact category
+        ↓
+Store the mapping
+        ↓
+When generating facts:
+Determine the fact category
+        ↓
+Retrieve the mapped icon
+        ↓
+Display the correct icon for that fact
+```
+
+The icon-selection logic should always be **category-driven**, ensuring every fact consistently displays the most appropriate icon.
+
+---
+
+## 2. Add Drag-and-Drop Upload Support
+
+Add a modern **drag-and-drop upload interface** for the SVG icon upload section.
+
+Users should be able to:
+
+* Drag files directly into the upload area.
+* Click the upload area to browse files.
+* Upload multiple SVG files at once.
+* See visual feedback when dragging files over the upload zone.
+
+---
+
+## 3. Make Drag-and-Drop the Standard Upload Component
+
+Do not implement drag-and-drop only for the SVG uploader.
+
+Instead, make it the **default upload component** used across the entire application.
+
+This means:
+
+* Every current upload section should support drag-and-drop.
+* Every upload section added in the future should automatically inherit the same drag-and-drop component and behavior.
+* Use one reusable upload component to maintain consistency across the application.
+
+---
+
+## 4. Make "Bulk SVG Icons Upload (Fact Pages)" the Default Upload Method
+
+In the **Bulk SVG Icons Upload (Fact Pages)** section:
+
+* Make the bulk upload interface the default upload option.
+* Users should immediately see the bulk uploader when opening this section.
+* Do not require switching between different upload modes.
+
+---
+
+## 5. Persist Uploaded SVG Icons Until Replaced
+
+Currently, uploaded SVG icons are not handled correctly after upload.
+
+Implement the following persistence logic:
+
+### First Upload
+
+* User uploads the complete set of SVG icons.
+* Save all uploaded icons.
+* Display them immediately.
+* Use them for preview generation and PDF generation.
+* Keep them permanently available.
+
+---
+
+### Subsequent Sessions
+
+When the user returns:
+
+* Automatically load the previously saved SVG icons.
+* Display the saved icons without requiring another upload.
+* Continue using these saved icons until the user uploads a new set.
+
+---
+
+### Replacing the Icon Set
+
+When the user uploads a new SVG icon set:
+
+1. Remove the previously saved icons.
+2. Replace them with the newly uploaded icons.
+3. Save the new icon set.
+4. Update previews immediately.
+5. Use the new icons for all future PDF generations.
+
+The application should never mix old and new icon sets.
+
+---
+
+## 6. Required Upload Lifecycle
+
+The upload process should always follow this cycle:
+
+```text
+First Upload
+      ↓
+Save SVG Icons
+      ↓
+Use Saved Icons Everywhere
+      ↓
+User Uploads New SVG Set
+      ↓
+Delete Previous SVG Icons
+      ↓
+Save New SVG Icons
+      ↓
+Refresh Preview
+      ↓
+Generate PDF Using New Icons
+      ↓
+Repeat
+```
+
+Only one SVG icon set should exist at any given time. Uploading a new set must completely replace the previous one, ensuring consistent previews and PDF output.
