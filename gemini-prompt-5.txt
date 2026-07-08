@@ -1,0 +1,56 @@
+### Improve SVG Icon Assignment Logic Based on Icon Names
+
+The user uploads a collection of **transparent vector SVG icons** (either **black-and-white** or **color**), and **each SVG file has a meaningful filename** that describes the icon (for example: `rocket.svg`, `lion.svg`, `microscope.svg`, `brain.svg`, `globe.svg`, etc.).
+
+Instead of assigning icons randomly or by upload order, the system should use the **icon filenames** to determine which fact category each icon belongs to.
+
+### Required Logic
+
+* Read the filename of every uploaded SVG icon.
+* Analyze the filename (icon name) to determine what the icon represents.
+* Automatically map each icon to the most appropriate fact category based on its name.
+* Store this **Category → SVG Icon** mapping and use it consistently throughout the application.
+
+### Example Mapping
+
+* `lion.svg`, `paw.svg`, `bird.svg` → **Animals**
+* `rocket.svg`, `planet.svg`, `telescope.svg` → **Space**
+* `microscope.svg`, `atom.svg`, `beaker.svg` → **Science**
+* `globe.svg`, `mountain.svg`, `map.svg` → **Geography**
+* `brain.svg`, `heart.svg`, `skeleton.svg` → **Human Body**
+* `fish.svg`, `whale.svg`, `coral.svg` → **Ocean Life**
+* `tree.svg`, `leaf.svg`, `flower.svg` → **Nature**
+* `castle.svg`, `scroll.svg`, `pyramid.svg` → **History**
+* `computer.svg`, `robot.svg`, `chip.svg` → **Technology**
+* `trophy.svg`, `ball.svg`, `medal.svg` → **Sports**
+
+### Icon Assignment Rules
+
+* Every fact must display the SVG icon that corresponds to its category.
+* Facts within the same category should always use the same mapped icon.
+* Do not assign icons randomly, sequentially, or to unrelated categories.
+* If multiple suitable icons exist for a category, use the predefined mapping or allow a configurable priority.
+* If no suitable icon is available for a category, use a default educational SVG icon as a fallback.
+
+### Expected Workflow
+
+```text
+User uploads SVG icon set
+        ↓
+Read each SVG filename
+        ↓
+Identify the concept represented by the filename
+        ↓
+Map the icon to the appropriate fact category
+        ↓
+Save the Category → Icon mapping
+        ↓
+When generating fact pages:
+Determine the fact's category
+        ↓
+Retrieve the mapped SVG icon
+        ↓
+Display the correct icon consistently for that category
+```
+
+This ensures that every fact automatically displays the **most appropriate SVG icon based on the uploaded icon's filename**, resulting in accurate, consistent, and category-specific icon placement throughout the book.
