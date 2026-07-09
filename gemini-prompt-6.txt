@@ -1,0 +1,312 @@
+1 ### Improve SVG Icon Assignment Logic Based on Icon Names
+
+The user uploads a collection of **transparent vector SVG icons** (either **black-and-white** or **color**), and **each SVG file has a meaningful filename** that describes the icon (for example: `rocket.svg`, `lion.svg`, `microscope.svg`, `brain.svg`, `globe.svg`, etc.).
+
+Instead of assigning icons randomly or by upload order, the system should use the **icon filenames** to determine which fact category each icon belongs to.
+
+### Required Logic
+
+* Read the filename of every uploaded SVG icon.
+* Analyze the filename (icon name) to determine what the icon represents.
+* Automatically map each icon to the most appropriate fact category based on its name.
+* Store this **Category → SVG Icon** mapping and use it consistently throughout the application.
+
+### Example Mapping
+
+* `lion.svg`, `paw.svg`, `bird.svg` → **Animals**
+* `rocket.svg`, `planet.svg`, `telescope.svg` → **Space**
+* `microscope.svg`, `atom.svg`, `beaker.svg` → **Science**
+* `globe.svg`, `mountain.svg`, `map.svg` → **Geography**
+* `brain.svg`, `heart.svg`, `skeleton.svg` → **Human Body**
+* `fish.svg`, `whale.svg`, `coral.svg` → **Ocean Life**
+* `tree.svg`, `leaf.svg`, `flower.svg` → **Nature**
+* `castle.svg`, `scroll.svg`, `pyramid.svg` → **History**
+* `computer.svg`, `robot.svg`, `chip.svg` → **Technology**
+* `trophy.svg`, `ball.svg`, `medal.svg` → **Sports**
+
+
+### Improve SVG Icon Assignment Logic Based on Icon Names
+
+The user uploads a collection of **transparent vector SVG icons** (either **black-and-white** or **color**), and **each SVG file has a meaningful filename** that describes the icon (for example: `rocket.svg`, `lion.svg`, `microscope.svg`, `brain.svg`, `globe.svg`, etc.).
+
+Instead of assigning icons randomly or by upload order, the system should use the **icon filenames** to determine which fact category each icon belongs to.
+
+### Required Logic
+
+* Read the filename of every uploaded SVG icon.
+* Analyze the filename (icon name) to determine what the icon represents.
+* Automatically map each icon to the most appropriate fact category based on its name.
+* Store this **Category → SVG Icon** mapping and use it consistently throughout the application.
+
+### Example Mapping
+
+* `lion.svg`, `paw.svg`, `bird.svg` → **Animals**
+* `rocket.svg`, `planet.svg`, `telescope.svg` → **Space**
+* `microscope.svg`, `atom.svg`, `beaker.svg` → **Science**
+* `globe.svg`, `mountain.svg`, `map.svg` → **Geography**
+* `brain.svg`, `heart.svg`, `skeleton.svg` → **Human Body**
+* `fish.svg`, `whale.svg`, `coral.svg` → **Ocean Life**
+* `tree.svg`, `leaf.svg`, `flower.svg` → **Nature**
+* `castle.svg`, `scroll.svg`, `pyramid.svg` → **History**
+* `computer.svg`, `robot.svg`, `chip.svg` → **Technology**
+* `trophy.svg`, `ball.svg`, `medal.svg` → **Sports**
+
+### Icon Assignment Rules
+
+* Every fact must display the SVG icon that corresponds to its category.
+* Facts within the same category should always use the same mapped icon.
+* Do not assign icons randomly, sequentially, or to unrelated categories.
+* If multiple suitable icons exist for a category, use the predefined mapping or allow a configurable priority.
+* If no suitable icon is available for a category, use a default educational SVG icon as a fallback.
+
+### Expected Workflow
+
+```text
+User uploads SVG icon set
+        ↓
+Read each SVG filename
+        ↓
+Identify the concept represented by the filename
+        ↓
+Map the icon to the appropriate fact category
+        ↓
+Save the Category → Icon mapping
+        ↓
+When generating fact pages:
+Determine the fact's category
+        ↓
+Retrieve the mapped SVG icon
+        ↓
+Display the correct icon consistently for that category
+```
+
+This ensures that every fact automatically displays the **most appropriate SVG icon based on the uploaded icon's filename**, resulting in accurate, consistent, and category-specific icon placement throughout the book.
+
+_______
+2 ###
+icon name wise  
+For your **Kids Interesting Facts Book**, the best approach is to map each icon to a **primary educational category** so the AI can automatically select the correct icon for every fact. Below is a recommended category mapping for the icon names you provided.
+
+| Icon Name           | Recommended Category      |
+| ------------------- | ------------------------- |
+| abacus              | Math                      |
+| airplane            | Transportation            |
+| airplane_2          | Transportation            |
+| alembic             | Science                   |
+| alien               | Space                     |
+| ambulance           | Health & Medicine         |
+| ambulance_2         | Health & Medicine         |
+| apple               | Fruits & Food             |
+| arrow               | Symbols                   |
+| backpack            | School & Education        |
+| badminton           | Sports                    |
+| ball                | Sports                    |
+| banana              | Fruits & Food             |
+| baseball            | Sports                    |
+| basketball          | Sports                    |
+| beach               | Geography & Nature        |
+| bear                | Animals                   |
+| bell                | School & Education        |
+| bicycle             | Transportation            |
+| bolt                | Tools & Engineering       |
+| book                | Books & Reading           |
+| bookmark            | Books & Reading           |
+| books               | Books & Reading           |
+| books_2             | Books & Reading           |
+| bowling             | Sports                    |
+| brain               | Human Body                |
+| bread               | Fruits & Food             |
+| building            | Architecture              |
+| bulb                | Science                   |
+| bulb_2              | Science                   |
+| bulb_3              | Science                   |
+| bus                 | Transportation            |
+| bus_2               | Transportation            |
+| cactus              | Plants                    |
+| cake                | Food & Desserts           |
+| calendar            | Time & Calendar           |
+| camera              | Photography               |
+| camera_2            | Photography               |
+| cap                 | Clothing                  |
+| car                 | Transportation            |
+| car_2               | Transportation            |
+| carrot              | Vegetables                |
+| cat                 | Animals                   |
+| cheese              | Food & Dairy              |
+| chef                | Careers                   |
+| chicken             | Animals                   |
+| church              | World Religions           |
+| claus               | Holidays                  |
+| clock               | Time                      |
+| cloud               | Weather                   |
+| compass             | Geography                 |
+| compass_2           | Geography                 |
+| computer            | Technology                |
+| cow                 | Animals                   |
+| crayon              | Art & Drawing             |
+| cross               | Health & Medicine         |
+| crown               | History & Royalty         |
+| deer                | Animals                   |
+| desktop             | Technology                |
+| divide              | Math                      |
+| dna                 | Science                   |
+| doctor              | Health & Medicine         |
+| dog                 | Animals                   |
+| dolphin             | Ocean Animals             |
+| dress               | Clothing                  |
+| droplet             | Water                     |
+| drum                | Music                     |
+| duck                | Animals                   |
+| duck_2              | Animals                   |
+| eagle               | Birds                     |
+| ear                 | Human Body                |
+| earth               | Space & Earth             |
+| egg                 | Food                      |
+| hospital            | Health & Medicine         |
+| island              | Geography                 |
+| leaf                | Plants                    |
+| leaf_2              | Plants                    |
+| light_bulb          | Science                   |
+| light_bulb_2        | Science                   |
+| lightning           | Weather                   |
+| lion                | Animals                   |
+| lungs               | Human Body                |
+| magnet              | Science                   |
+| magnifying_glass    | Discovery & Investigation |
+| map                 | Geography                 |
+| menorah             | World Religions           |
+| microphone          | Music                     |
+| microscope          | Science                   |
+| milk                | Food & Dairy              |
+| milky_way           | Space                     |
+| minus               | Math                      |
+| mobile_phone        | Technology                |
+| monkey              | Animals                   |
+| mosque              | World Religions           |
+| motorcycle          | Transportation            |
+| mouse               | Animals                   |
+| musical_note        | Music                     |
+| notebook            | School & Education        |
+| nurse               | Health & Medicine         |
+| octopus             | Ocean Animals             |
+| open_book           | Books & Reading           |
+| orange              | Fruits & Food             |
+| paint_palette       | Art                       |
+| paintbrush          | Art                       |
+| parrot              | Birds                     |
+| peacock             | Birds                     |
+| pedestrian_crossing | Road Safety               |
+| pen                 | School & Education        |
+| pen_2               | School & Education        |
+| pencil              | School & Education        |
+| pencil_2            | School & Education        |
+| penguin             | Animals                   |
+| piano               | Music                     |
+| pig                 | Animals                   |
+| pill                | Health & Medicine         |
+| pilot               | Careers                   |
+| pineapple           | Fruits & Food             |
+| plus                | Math                      |
+| police_officer      | Community Helpers         |
+| printer             | Technology                |
+| puzzle              | Brain Games               |
+| question_mark       | Discovery & Investigation |
+| rabbit              | Animals                   |
+| radio               | Technology                |
+| rainbow             | Weather                   |
+| recycle             | Environment               |
+| recycle_arrow       | Environment               |
+| ringed_planet       | Space                     |
+| robot               | Robotics & Technology     |
+| rocket              | Space                     |
+| rose                | Flowers                   |
+| ruler               | Math & Measurement        |
+| santa               | Holidays                  |
+| school              | School & Education        |
+| school_bus          | School & Education        |
+| scientist           | Science                   |
+| set_square          | Math & Geometry           |
+| shark               | Ocean Animals             |
+| sheep               | Animals                   |
+| shell               | Ocean                     |
+| ship                | Transportation            |
+| snake               | Animals                   |
+| snowflake           | Weather                   |
+| snowman             | Winter                    |
+| soccer              | Sports                    |
+| squid               | Ocean Animals             |
+| star                | Space                     |
+| stethoscope         | Health & Medicine         |
+| stop_sign           | Road Safety               |
+| strawberry          | Fruits & Food             |
+| sun                 | Space                     |
+| sunflower           | Flowers                   |
+| swan                | Birds                     |
+| sword               | History                   |
+| synagogue           | World Religions           |
+| syringe             | Health & Medicine         |
+| teacher             | School & Education        |
+| telephone           | Technology                |
+| telescope           | Space                     |
+| television          | Technology                |
+| temple              | World Religions           |
+| tennis              | Sports                    |
+| theater_masks       | Arts & Drama              |
+| thermometer         | Science                   |
+| thunderstorm        | Weather                   |
+| tooth               | Human Body                |
+| tornado             | Weather                   |
+| train               | Transportation            |
+| tree                | Plants                    |
+| t_rex               | Dinosaurs                 |
+| tulip               | Flowers                   |
+| turkey              | Birds                     |
+| turtle              | Ocean Animals             |
+| ufo                 | Space                     |
+| volcano             | Earth Science             |
+| volcano_2           | Earth Science             |
+| watermelon          | Fruits & Food             |
+| wave                | Ocean                     |
+| whale               | Ocean Animals             |
+| wind                | Weather                   |
+| wolf                | Animals                   |
+| tree_emoji          | Plants                    |
+| leaf_emoji          | Plants                    |
+| banana_emoji        | Fruits & Food             |
+| cake_emoji          | Food & Desserts           |
+| pumpkin_emoji       | Vegetables                |
+| headphones_emoji    | Music                     |
+| basketball_emoji    | Sports                    |
+| cricket_emoji       | Sports                    |
+| volleyball_emoji    | Sports                    |
+| island_emoji        | Geography                 |
+| school_emoji        | School & Education        |
+| elephant_emoji      | Animals                   |
+| fish_emoji          | Ocean Animals             |
+| sparrow_emoji       | Birds                     |
+| dolphin_emoji       | Ocean Animals             |
+| nurse_emoji         | Health & Medicine         |
+| camera_emoji        | Photography               |
+| camera_emoji_2      | Photography               |
+| printer_emoji       | Technology                |
+| helicopter_emoji    | Transportation            |
+| car_emoji           | Transportation            |
+
+This mapping is suitable for an automated rule such as:
+
+* **Animal facts** → Animals, Birds, Ocean Animals, Dinosaurs icons
+* **Space facts** → Space icons (rocket, telescope, planet, UFO, star, sun, Earth, Milky Way)
+* **Science facts** → Microscope, scientist, alembic, magnet, thermometer, DNA, light bulb
+* **Human Body facts** → Brain, lungs, ear, tooth, stethoscope, doctor, nurse, syringe
+* **Geography facts** → Globe, map, compass, island, volcano
+* **Plant facts** → Tree, leaf, flowers, cactus
+* **Weather facts** → Cloud, lightning, rainbow, snowflake, tornado, wind
+* **Transportation facts** → Car, bus, train, airplane, helicopter, ship, bicycle, motorcycle
+* **Math facts** → Abacus, ruler, set square, plus, minus, divide
+* **School facts** → School, teacher, backpack, notebook, books, pencils, pens
+* **Technology facts** → Computer, robot, printer, mobile phone, television
+
+This deterministic mapping ensures each fact category always receives the most appropriate icon, producing consistent and professional layouts throughout the book.
+
+3 ### **Ensure the text within each fact box fits perfectly without leaving unnecessary empty space. The text should wrap naturally, fully utilize the available area, and align correctly within the box. Maintain consistent safe margins and bleed, ensuring the text is properly positioned without overflowing or leaving excessive gaps.**
+
