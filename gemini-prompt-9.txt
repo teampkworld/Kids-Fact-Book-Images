@@ -51,4 +51,53 @@ Update the **"PROOFMAP OF YOUR ADVENTURE"** page as follows:
 * Use the same bullet style consistently throughout the entire page.
 * Ensure proper alignment, spacing, indentation, and visual balance for a professional, child-friendly layout.
 
+### 31 Image Facts Icon Mapping Fix
+
+The icons assigned to the **31 Image Facts** are also being mapped incorrectly. Some image facts are displaying icons from unrelated categories. This should not happen.
+
+Please implement the following logic:
+
+* Before assigning an icon, **read and analyze the complete title and description** of each of the 31 Image Facts.
+* Determine the most appropriate category based on the actual content of the fact—not by its position, image slot number, upload order, or any default mapping.
+* Once the correct category has been identified, assign the SVG icon that corresponds to that category.
+* Do **not** map an icon without first understanding the content of the fact.
+
+### Required Logic
+
+```text
+Read Image Fact Title
+        +
+Read Image Fact Description
+        ↓
+Determine the most appropriate category
+        ↓
+Find the matching Category → SVG Icon
+        ↓
+Display the correct SVG icon
+```
+
+### Mapping Rules
+
+* Analyze the full fact content before assigning an icon.
+* Base the category on the meaning and subject of the fact.
+* Never assign icons randomly.
+* Never assign icons by image slot number.
+* Never assign icons by upload order.
+* Never reuse an icon from an unrelated category.
+* If the category cannot be determined with confidence, use a predefined fallback icon and log the item for review instead of assigning an incorrect icon.
+
+### Icon Size Consistency
+
+The **31 Image Facts icons** must use the **exact same size and styling** as the icons used for the **1000 Facts** section.
+
+Requirements:
+
+* Use identical width and height for all category icons.
+* Maintain the original SVG aspect ratio.
+* Keep consistent padding and spacing.
+* Center-align every icon within its allocated area.
+* Render all icons as crisp, high-quality vectors with no scaling artifacts.
+* Ensure there is no visible size difference between icons used in the 1000 Facts pages and the 31 Image Facts pages.
+
+The goal is for both the **1000 Facts** section and the **31 Image Facts** section to use a single, consistent icon system where every icon is selected based on the actual fact category and displayed at a uniform size throughout the entire book.
 These changes should preserve the existing correct mappings, fix only the six incorrect category mappings, standardize icon sizing across the book, and improve the readability of the **"PROOFMAP OF YOUR ADVENTURE"** page by replacing icons with clean black-and-white bullets.
