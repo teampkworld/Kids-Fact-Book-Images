@@ -1,0 +1,54 @@
+### Icon Category Mapping Fixes
+
+Among the **25 category SVG icons** that I have already uploaded, the following category icons are currently mapped incorrectly and are therefore not being displayed for their respective categories:
+
+* Mathematics
+* Music
+* Art
+* Culture
+* General Knowledge
+* Language
+
+Please review these six category icons and remap them correctly according to their uploaded SVG filenames. The filenames themselves represent the intended category, so the mapping must be based on the filename, not on upload order, index, or any previous cached mapping.
+
+#### Correct SVG Filename Mapping
+
+* Mathematics → `Mathematics.svg`
+* Music → `Music.svg`
+* Art → `Art.svg`
+* Culture → `Culture.svg`
+* General Knowledge → `General Knowledge.svg`
+* Language → `Language.svg`
+
+Leave all other **19 category icon mappings unchanged**, as they are already correct.
+
+### Icon Rendering Logic
+
+* Read the SVG filename and use it as the category identifier.
+* Match each fact's category to the corresponding SVG filename.
+* Never assign icons randomly, sequentially, or based on upload position.
+* Every fact within the same category must always display the same SVG icon.
+* Maintain this mapping consistently across the editor, preview, PDF proof, final manuscript, DOCX export, and XLSX export.
+
+### Icon Size Standardization
+
+Standardize the display size of **all 25 SVG icons** throughout the entire book.
+
+* Every category icon must render at the exact same width and height.
+* Maintain the original SVG aspect ratio.
+* Center-align each icon within its designated icon area.
+* Use consistent padding and spacing around every icon.
+* Ensure icons remain sharp, crisp, and scalable without distortion or clipping.
+* Prevent any icon from appearing larger or smaller than the others.
+
+### "PROOFMAP OF YOUR ADVENTURE" Page Update
+
+Update the **"PROOFMAP OF YOUR ADVENTURE"** page as follows:
+
+* Remove all category SVG icons from this page.
+* Replace the icons with simple **black-and-white bullet points**.
+* Choose the bullet style that provides the cleanest and most readable KDP interior layout (for example, solid round bullets •, small filled circles ●, or another simple monochrome bullet).
+* Use the same bullet style consistently throughout the entire page.
+* Ensure proper alignment, spacing, indentation, and visual balance for a professional, child-friendly layout.
+
+These changes should preserve the existing correct mappings, fix only the six incorrect category mappings, standardize icon sizing across the book, and improve the readability of the **"PROOFMAP OF YOUR ADVENTURE"** page by replacing icons with clean black-and-white bullets.
