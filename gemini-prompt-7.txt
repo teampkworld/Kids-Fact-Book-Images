@@ -1,91 +1,21 @@
-1 ### Improve SVG Icon Assignment Logic Based on Icon Names
+### Fix the Icon Mapping Logic
 
-The user uploads a collection of **transparent vector SVG icons** (either **black-and-white** or **color**), and **each SVG file has a meaningful filename** that describes the icon (for example: `rocket.svg`, `lion.svg`, `microscope.svg`, `brain.svg`, `globe.svg`, etc.).
+The current implementation is incorrect. You are assigning the **same icon** to all facts instead of selecting icons based on the fact's category.
 
-Instead of assigning icons randomly or by upload order, the system should use the **icon filenames** to determine which fact category each icon belongs to.
+Please follow the logic below exactly.
 
-### Required Logic
+---
 
-* Read the filename of every uploaded SVG icon.
-* Analyze the filename (icon name) to determine what the icon represents.
-* Automatically map each icon to the most appropriate fact category based on its name.
-* Store this **Category → SVG Icon** mapping and use it consistently throughout the application.
+### Available Data
 
-### Example Mapping
+I have already provided:
 
-* `lion.svg`, `paw.svg`, `bird.svg` → **Animals**
-* `rocket.svg`, `planet.svg`, `telescope.svg` → **Space**
-* `microscope.svg`, `atom.svg`, `beaker.svg` → **Science**
-* `globe.svg`, `mountain.svg`, `map.svg` → **Geography**
-* `brain.svg`, `heart.svg`, `skeleton.svg` → **Human Body**
-* `fish.svg`, `whale.svg`, `coral.svg` → **Ocean Life**
-* `tree.svg`, `leaf.svg`, `flower.svg` → **Nature**
-* `castle.svg`, `scroll.svg`, `pyramid.svg` → **History**
-* `computer.svg`, `robot.svg`, `chip.svg` → **Technology**
-* `trophy.svg`, `ball.svg`, `medal.svg` → **Sports**
+* A complete **Bulk SVG Icons Upload (Fact Pages)** icon library (set as the default).
+* The **name of every SVG icon**.
+* A text file containing the complete list of icon names.
+* A text file containing the mapping between **Icon Name** and **Recommended Category**.
 
-
-### Improve SVG Icon Assignment Logic Based on Icon Names
-
-The user uploads a collection of **transparent vector SVG icons** (either **black-and-white** or **color**), and **each SVG file has a meaningful filename** that describes the icon (for example: `rocket.svg`, `lion.svg`, `microscope.svg`, `brain.svg`, `globe.svg`, etc.).
-
-Instead of assigning icons randomly or by upload order, the system should use the **icon filenames** to determine which fact category each icon belongs to.
-
-### Required Logic
-
-* Read the filename of every uploaded SVG icon.
-* Analyze the filename (icon name) to determine what the icon represents.
-* Automatically map each icon to the most appropriate fact category based on its name.
-* Store this **Category → SVG Icon** mapping and use it consistently throughout the application.
-
-### Example Mapping
-
-* `lion.svg`, `paw.svg`, `bird.svg` → **Animals**
-* `rocket.svg`, `planet.svg`, `telescope.svg` → **Space**
-* `microscope.svg`, `atom.svg`, `beaker.svg` → **Science**
-* `globe.svg`, `mountain.svg`, `map.svg` → **Geography**
-* `brain.svg`, `heart.svg`, `skeleton.svg` → **Human Body**
-* `fish.svg`, `whale.svg`, `coral.svg` → **Ocean Life**
-* `tree.svg`, `leaf.svg`, `flower.svg` → **Nature**
-* `castle.svg`, `scroll.svg`, `pyramid.svg` → **History**
-* `computer.svg`, `robot.svg`, `chip.svg` → **Technology**
-* `trophy.svg`, `ball.svg`, `medal.svg` → **Sports**
-
-### Icon Assignment Rules
-
-* Every fact must display the SVG icon that corresponds to its category.
-* Facts within the same category should always use the same mapped icon.
-* Do not assign icons randomly, sequentially, or to unrelated categories.
-* If multiple suitable icons exist for a category, use the predefined mapping or allow a configurable priority.
-* If no suitable icon is available for a category, use a default educational SVG icon as a fallback.
-
-### Expected Workflow
-
-```text
-User uploads SVG icon set
-        ↓
-Read each SVG filename
-        ↓
-Identify the concept represented by the filename
-        ↓
-Map the icon to the appropriate fact category
-        ↓
-Save the Category → Icon mapping
-        ↓
-When generating fact pages:
-Determine the fact's category
-        ↓
-Retrieve the mapped SVG icon
-        ↓
-Display the correct icon consistently for that category
-```
-
-This ensures that every fact automatically displays the **most appropriate SVG icon based on the uploaded icon's filename**, resulting in accurate, consistent, and category-specific icon placement throughout the book.
-
-_______
-2 ###
-icon name wise  
-For your **Kids Interesting Facts Book**, the best approach is to map each icon to a **primary educational category** so the AI can automatically select the correct icon for every fact. Below is a recommended category mapping for the icon names you provided.
+icon name wise mapping :  
 
 | Icon Name           | Recommended Category      |
 | ------------------- | ------------------------- |
@@ -305,8 +235,104 @@ This mapping is suitable for an automated rule such as:
 * **Math facts** → Abacus, ruler, set square, plus, minus, divide
 * **School facts** → School, teacher, backpack, notebook, books, pencils, pens
 * **Technology facts** → Computer, robot, printer, mobile phone, television
+---
 
-This deterministic mapping ensures each fact category always receives the most appropriate icon, producing consistent and professional layouts throughout the book.
+### Required Logic
 
-3 ### **Ensure the text within each fact box fits perfectly without leaving unnecessary empty space. The text should wrap naturally, fully utilize the available area, and align correctly within the box. Maintain consistent safe margins and bleed, ensuring the text is properly positioned without overflowing or leaving excessive gaps.**
+1. Read the uploaded **Category → Icon** mapping.
+2. Group all uploaded SVG icons by their assigned category.
+3. When rendering each fact, first determine the fact's category.
+4. Retrieve **only the icons that belong to that category**.
+5. Randomly select **one icon** from that category's icon pool.
+6. Display the selected icon in the fact box.
+7. Repeat this process for every fact.
 
+---
+
+### Example
+
+If the fact is:
+
+**Fact #42 — Nature**
+
+The system should:
+
+* Detect the category = **Nature**
+* Look up all icons assigned to the **Nature** category
+* Randomly choose one Nature icon, such as:
+
+  * tree.svg
+  * leaf.svg
+  * flower.svg
+  * cactus.svg
+  * sunflower.svg
+* Display one of these icons only.
+
+Do **not** use icons from other categories such as Space, Animals, Science, or Transportation.
+
+---
+
+### Randomization Rules
+
+* Randomly select an icon **only within the current fact's category**.
+* Do not always choose the first icon.
+* Rotate through the available icons to create visual variety.
+* Avoid displaying the same icon repeatedly for consecutive facts when multiple icons are available.
+* Every icon within a category should be used over time.
+
+---
+
+### Apply to All Facts
+
+This logic must be applied consistently to:
+
+* **All 1,000 standard facts**
+* **All 31 image-related discovery facts**
+
+Every fact should receive an icon that matches **its own category**.
+
+---
+
+### Example Category Rotation
+
+If the category is **Animals**, randomly use icons such as:
+
+* lion.svg
+* bear.svg
+* dog.svg
+* cat.svg
+* rabbit.svg
+* wolf.svg
+* monkey.svg
+
+If the category is **Space**, randomly use:
+
+* rocket.svg
+* telescope.svg
+* ringed_planet.svg
+* star.svg
+* milky_way.svg
+* ufo.svg
+* earth.svg
+
+If the category is **Science**, randomly use:
+
+* microscope.svg
+* scientist.svg
+* alembic.svg
+* dna.svg
+* magnet.svg
+* thermometer.svg
+
+The same logic should apply to every other category.
+
+---
+
+### Expected Result
+
+The application should no longer display the same icon for every fact. Instead, it should automatically:
+
+* Identify the fact's category.
+* Select a matching icon from that category's icon library.
+* Randomly rotate among the available icons within that category.
+* Ensure all uploaded icons are utilized over time across the **1,000 facts** and **31 image-related facts**, resulting in a varied, category-appropriate, and visually engaging book.
