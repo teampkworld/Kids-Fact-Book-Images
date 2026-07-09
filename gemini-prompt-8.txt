@@ -1,0 +1,78 @@
+### Category-Based SVG Icon Mapping Logic
+
+The uploaded **25 transparent SVG icons** are already organized and named according to their respective categories (for example, `Animals.svg`, `Science.svg`, `Technology.svg`, etc.). The system must use these filenames as the **primary source** for assigning icons to facts. Do **not** assign icons randomly or by upload order.
+
+Implement the following logic:
+
+* Read the filename of every uploaded SVG icon.
+* Treat the filename as the category name.
+* Build a permanent **Category → SVG Icon** mapping using the uploaded filenames.
+* Whenever a fact is displayed, determine its category first, then automatically display the matching SVG icon.
+* Every fact belonging to the same category must always use the same icon.
+* This mapping must remain consistent across the editor, preview, PDF proof, final manuscript, DOCX export, XLSX export, and any future exports.
+
+### Required Category → SVG Filename Mapping
+
+| Category          | Required SVG File       |
+| ----------------- | ----------------------- |
+| Animals           | `Animals.svg`           |
+| Art               | `Art.svg`               |
+| Birds             | `Birds.svg`             |
+| Culture           | `Culture.svg`           |
+| Dinosaurs         | `Dinosaurs.svg`         |
+| Food              | `Food.svg`              |
+| General Knowledge | `General Knowledge.svg` |
+| Geography         | `Geography.svg`         |
+| History           | `History.svg`           |
+| Human Body        | `Human Body.svg`        |
+| Insects           | `Insects.svg`           |
+| Inventions        | `Inventions.svg`        |
+| Language          | `Language.svg`          |
+| Mathematics       | `Mathematics.svg`       |
+| Music             | `Music.svg`             |
+| Nature            | `Nature.svg`            |
+| Ocean Life        | `Ocean Life.svg`        |
+| Plants            | `Plants.svg`            |
+| Science           | `Science.svg`           |
+| Space             | `Space.svg`             |
+| Sports            | `Sports.svg`            |
+| Technology        | `Technology.svg`        |
+| Transportation    | `Transportation.svg`    |
+| Weather           | `Weather.svg`           |
+| World Records     | `World Records.svg`     |
+
+### Required Logic
+
+```text
+User uploads the 25 category SVG icons
+                ↓
+Read every SVG filename
+                ↓
+Use the filename as the category identifier
+                ↓
+Create a permanent Category → SVG mapping
+                ↓
+When rendering each fact:
+Determine the fact category
+                ↓
+Look up the matching SVG icon
+                ↓
+Display that SVG beside the fact
+```
+
+### Matching Rules
+
+* Category matching should be **case-insensitive**.
+* Ignore minor differences such as spaces, underscores, or hyphens (for example, `Human Body.svg`, `human_body.svg`, and `human-body.svg` should all map to **Human Body**).
+* Never assign icons based on upload sequence, file index, or random selection.
+* Never reuse an icon from another category unless the correct category icon is unavailable.
+
+### Validation Requirements
+
+* Verify that all **25 categories** have a corresponding SVG icon.
+* Ensure that every fact displays the icon for its own category only.
+* Prevent cross-category icon mismatches.
+* If a category icon is missing, display a predefined fallback icon and notify the user which category is missing.
+* Cache the mapping so the uploaded icons remain linked until the user uploads a new set of category SVG icons, at which point the old mapping should be replaced completely.
+
+The objective is to ensure that every fact in the Kids Facts Book always displays the **correct category icon**, using the uploaded SVG filenames as the authoritative mapping source. This guarantees consistent, accurate, and predictable icon placement throughout the entire book.
