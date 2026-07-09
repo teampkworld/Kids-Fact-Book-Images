@@ -1,4 +1,4 @@
-### Icon Category Mapping Fixes
+above previous modified code not working same problem apear again ; please read carefully instructions after start process: ### Icon Category Mapping Fixes
 
 Among the **25 category SVG icons** that I have already uploaded, the following category icons are currently mapped incorrectly and are therefore not being displayed for their respective categories:
 
@@ -86,8 +86,45 @@ Display the correct SVG icon
 * Never reuse an icon from an unrelated category.
 * If the category cannot be determined with confidence, use a predefined fallback icon and log the item for review instead of assigning an incorrect icon.
 
-### Icon Size Consistency
+### Icon Size Consistency and mapping 
+corrected mapping of all 31 facts to their suitable categories and SVG files: given 31 facts icon mapping structure as per title based : 
 
+| **Serial No** | **Title**                          | **Category**          | **Required SVG File**       |
+|---------------|------------------------------------|-----------------------|-----------------------------|
+| 1             | The Marvel of Tree Communication    | Plants                | `Plants.svg`                |
+| 2             | The Incredible Honeybee Dance       | Insects               | `Insects.svg`               |
+| 3             | The Underwater World of Bioluminescence | Ocean Life        | `Ocean Life.svg`            |
+| 4             | The Mighty Chameleon's Super Eyes   | Animals               | `Animals.svg`               |
+| 5             | The Amazing Migrated Butterflies   | Insects               | `Insects.svg`               |
+| 6             | The Unstoppable Power of Seeds     | Plants                | `Plants.svg`                |
+| 7             | The Surprising Memory of Crows     | Birds                 | `Birds.svg`                 |
+| 8             | The Earth's Hidden Underground Rivers | Geography          | `Geography.svg`             |
+| 9             | Hedgehog Spiny Soap                | Animals               | `Animals.svg`               |
+| 10            | The Penguin Pebble Gift             | Birds                 | `Birds.svg`                 |
+| 11            | Wombat's Cube-Shaped Poop           | Animals               | `Animals.svg`               |
+| 12            | Neon Ocean Jellyfish               | Ocean Life            | `Ocean Life.svg`            |
+| 13            | Noisy Pistol Shrimp                 | Ocean Life            | `Ocean Life.svg`            |
+| 14            | Squirrel Forest Helpers             | Animals               | `Animals.svg`               |
+| 15            | The Rollerball Planet Uranus        | Space                 | `Space.svg`                 |
+| 16            | The Comet's Shiny Hair              | Space                 | `Space.svg`                 |
+| 17            | The Wishing Star Sparkle            | Space                 | `Space.svg`                 |
+| 18            | The True Crocodile Tears            | Animals               | `Animals.svg`               |
+| 19            | Chameleon's 3D Eyes                 | Animals               | `Animals.svg`               |
+| 20            | The Grizzly's Mountain Sniffer      | Animals               | `Animals.svg`               |
+| 21            | Bananas are Curved Berries          | Food                  | `Food.svg`                  |
+| 22            | Sheep Friendly Memories             | Animals               | `Animals.svg`               |
+| 23            | The Mystery of the Singing Sand Dunes | Geography          | `Geography.svg`             |
+| 24            | The Octopus's Secret Three Hearts   | Ocean Life            | `Ocean Life.svg`            |
+| 25            | The Unbelievable Glass Frog         | Animals               | `Animals.svg`               |
+| 26            | The Rain that Never Touches the Ground | Weather            | `Weather.svg`               |
+| 27            | The Sleepy World of Floating Otters | Ocean Life         | `Ocean Life.svg`            |
+| 28            | The Starfish's Miracle Re-growing Arms | Ocean Life       | `Ocean Life.svg`            |
+| 29            | The Microscopic Water Bear Super-Survivors | Science      | `Science.svg`               |
+| 30            | The Electric Wonder of Lightning Strikes | Weather        | `Weather.svg`               |
+| **31**       | **The Living Water Battery**        | **Science**           | **`Science.svg`**           |
+
+---
+________
 The **31 Image Facts icons** must use the **exact same size and styling** as the icons used for the **1000 Facts** section.
 
 Requirements:
