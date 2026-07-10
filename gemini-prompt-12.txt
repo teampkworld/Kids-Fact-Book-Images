@@ -43,6 +43,7 @@
 ### Logic Requirements
 
 * Match icons by **filename**, not by visual appearance.
+* Set these icons as the default for the "MAP OF YOUR ADVENTURE" page. Embed them permanently so they are used automatically in all current and future book generations unless the user uploads a new icon set.
 * Always use the uploaded transparent SVG files.
 * Do not substitute a different icon if the required filename exists.
 * Display all icons at a uniform size (approximately **20–24 px** for the KDP interior) with consistent padding and vertical alignment.
