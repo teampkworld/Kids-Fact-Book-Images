@@ -1,0 +1,68 @@
+
+1. **Increase the size of the icons used in the 31 Image Discovery Facts.**
+   Enlarge the SVG icons slightly so they are clearly visible in the printed KDP book while maintaining consistent proportions, sharp edges, and proper alignment with the text. All 31 fact icons should use the same standardized size.
+
+2. **Capitalize all book headers.**
+   Ensure that every heading throughout the book is displayed in a consistent **Title Case / Capitalized** format. Apply this uniformly to all page titles, section headers, chapter headings, level titles, and major headings.
+
+3. **Add a new "MAP OF YOUR ADVENTURE" Bulk SVG Upload section.**
+   Create a dedicated bulk upload option specifically for the **MAP OF YOUR ADVENTURE** page. This uploader should allow users to upload transparent SVG icons that will automatically replace the default bullet-point icons on the index page.
+
+   **Requirements:**
+
+   * Accept transparent SVG icons.
+   * Store the uploaded icons and reuse them until the user uploads a new set.
+   * When a new set is uploaded, completely replace the previous icons.
+   * Render all icons at a consistent size and alignment.
+   * Maintain equal spacing, padding, and baseline alignment for every index item.
+   * Use the uploaded SVG files directly without rasterization or color changes.
+
+4. **Map the uploaded SVG icons according to the following fixed structure.**
+   Match the uploaded icon filenames to the corresponding index items exactly as shown below:
+
+| MAP OF YOUR ADVENTURE Item               | Required SVG Icon      |
+| ---------------------------------------- | ---------------------- |
+| WELCOME TO WONDER!                       | Waving Hand.svg        |
+| HOW TO USE THIS BOOK                     | Checklist.svg          |
+| TABLE OF CONTENTS                        | Open Book.svg          |
+| THE GREAT DISCOVERY JOURNEY BEGINS HERE! | Compass.svg            |
+| THE ADVENTURE OF DISCOVERY CONTINUES!    | Footprints.svg         |
+| LEVEL 1 — CURIOUS BEGINNERS              | Light bulb.svg         |
+| LEVEL 2 — KNOWLEDGE SEEKERS              | Magnifying glass.svg   |
+| LEVEL 3 — FACT DETECTIVES                | Detective_hat.svg      |
+| LEVEL 4 — ULTIMATE EXPLORERS             | Telescope.svg          |
+| LEVEL 5 — SUPREME FACT MASTERS           | Treasure map.svg       |
+| PREPARE TO MINI-DISCOVER MAJOR SECRETS!  | Treasure chest.svg     |
+| FINAL SECRET DISCOVERIES!                | Classic key.svg        |
+| ULTIMATE FACT CHAMPIONSHIP QUIZ          | Clipboard.svg          |
+| SUPER MASTER CERTIFICATE BADGE           | Award ribbon badge.svg |
+| KNOWLEDGE QUIZ ANSWER KEY                | Classic key.svg        |
+| THANK YOU FOR EXPLORING!                 | Heart.svg              |
+| MORE FUN BOOKS FROM DREAM ORBIT          | Books.svg              |
+
+### Logic Requirements
+
+* Match icons by **filename**, not by visual appearance.
+* Always use the uploaded transparent SVG files.
+* Do not substitute a different icon if the required filename exists.
+* Display all icons at a uniform size (approximately **20–24 px** for the KDP interior) with consistent padding and vertical alignment.
+* Preserve the original SVG quality with no blur, distortion, stretching, recoloring, or cropping.
+* Ensure that the same uploaded icon is always used for the same index item across every PDF generation, providing consistent output every time.
+Use only the uploaded black silhouette SVG icons.
+Match icons exactly by filename, not by visual similarity.
+Keep all icons at a consistent size (approximately 20–24 px for an 8.5 × 11 inch KDP interior).
+Maintain identical vertical alignment with the text baseline.
+Preserve equal left padding, spacing, and margins for every index row.
+Do not stretch, crop, or recolor the SVGs.
+Render all icons using their original transparent SVG files.
+Use the same icon consistently for the same index item across every PDF generation.
+Do not substitute another icon if the mapped SVG already exists.
+If a mapped SVG is unavailable, use the following fallback priority:
+Light bulb → General discovery concepts
+Open Book → Reading or contents
+Compass → Journey or navigation
+Clipboard → Instructions or quiz
+Award ribbon badge → Achievement
+Heart → Thank you or appreciation
+
+This mapping provides a consistent visual language throughout the Kids Facts Book while matching the concept of each section using your uploaded SVG icon set.
