@@ -1,13 +1,1 @@
-### Required Changes
-
-1. On the **"FUN FACT BOOKS FROM DREAM ORBIT"** page, replace the existing text:
-
-> **"To explore our full list of printables and new book releases, please visit our official profile page:"**
-
-with the following:
-
-> **"To explore our complete collection of books and the latest releases, please visit our official Amazon Store:"**
-
-Ensure the new text matches the existing typography, alignment, spacing, and overall page design.
-
-2. On the **"MAP OF YOUR ADVENTURE"** page, increase the size of all section icons slightly so they are more visible in print. Maintain consistent icon sizing, alignment, spacing, and visual balance without affecting the page layout or causing any overlap.
+**The icons on the "MAP OF YOUR ADVENTURE" page are not rendering correctly in the output PDF. Although the original uploaded icons are high-quality vector SVGs, they appear small, blurry, and lose their sharpness in the generated PDF. Preserve the original SVG vector quality during rendering so the icons remain crisp, sharp, and fully scalable. Do not rasterize, compress, or downscale the SVGs. Render each icon at the appropriate size while maintaining its original proportions, transparency, and vector clarity. The output PDF should display the icons exactly as the original uploaded SVG files, with clean edges, high resolution, and professional print quality.**
