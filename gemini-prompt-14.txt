@@ -1,0 +1,13 @@
+### Required Changes
+
+1. On the **"FUN FACT BOOKS FROM DREAM ORBIT"** page, replace the existing text:
+
+> **"To explore our full list of printables and new book releases, please visit our official profile page:"**
+
+with the following:
+
+> **"To explore our complete collection of books and the latest releases, please visit our official Amazon Store:"**
+
+Ensure the new text matches the existing typography, alignment, spacing, and overall page design.
+
+2. On the **"MAP OF YOUR ADVENTURE"** page, increase the size of all section icons slightly so they are more visible in print. Maintain consistent icon sizing, alignment, spacing, and visual balance without affecting the page layout or causing any overlap.
