@@ -12,3 +12,7 @@ previous your fixes not working first read given instructions carefully and use 
 > 7. Add proper cleanup logic when images are replaced, removed, or when the user starts a new upload session, ensuring there are no stale image references, memory leaks, or cached assets.
 >
 > **Expected behavior:** Every time the user uploads new images, the application must completely discard all previous images and their references, refresh the upload state, and process only the newly uploaded images. Under no circumstances should images from any previous upload session appear in previews, processing, or final output.
+
+
+
+Copied from: Editing Kids-Fact-Book-Images/gemini-prompt-18.txt at main · teampkworld/Kids-Fact-Book-Images - <https://github.com/teampkworld/Kids-Fact-Book-Images/edit/main/gemini-prompt-18.txt>
