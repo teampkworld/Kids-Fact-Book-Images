@@ -1,5 +1,5 @@
 
-> **Fix the image upload logic across the entire app.** Currently, whenever a user uploads new images, the application sometimes continues to use previously uploaded (cached or stored) images instead of the newly selected ones. The old images are not being completely removed, causing outdated images to appear in the output.
+previous your fixes not working first read given instructions carefully and use your brain fully and perfect logic to resolve this issue : > **Fix the image upload logic across the entire app.** Currently, whenever a user uploads new images, the application sometimes continues to use previously uploaded (cached or stored) images instead of the newly selected ones. The old images are not being completely removed, causing outdated images to appear in the output.
 >
 > Implement a robust image management workflow so that **every new upload starts with a clean state**. Before processing or storing any newly uploaded images:
 >
