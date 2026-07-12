@@ -1,0 +1,27 @@
+### Required Fixes
+
+**1. Fix Image Upload Cache & Refresh Logic**
+
+Currently, all image upload sections sometimes display previously uploaded images instead of the newly uploaded ones. The old images remain cached and appear in the generated output.
+
+Implement the following logic:
+
+* Whenever a user uploads new image(s), automatically remove all previously uploaded images associated with that upload section.
+* Replace the old images with the newly uploaded images immediately.
+* Refresh the preview and generated output using only the latest uploaded images.
+* Prevent browser, application, or server-side cache from reusing old images.
+* Ensure every PDF generation always uses the current uploaded images only.
+* Apply this logic consistently to **all existing and future image upload sections**.
+* Add a **"Clear Image Cache"** button that completely removes all cached uploaded images and forces a fresh reload of every image before generating the output.
+
+---
+
+**2. Format the "Think about it:" Section**
+
+In every fact box throughout the book, format the text under **"Think about it:"** in **italic** while keeping the heading **"Think about it:"** itself **bold**.
+
+**Example formatting:**
+
+**Think about it:** *Why do you think this happens? How might it affect our everyday lives?*
+
+Apply this formatting consistently across all facts in the PDF, preview, and all export formats.
