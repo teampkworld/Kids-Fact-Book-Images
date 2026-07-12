@@ -1,18 +1,23 @@
+previous your fixes not working first read given instructions carefully and use your brain fully and perfect logic to resolve this issue : ### Required Fix: MAP OF YOUR ADVENTURE SVG Upload Logic
 
-previous your fixes not working first read given instructions carefully and use your brain fully and perfect logic to resolve this issue : > **Fix the image upload logic across the entire app.** Currently, whenever a user uploads new images, the application sometimes continues to use previously uploaded (cached or stored) images instead of the newly selected ones. The old images are not being completely removed, causing outdated images to appear in the output.
->
-> Implement a robust image management workflow so that **every new upload starts with a clean state**. Before processing or storing any newly uploaded images:
->
-> 1. Completely remove all previously uploaded images from memory, state, cache, temporary storage, and any references associated with the previous upload. Remove all the images that are in the auto memory so far.
-> 2. Clear the image cache to prevent stale or cached images from being reused.
-> 3. Reset the upload state and image references before accepting new files.
-> 4. Store and process **only the newly uploaded images**.
-> 5. Ensure that all previews, processing pipelines, AI generation, and output use **only the latest uploaded images**, with zero possibility of old images appearing.
-> 6. If multiple upload sections exist in the app, apply this logic consistently to **every image upload component**.
-> 7. Add proper cleanup logic when images are replaced, removed, or when the user starts a new upload session, ensuring there are no stale image references, memory leaks, or cached assets.
->
-> **Expected behavior:** Every time the user uploads new images, the application must completely discard all previous images and their references, refresh the upload state, and process only the newly uploaded images. Under no circumstances should images from any previous upload session appear in previews, processing, or final output.
+On the **"MAP OF YOUR ADVENTURE"** page, the SVG icon upload system is not updating correctly. When the user uploads a new set of transparent SVG icons, the application continues to display previously uploaded icons instead of replacing them. Additionally, if the user leaves some upload slots empty, those empty slots incorrectly retain and display old images from previous uploads.
 
+Implement the following logic:
 
+* Treat each new upload as a completely new icon set.
+* Before processing any new upload, **clear all previously stored SVG icons** associated with the "MAP OF YOUR ADVENTURE" page.
+* Delete all old icon references, cached files, object URLs, and preview data before loading the new files.
+* Replace the previous icon set entirely with the newly uploaded SVG files.
+* If an upload slot is left empty, **do not reuse or display the previous icon** in that position. Empty slots must remain empty (or display the default placeholder if one exists).
+* Never preserve old icons for upload slots that are not included in the latest upload.
+* Refresh the preview immediately after uploading so that only the current SVG files are displayed.
+* Ensure the generated PDF uses **only the latest uploaded SVG icons** and never references cached or previously uploaded files.
+* Invalidate all browser, application, and memory caches related to the icon upload whenever a new upload occurs.
+* Maintain a one-to-one mapping between upload slots and SVG files, ensuring each slot always displays the correct current icon.
+* Apply this replacement logic consistently to the editor preview, PDF proof, final PDF generation, and all future exports.
 
-Copied from: Editing Kids-Fact-Book-Images/gemini-prompt-18.txt at main · teampkworld/Kids-Fact-Book-Images - <https://github.com/teampkworld/Kids-Fact-Book-Images/edit/main/gemini-prompt-18.txt>
+### Expected Behavior
+
+* **New upload → Completely remove old icons → Load only new icons.**
+* **Empty upload slot → Empty output (or default placeholder), never an old cached icon.**
+* **No previous SVG icon should ever appear unless it is part of the current upload set.**
