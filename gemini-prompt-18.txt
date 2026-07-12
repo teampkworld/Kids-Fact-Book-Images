@@ -1,0 +1,14 @@
+
+> **Fix the image upload logic across the entire app.** Currently, whenever a user uploads new images, the application sometimes continues to use previously uploaded (cached or stored) images instead of the newly selected ones. The old images are not being completely removed, causing outdated images to appear in the output.
+>
+> Implement a robust image management workflow so that **every new upload starts with a clean state**. Before processing or storing any newly uploaded images:
+>
+> 1. Completely remove all previously uploaded images from memory, state, cache, temporary storage, and any references associated with the previous upload.
+> 2. Clear the image cache to prevent stale or cached images from being reused.
+> 3. Reset the upload state and image references before accepting new files.
+> 4. Store and process **only the newly uploaded images**.
+> 5. Ensure that all previews, processing pipelines, AI generation, and output use **only the latest uploaded images**, with zero possibility of old images appearing.
+> 6. If multiple upload sections exist in the app, apply this logic consistently to **every image upload component**.
+> 7. Add proper cleanup logic when images are replaced, removed, or when the user starts a new upload session, ensuring there are no stale image references, memory leaks, or cached assets.
+>
+> **Expected behavior:** Every time the user uploads new images, the application must completely discard all previous images and their references, refresh the upload state, and process only the newly uploaded images. Under no circumstances should images from any previous upload session appear in previews, processing, or final output.
