@@ -1,0 +1,108 @@
+### Required Implementation Logic
+
+I have specified below exactly where the SVG transparent images should be placed in the **Kids Facts Book**. Follow these instructions precisely and preserve the existing page design.
+
+#### General Requirements
+
+* Keep the existing page border exactly as it is on all of these pages.
+* Insert the SVG transparent images **inside the bordered content area** only.
+* Render every SVG at **2000 × 2679 px (HD)** while preserving its original vector quality.
+* Maintain the original aspect ratio.
+* Do not crop, stretch, distort, or compress the images.
+* Center each image perfectly within the bordered area.
+* Follow Amazon KDP **8.5 × 11 inch (21.59 cm × 27.94 cm)** print standards, including proper **safe margins** and **full-bleed** requirements.
+* Ensure the images fit naturally inside the border without touching the page edges or overlapping the border.
+* Preserve the SVG transparency and render the images with crisp, print-quality vector clarity.
+
+### Page Placement Order
+
+Locate the section titled:
+
+**"PREPARE TO MINI-DISCOVER MAJOR SECRETS!"**
+
+This section contains **two pages**.
+
+Immediately **after these two pages**, insert the following pages in this exact sequence:
+
+#### Page 1
+
+Display:
+
+`01-MY FAVORITE FACTS.svg`
+
+Image URL:
+
+`https://raw.githubusercontent.com/teampkworld/Kids-Fact-Book-Images/refs/heads/main/01-MY%20FAVORITE%20FACTS.svg`
+
+#### Page 2
+
+Display the **same image again**:
+
+`01-MY FAVORITE FACTS.svg`
+
+---
+
+#### Page 3
+
+Display:
+
+`02-FACT EXPLORER CHALLENGE.svg`
+
+Image URL:
+
+`https://raw.githubusercontent.com/teampkworld/Kids-Fact-Book-Images/refs/heads/main/02-FACT%20EXPLORER%20CHALLENGE.svg`
+
+#### Page 4
+
+Display the **same image again**:
+
+`02-FACT EXPLORER CHALLENGE.svg`
+
+---
+
+#### Page 5
+
+Display:
+
+`03-AMAZING FACT COLLECTOR.svg`
+
+Image URL:
+
+`https://raw.githubusercontent.com/teampkworld/Kids-Fact-Book-Images/refs/heads/main/03-AMAZING%20FACT%20COLLECTOR.svg`
+
+#### Page 6
+
+Display the **same image again**:
+
+`03-AMAZING FACT COLLECTOR.svg`
+
+### Final Sequence
+
+```
+PREPARE TO MINI-DISCOVER MAJOR SECRETS!
+(Page 1)
+(Page 2)
+
+↓
+
+01-MY FAVORITE FACTS
+01-MY FAVORITE FACTS
+
+↓
+
+02-FACT EXPLORER CHALLENGE
+02-FACT EXPLORER CHALLENGE
+
+↓
+
+03-AMAZING FACT COLLECTOR
+03-AMAZING FACT COLLECTOR
+```
+
+### Rendering Requirements
+
+* Each SVG must occupy its own full page.
+* Each image must appear **exactly twice consecutively** before moving to the next image.
+* Do not modify the existing page border, layout, margins, or typography.
+* Ensure all inserted pages maintain the same visual style as the rest of the book.
+* The final PDF should be fully print-ready for Amazon KDP, with sharp, high-resolution SVG rendering and consistent page formatting throughout.
