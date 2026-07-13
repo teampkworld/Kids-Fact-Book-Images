@@ -13,6 +13,8 @@ I have specified below exactly where the SVG transparent images should be placed
 * Follow Amazon KDP **8.5 × 11 inch (21.59 cm × 27.94 cm)** print standards, including proper **safe margins** and **full-bleed** requirements.
 * Ensure the images fit naturally inside the border without touching the page edges or overlapping the border.
 * Preserve the SVG transparency and render the images with crisp, print-quality vector clarity.
+**If an image is larger than the page, automatically resize it proportionally to fit within the page while preserving its original aspect ratio and image quality. Ensure the final output remains sharp, high-resolution, and print-ready without stretching, cropping, or distortion.**
+
 
 ### Page Placement Order
 
