@@ -6,7 +6,6 @@ I have specified below exactly where the SVG transparent images should be placed
 
 * Keep the existing page border exactly as it is on all of these pages.
 * Insert the SVG transparent images **inside the bordered content area** only.
-* Render every SVG at **2000 × 2679 px (HD)** while preserving its original vector quality.
 * Maintain the original aspect ratio.
 * Do not crop, stretch, distort, or compress the images.
 * Center each image perfectly within the bordered area.
