@@ -1,6 +1,6 @@
 ### Required Fix: Embed SVG Images Correctly into the Generated PDF
 
-In the previous implementation, the application correctly created the required pages in the book, but the SVG transparent images were **not actually embedded**. As a result, the generated PDF contains blank pages where the images should appear.
+In the previous implementation, the application correctly created the required pages in the book, but the SVG transparent images (01-MY FAVORITE FACTS → 02-FACT EXPLORER CHALLENGE → 03-AMAZING FACT COLLECTOR) were **not actually embedded**. As a result, the generated PDF contains blank pages where the images should appear.
 
 Implement the following logic to resolve this issue:
 
