@@ -1,0 +1,27 @@
+**Increase the size of the main illustration on each of the pages listed below to a medium size while preserving its original aspect ratio, transparency, and image quality. Keep every other element on the page exactly the same, including the layout, typography, colors, spacing, alignment, and page structure.**
+
+**Layout Logic:**
+
+* Increase only the specified illustration size.
+* Automatically adjust the surrounding layout, spacing, and text flow so all content fits neatly on the same page.
+* Do not move any content to a new page.
+* Do not crop, stretch, or distort the illustrations.
+* Preserve the original page margins, safe areas, and KDP print layout.
+* Maintain a balanced, professional appearance after resizing.
+
+**Apply this change only to the following pages:**
+
+1. **WELCOME TO THE WORLD OF WONDER!**
+2. **HOW TO USE THIS BOOK**
+3. **LEVEL 1**
+4. **LEVEL 2**
+5. **LEVEL 3**
+6. **LEVEL 4**
+7. **LEVEL 5**
+8. **LEVEL — FACT DETECTIVE QUIZ**
+9. **ULTIMATE AMAZING FACT CHAMPIONSHIP**
+10. **SUPER FACT MASTER CERTIFICATE**
+11. **THANK YOU FOR EXPLORING!**
+12. **MORE FUN FACT BOOKS FROM DREAM ORBIT**
+
+**No other pages or design elements should be modified. Only enlarge the main illustrations on the pages listed above and ensure the remaining content automatically reflows to maintain the original page layout and professional KDP formatting.**
