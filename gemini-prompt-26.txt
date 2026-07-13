@@ -1,0 +1,17 @@
+### Required Fix: Embed SVG Images Correctly into the Generated PDF
+
+In the previous implementation, the application correctly created the required pages in the book, but the SVG transparent images were **not actually embedded**. As a result, the generated PDF contains blank pages where the images should appear.
+
+Implement the following logic to resolve this issue:
+
+* Download and load each SVG image directly from the provided URL before generating the PDF.
+* Verify that the SVG file has been successfully loaded. If loading fails, display an error instead of generating a blank page.
+* Embed the SVG itself into the PDF—do not create an empty placeholder page.
+* Render the SVG at high quality while preserving its vector format, transparency, and original aspect ratio.
+* Automatically scale the image to fit within the printable area while maintaining Amazon KDP safe margins. Do not stretch, crop, or distort the image.
+* Center the image horizontally and vertically inside the existing page border.
+* Ensure each page contains exactly one embedded SVG image and that no blank pages are generated.
+* Preserve the existing page border, layout, and formatting exactly as they are.
+* Apply this logic to every SVG image inserted into the book.
+* Before exporting the PDF, validate that each inserted page contains a successfully rendered SVG. If any image is missing, stop PDF generation and report which image failed to load instead of producing an incomplete PDF.
+* The final PDF must display all linked SVG images exactly as intended, with crisp vector quality, transparent backgrounds, and professional print-ready output.
