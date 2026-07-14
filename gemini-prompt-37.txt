@@ -1,4 +1,4 @@
-Remove all previously hardcoded or default SVG transparent icons that were mapped in the "MAP OF YOUR ADVENTURE" → Bulk SVG Upload (Index) section. Completely remove every reference to these default icons from the application, including all caches, memory, storage, default mappings, fallback references, and any initialization logic. After this change, none of the old default SVG icons should ever be loaded or used again.
+Remove all previously hardcoded or default 17 SVG transparent icons that were mapped in the "MAP OF YOUR ADVENTURE" → Bulk SVG Upload (Index) section. Completely remove every reference to these default icons from the application, including all caches, memory, storage, default mappings, fallback references, and any initialization logic. After this change, none of the old default SVG icons should ever be loaded or used again.
 
 From now on, the user-uploaded SVG transparent icons will become the new default icon set for the current project. When the user uploads a new set of SVG icons, those icons must automatically replace the previous set and become the only icons used throughout the application and during PDF generation.
 
