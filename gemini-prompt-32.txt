@@ -1,0 +1,19 @@
+**Required Fix: Index Pagination and Layout**
+
+The current **Index pages are not being paginated correctly**. As shown in the attached screenshot, hundreds of index entries are being rendered on the same page, causing severe text overlap, overflowing content, unreadable text, and broken layout.
+
+Implement the following pagination logic:
+
+* Before rendering an Index page, calculate the available printable space inside the page margins.
+* Limit each Index page to **approximately 45–70 entries**, depending on the font size, line spacing, and available page height.
+* When the current page reaches its maximum capacity, automatically create a **new Index page** and continue with the remaining entries.
+* Never allow entries to overflow beyond the printable area.
+* Never allow text to overlap with other entries, section headings, borders, page numbers, or the page footer.
+* Keep each alphabetical heading (A, B, C, etc.) together with its related entries whenever possible. If there is not enough space, move the heading and its entries to the next page rather than splitting them awkwardly.
+* Preserve consistent typography, spacing, indentation, dot leaders, page-number alignment, borders, margins, and page numbering across all Index pages.
+* Perform automatic page-break calculations based on the actual rendered height of each entry, not on a fixed number of items.
+* Validate the layout before exporting the PDF to ensure no text is clipped, overlapped, or rendered outside the printable area.
+
+**Expected Result**
+
+Every Index page should be clean, readable, and professionally formatted. Entries should flow naturally across multiple pages, with no overlapping text, no cut-off content, and full compliance with Amazon KDP print standards.
