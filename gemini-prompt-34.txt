@@ -103,3 +103,6 @@ Pages:
 * Ensure every illustration is rendered at full resolution with sharp vector quality in the exported PDF.
 
 **Important:** Only increase the illustration size. Do **not** modify the page layout, text content, typography, headings, or page order.
+
+#### 5. Change the **"Think about it:"** label inside every fact box to *italic* formatting throughout the book.
+
