@@ -1,0 +1,105 @@
+
+#### 1. Index Page Typography
+
+Update the typography rules for all **Index pages**.
+
+* Display every **Index Entry (Topic)** (e.g., **Animals**, **Birds**, **Butterflies**, **Blue Whales**, **Mathematics**, **Technology**) in **Bold**.
+* Display all **Page References** (e.g., `6, 9, 14, 17, 23`) in **Regular/Normal** font weight.
+* Keep the leader dots (`..............`) in normal weight.
+* Maintain consistent spacing between the topic name, leader dots, and page numbers.
+* Ensure wrapped page references remain aligned beneath the first line without affecting the bold topic text.
+* Apply this formatting consistently across every Index page.
+
+---
+
+#### 2. Embed All Fonts in the PDF
+
+Perform a complete audit of the PDF generation process.
+
+* Verify that **every font used anywhere in the book is embedded** in the exported PDF.
+* This includes:
+
+  * Running headers
+  * Page numbers
+  * Titles
+  * Subtitles
+  * Body text
+  * Fact headings
+  * "How it works:"
+  * "Think about it:"
+  * Index titles
+  * Alphabetical headings
+  * Index entries
+  * Page references
+  * Table of Contents / MAP OF YOUR ADVENTURE
+  * Quiz pages
+  * Certificate pages
+  * Copyright pages
+* Do not allow any fonts to fall back to system fonts.
+* Ensure the exported PDF passes Amazon KDP font embedding requirements.
+
+---
+
+#### 3. Fix the "MAP OF YOUR ADVENTURE" Page
+
+The current output is incorrect.
+
+According to the attached reference screenshot, the page should display:
+
+* All uploaded SVG icons.
+* All section headings.
+* Leader dots.
+* Page numbers.
+* Proper typography.
+* Proper spacing.
+* Correct icon alignment.
+
+**Current Issue**
+
+The generated page is missing the icons and/or headings, resulting in an incomplete or nearly empty page.
+
+**Required Logic**
+
+* Deeply inspect the rendering pipeline for the **MAP OF YOUR ADVENTURE** page.
+* Verify that every mapped SVG icon is successfully loaded before PDF generation.
+* Ensure icons are rendered as vector graphics (not rasterized placeholders).
+* Verify that headings are drawn after the icons so they remain visible.
+* Prevent rendering layers from hiding or clipping the icons or text.
+* If an icon fails to load, display the mapped fallback icon instead of leaving an empty space.
+* Confirm that all icons, headings, leader dots, and page numbers appear exactly as shown in the reference layout.
+
+---
+
+#### 4. Increase Illustration Size on the Following Pages
+
+Increase only the illustration size on the pages listed below.
+
+The text content, typography, and page structure must remain unchanged.
+
+Pages:
+
+* WELCOME TO WONDER!
+* HOW TO USE THIS BOOK
+* LEVEL 1 — CURIOUS BEGINNERS
+* LEVEL 2 — KNOWLEDGE SEEKERS
+* LEVEL 3 — FACT DETECTIVES
+* LEVEL 4 — ULTIMATE EXPLORERS
+* LEVEL 5 — SUPREME FACT MASTERS
+* LEVEL 1 TO 5 FACT DETECTIVE QUIZ PAGES
+* ULTIMATE FACT CHAMPIONSHIP QUIZ
+* SUPER MASTER CERTIFICATE BADGE
+* THANK YOU FOR EXPLORING!
+* MORE FUN BOOKS FROM DREAM ORBIT
+
+**Required Logic**
+
+* Scale each illustration proportionally while preserving its original aspect ratio.
+* Increase the image size to occupy more of the available page space without overlapping text.
+* Maintain consistent spacing between the illustration and surrounding content.
+* Recalculate text alignment after image scaling.
+* Preserve all existing page borders.
+* Maintain Amazon KDP bleed and safe-margin requirements.
+* Prevent any part of the illustration from being clipped or extending beyond the printable area.
+* Ensure every illustration is rendered at full resolution with sharp vector quality in the exported PDF.
+
+**Important:** Only increase the illustration size. Do **not** modify the page layout, text content, typography, headings, or page order.
