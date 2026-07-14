@@ -1,7 +1,4 @@
-1). Some pages in the book that are intended to have a border are missing it. Review the entire book and identify every page where a border should be present. Apply the correct border consistently to all such pages, ensuring it matches the existing border style, thickness, spacing, alignment, and margins. Maintain Amazon KDP safe margins and ensure the border is rendered uniformly throughout the book without affecting the page layout or content.**
-
---------------------------------------------------
-2). 
+1). 
 IMPORTANT INDEX LAYOUT RULES
 
 DO NOT attempt to fit the entire index onto one page.
