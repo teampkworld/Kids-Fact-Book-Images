@@ -1,0 +1,63 @@
+In every Kids Facts Book, the section **"PREPARE TO MINI-DISCOVER MAJOR SECRETS!"** consists of **two pages**. Immediately **after these two pages**, insert the following **three additional pages** in the exact order below:
+
+1. **MY FAVORITE FACTS**
+2. **FACT EXPLORER CHALLENGE**
+3. **AMAZING FACT COLLECTOR**
+
+This structure must be applied consistently to **every current and future book**.
+
+### Index & Page Number Logic
+
+After these three pages are inserted:
+
+* Automatically calculate their actual page numbers during PDF generation.
+* Add all three page titles to both the **MAP OF YOUR ADVENTURE** page and the **Alphabetical Subject Index** (where applicable).
+* The page numbers shown in the index must always reflect their actual locations in the final PDF.
+* If pages are added or removed anywhere in the book, these page numbers must automatically update.
+
+### MAP OF YOUR ADVENTURE Icon Mapping
+
+The **"MAP OF YOUR ADVENTURE" → Bulk SVG Upload (Index)** section contains user-uploaded transparent SVG icons.
+
+Map the uploaded SVG icons according to the following **fixed filename-to-index mapping**. Use the uploaded SVG whose filename exactly matches the required icon name.
+
+| MAP OF YOUR ADVENTURE Item               | Required SVG Icon      |
+| ---------------------------------------- | ---------------------- |
+| WELCOME TO WONDER!                       | Waving Hand.svg        |
+| HOW TO USE THIS BOOK                     | Checklist.svg          |
+| TABLE OF CONTENTS                        | Open Book.svg          |
+| THE GREAT DISCOVERY JOURNEY BEGINS HERE! | Compass.svg            |
+| THE ADVENTURE OF DISCOVERY CONTINUES!    | Footprints.svg         |
+| LEVEL 1 — CURIOUS BEGINNERS              | Light bulb.svg         |
+| LEVEL 2 — KNOWLEDGE SEEKERS              | Magnifying glass.svg   |
+| LEVEL 3 — FACT DETECTIVES                | Detective_hat.svg      |
+| LEVEL 4 — ULTIMATE EXPLORERS             | Telescope.svg          |
+| LEVEL 5 — SUPREME FACT MASTERS           | Treasure map.svg       |
+| PREPARE TO MINI-DISCOVER MAJOR SECRETS!  | Treasure chest.svg     |
+| **MY FAVORITE FACTS**                    | **Favorite_facts.svg** |
+| **FACT EXPLORER CHALLENGE**              | **Fact_Explorer.svg**  |
+| **AMAZING FACT COLLECTOR**               | **Fact_collector.svg** |
+| FINAL SECRET DISCOVERIES!                | Classic key.svg        |
+| ULTIMATE FACT CHAMPIONSHIP QUIZ          | Clipboard.svg          |
+| SUPER MASTER CERTIFICATE BADGE           | Award ribbon badge.svg |
+| KNOWLEDGE QUIZ ANSWER KEY                | Classic key.svg        |
+| ALPHABETICAL SUBJECT INDEX               | Index.svg              |
+| THANK YOU FOR EXPLORING!                 | Heart.svg              |
+| MORE FUN BOOKS FROM DREAM ORBIT          | Books.svg              |
+
+### Rendering Requirements
+
+* Render all uploaded SVG icons as high-quality vector graphics.
+* Preserve transparency and render the icon artwork as a clean black silhouette.
+* Maintain consistent icon size, alignment, spacing, and vertical centering across every entry.
+* Do not substitute icons unless the required filename is missing.
+* If the required SVG file is not uploaded, leave the icon placeholder empty or display a controlled warning instead of using an incorrect icon.
+
+### Expected Result
+
+Every generated Kids Facts Book must automatically:
+
+* Insert the three pages (**MY FAVORITE FACTS**, **FACT EXPLORER CHALLENGE**, and **AMAZING FACT COLLECTOR**) immediately after the **PREPARE TO MINI-DISCOVER MAJOR SECRETS!** section.
+* Display all three pages in the **MAP OF YOUR ADVENTURE** page with the correct dynamically calculated page numbers.
+* Display the correct uploaded SVG icon beside each new entry according to the fixed mapping above.
+* Keep the index, page numbers, and icon mappings synchronized automatically for all future books without requiring manual updates.
