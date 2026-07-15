@@ -11,5 +11,61 @@ Implement the following logic:
 * Ensure wrapped page references align correctly beneath the first line without affecting the topic text.
 * Apply the same font size and formatting consistently across every Index page.
 * Ensure the final typography complies with Amazon KDP print standards, providing a clean, balanced, and professional appearance with no overlapping or clipped text.
-2.) Starting from the **ULTIMATE FACT CHAMPIONSHIP QUIZ** page, remove **only the three pages immediately preceding it**. These three pages should no longer appear in the current book or in any future books. Update the book generation logic so they are never created automatically again. Do not modify anything else—the remaining pages, page order, content, layout, embedded SVG images, formatting, page numbering, and all other book elements must remain exactly the same.
+
+2.) Required Enhancement: "MAP OF YOUR ADVENTURE" Marker Selection Logic
+
+Currently, the **"MAP OF YOUR ADVENTURE"** page supports only one display mode, where the SVG transparent icons uploaded by the user through the **"MAP OF YOUR ADVENTURE Bulk SVG Upload (Index)"** section are mapped to each index item.
+
+Enhance this feature by adding a second display mode, allowing the user to choose between **SVG Icons** and **Bullet Points**.
+
+### Add a New Marker Style Option
+
+Create a new setting named:
+
+**Marker Style**
+
+Provide the following two options:
+
+* **SVG Icons**
+* **Bullet Points**
+
+### Logic
+
+* If the user selects **SVG Icons**, map the uploaded transparent SVG icons from the **"MAP OF YOUR ADVENTURE Bulk SVG Upload (Index)"** section to the corresponding items on the **"MAP OF YOUR ADVENTURE"** page using the existing icon-mapping logic.
+* If the user selects **Bullet Points**, ignore the uploaded SVG icons completely and display clean, professional bullet points for every index item instead.
+* Only one marker style may be active at a time.
+* Switching between **SVG Icons** and **Bullet Points** should update the preview immediately without requiring the user to regenerate the project.
+* The selected marker style must also be applied consistently in the PDF preview, final PDF, and all future export formats.
+
+### Bullet Point Requirements
+
+When **Bullet Points** is selected:
+
+* Use a clean, professional bullet style.
+* Apply the same bullet style to every index item.
+* Maintain consistent size, alignment, indentation, spacing, and vertical centering.
+* Ensure the bullets match the overall typography and layout of the page.
+
+### SVG Icon Requirements
+
+When **SVG Icons** is selected:
+
+* Continue using the uploaded transparent SVG icons.
+* Preserve the existing icon-to-index mapping.
+* Maintain consistent icon size, spacing, alignment, and vector quality.
+* Render only the uploaded SVG icons.
+
+### Expected Behavior
+
+**Marker Style = SVG Icons**
+
+* Display uploaded SVG icons beside each index item.
+* Hide bullet points.
+
+**Marker Style = Bullet Points**
+
+* Display bullet points beside each index item.
+* Hide all SVG icons.
+
+At any time, only the user-selected marker style should appear on the **"MAP OF YOUR ADVENTURE"** page, ensuring a clean, consistent, and predictable layout.
 
