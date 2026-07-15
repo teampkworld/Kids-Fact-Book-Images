@@ -1,4 +1,4 @@
-Reduce the **Page References** font size on all **Index pages** to a professional, KDP-friendly size while maintaining excellent readability and a clean layout.
+1.) Reduce the **Page References** font size on all **Index pages** to a professional, KDP-friendly size while maintaining excellent readability and a clean layout.
 
 Implement the following logic:
 
@@ -11,3 +11,5 @@ Implement the following logic:
 * Ensure wrapped page references align correctly beneath the first line without affecting the topic text.
 * Apply the same font size and formatting consistently across every Index page.
 * Ensure the final typography complies with Amazon KDP print standards, providing a clean, balanced, and professional appearance with no overlapping or clipped text.
+2.) Starting from the **ULTIMATE FACT CHAMPIONSHIP QUIZ** page, remove **only the three pages immediately preceding it**. These three pages should no longer appear in the current book or in any future books. Update the book generation logic so they are never created automatically again. Do not modify anything else—the remaining pages, page order, content, layout, embedded SVG images, formatting, page numbering, and all other book elements must remain exactly the same.
+
