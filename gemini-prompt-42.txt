@@ -1,0 +1,13 @@
+Reduce the **Page References** font size on all **Index pages** to a professional, KDP-friendly size while maintaining excellent readability and a clean layout.
+
+Implement the following logic:
+
+* Reduce the font size of **Page References** (e.g., `6, 9, 14, 17, 25...`) so they are slightly smaller than the **Index Entry (Topic)** text.
+* Keep **Index Entry (Topic)** names (e.g., **Animals**, **Birds**, **Mathematics**) in **bold**.
+* Keep **Page References** in **regular (normal)** font weight.
+* Maintain a clear visual hierarchy where the topic name stands out and the page numbers remain easy to read.
+* Automatically adjust the font size based on the available column width to prevent overflow or excessive line wrapping.
+* Preserve consistent spacing between the topic name, leader dots, and page references.
+* Ensure wrapped page references align correctly beneath the first line without affecting the topic text.
+* Apply the same font size and formatting consistently across every Index page.
+* Ensure the final typography complies with Amazon KDP print standards, providing a clean, balanced, and professional appearance with no overlapping or clipped text.
