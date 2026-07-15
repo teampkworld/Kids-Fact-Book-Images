@@ -1,0 +1,41 @@
+ add **"MAP OF YOUR ADVENTURE"** index page after exact "HOW TO USE THIS BOOK" page. Each index item is assigned the most suitable icon by concept.
+
+i have provided a detailed icon-mapping structure that specifies exactly which uploaded SVG filename corresponds to each "MAP OF YOUR ADVENTURE" page heading. if user upload svg transparent image to "MAP OF YOUR ADVENTURE" Bulk SVG Upload (Index) section, Match the user uploaded svg filenames to the corresponding index items exactly as shown in the mapping below, and use only these uploaded SVG icons when generating the output PDF. Do not use any old, default, or fallback icons.
+
+MAP OF YOUR ADVENTURE Item → Required SVG Icon
+_________________________________________________
+WELCOME TO WONDER! → Waving Hand.svg
+HOW TO USE THIS BOOK → Checklist.svg
+TABLE OF CONTENTS → Open Book.svg
+THE GREAT DISCOVERY JOURNEY BEGINS HERE! → Compass.svg
+THE ADVENTURE OF DISCOVERY CONTINUES! → Footprints.svg
+LEVEL 1 — CURIOUS BEGINNERS → Light bulb.svg
+LEVEL 2 — KNOWLEDGE SEEKERS → Magnifying glass.svg
+LEVEL 3 — FACT DETECTIVES → Detective_hat.svg
+LEVEL 4 — ULTIMATE EXPLORERS → Telescope.svg
+LEVEL 5 — SUPREME FACT MASTERS → Treasure map.svg
+PREPARE TO MINI-DISCOVER MAJOR SECRETS! → Treasure chest.svg
+MY FAVORITE FACTS → Favorite_facts.svg
+FACT EXPLORER CHALLENGE → Fact_Explorer.svg
+AMAZING FACT COLLECTOR → Fact_collector.svg
+FINAL SECRET DISCOVERIES! → Classic key.svg
+ULTIMATE FACT CHAMPIONSHIP QUIZ → Clipboard.svg
+SUPER MASTER CERTIFICATE BADGE → Award ribbon badge.svg
+KNOWLEDGE QUIZ ANSWER KEY → Classic key.svg
+ALPHABETICAL SUBJECT INDEX → Index.svg
+THANK YOU FOR EXPLORING! → Heart.svg
+MORE FUN BOOKS FROM DREAM ORBIT → Books.svg
+
+### AI Coder Logic Prompt
+
+* Use only the uploaded **black silhouette SVG icons**.
+* Match icons **exactly by filename**, not by visual similarity.
+* Keep all icons at a consistent size for an 8.5 × 11 inch KDP interior).
+* Maintain identical vertical alignment with the text baseline.
+* Preserve equal left padding, spacing, and margins for every index row.
+* Do not stretch, crop, or recolor the SVGs.
+* Render all icons using their original transparent SVG files.
+* Use the same icon consistently for the same index item across every PDF generation.
+* Do not substitute another icon if the mapped SVG already exists.
+
+This mapping provides a consistent visual language throughout the Kids Facts Book while matching the concept of each section using your uploaded SVG icon set.
