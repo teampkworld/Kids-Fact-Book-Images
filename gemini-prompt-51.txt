@@ -2,7 +2,7 @@
 
 2).Remove the "Icon & Illustration Style" Section Completely
 
-**Completely remove the entire "Icon & Illustration Style" section from the application.** This removal must be comprehensive and include **every related component, dependency, and reference**, leaving no residual code or functionality behind.
+**Completely remove the entire "Icon & Illustration Style" section from the application.** This removal must be comprehensive and include **every related component, dependency, and reference**, leaving no residual code or functionality behind. i attached screenshot for your clarification.
 
 #### Remove all of the following:
 
