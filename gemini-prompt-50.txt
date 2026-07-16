@@ -1,6 +1,6 @@
 1. Replace the "MAP OF YOUR ADVENTURE" Page with a New Table of Contents
 
-Remove the existing **"MAP OF YOUR ADVENTURE"** page completly (entirly) from the application and replace it with a **new Book Table of Contents** page in the exact same location within the book. This is a complete feature replacement, not a modification of the existing page.
+Remove the existing **"MAP OF YOUR ADVENTURE"** page (5th page) completly (entirly) from the application and replace it with a **new Book Table of Contents** page in the exact same location within the book. This is a complete feature replacement, not a modification of the existing page. i attached screenshot for your clarification.
 
 #### Remove the Existing "MAP OF YOUR ADVENTURE" Feature
 
