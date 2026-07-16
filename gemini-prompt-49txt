@@ -17,7 +17,7 @@ Remove the "Icon & Illustration Style" Section Completely
 * All validation logic, processing pipelines, rendering logic, preview generation, and export logic related to this feature.
 * All cache handling, temporary files, local storage, session storage, IndexedDB entries, object URLs, memory references, and cleanup logic associated with this section.
 * All imports, exports, routes, constants, configuration files, assets, icons, illustrations, images, stylesheets, CSS classes, and dependencies that are used only by this feature.
-* Remove any feature flags, conditional rendering, menu items, navigation links, or toolbar actions that reference this section.
+* Remove any embeded icons, in the cash memory icons,  feature flags, conditional rendering, menu items, navigation links, or toolbar actions that reference this section.
 
 #### Cleanup Requirements
 
