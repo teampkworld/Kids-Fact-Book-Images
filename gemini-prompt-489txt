@@ -1,0 +1,35 @@
+Remove the "Icon & Illustration Style" Section Completely
+
+**Completely remove the entire "Icon & Illustration Style" section from the application.** This removal must be comprehensive and include **every related component, dependency, and reference**, leaving no residual code or functionality behind. i attached screenshot for your clarification.
+
+#### Remove all of the following:
+
+* The complete **"Icon & Illustration Style"** section and its container.
+* All UI elements, panels, cards, tabs, accordions, and layouts belonging to this section.
+* All upload controls and file pickers.
+* All SVG icon upload functionality.
+* All illustration upload functionality.
+* All image upload functionality.
+* All previews, thumbnails, galleries, and preview components.
+* All icon mappings, illustration mappings, and related configuration logic.
+* All settings, options, toggles, selectors, dropdowns, checkboxes, sliders, and buttons associated with this section.
+* All helper functions, services, hooks, utilities, state management, reducers, contexts, and event handlers used exclusively by this section.
+* All validation logic, processing pipelines, rendering logic, preview generation, and export logic related to this feature.
+* All cache handling, temporary files, local storage, session storage, IndexedDB entries, object URLs, memory references, and cleanup logic associated with this section.
+* All imports, exports, routes, constants, configuration files, assets, icons, illustrations, images, stylesheets, CSS classes, and dependencies that are used only by this feature.
+* Remove any feature flags, conditional rendering, menu items, navigation links, or toolbar actions that reference this section.
+
+#### Cleanup Requirements
+
+* Remove all unused code, imports, variables, types, interfaces, functions, and dependencies created by this removal.
+* Ensure there are no broken references, compilation errors, runtime errors, console warnings, or dead code after the cleanup.
+* Update the application so that no hidden or orphaned logic related to **"Icon & Illustration Style"** remains.
+
+#### Preserve Everything Else
+
+This change must **only** remove the **"Icon & Illustration Style"** feature.
+
+* Do **not** modify any other section of the application.
+* Do **not** change the UI layout, styling, navigation, workflows, or functionality of any remaining feature.
+* Do **not** rename, reorder, or alter any unrelated components.
+* All remaining features, application structure, behavior, performance, and user experience must remain **exactly the same** as before.
