@@ -1,0 +1,308 @@
+### **Fix the Workflow – Replace the Current "MAP OF YOUR ADVENTURE" Icon System**
+
+The previous implementation is incorrect. The application is **not following the required workflow**. Do **not** patch the existing code. Instead, **replace the entire icon-loading workflow** with the logic below.
+
+---
+
+## Step 1 – Remove the Existing Workflow
+
+Completely remove the current **"MAP OF YOUR ADVENTURE"** icon workflow.
+
+Delete all existing:
+
+* Hardcoded icon mappings
+* Default icon arrays
+* Previous SVG upload logic
+* Old icon lookup functions
+* Cached SVG references
+* Memory references
+* Local storage/session storage entries
+* Object URLs
+* Fallback icon logic
+* Previous initialization code
+
+After this cleanup, the application should have **no remaining knowledge** of the previous icon system.
+
+---
+
+# Step 2 – Create a New Default Icon Library
+
+Instead of uploading icons or loading bundled assets, create a **new default icon library** using the GitHub Raw SVG URLs.
+
+The GitHub URLs become the **single source of truth**.
+
+The application must never search elsewhere.
+
+---
+
+# Step 3 – Create a Dictionary (Key → URL)
+
+Do **not** use arrays or indexes.
+
+Create a dictionary/object where:
+
+```
+Heading Name
+↓
+
+SVG URL
+```
+
+Example
+
+```
+WELCOME TO WONDER!
+↓
+
+https://raw.githubusercontent.com/teampkworld/Files/main/Index-Icons/Waving%20Hand.svg
+```
+
+Every heading must have exactly one URL.
+
+Never rely on array position.
+
+Never rely on upload order.
+
+Never rely on image numbering.
+
+---
+
+# Step 4 – Render Using the Heading Name
+
+When generating the **MAP OF YOUR ADVENTURE** page:
+
+For each heading:
+
+```
+Current Heading
+
+↓
+
+Find Heading in Dictionary
+
+↓
+
+Get SVG URL
+
+↓
+
+Download SVG
+
+↓
+
+Render SVG
+
+↓
+
+Render Heading
+
+↓
+
+Render Page Number
+```
+
+Do **NOT** search by index.
+
+Do **NOT** search by position.
+
+Search only by the heading text.
+
+---
+
+# Step 5 – Download SVG Automatically
+
+When a heading is rendered:
+
+```
+Heading
+
+↓
+
+Dictionary
+
+↓
+
+URL
+
+↓
+
+Download SVG
+
+↓
+
+Convert SVG
+
+↓
+
+Render into PDF
+```
+
+Do not expect the user to upload icons.
+
+The icons already exist online.
+
+---
+
+# Step 6 – Cache Correctly
+
+When an SVG downloads successfully
+
+```
+Download SVG
+
+↓
+
+Save to Cache
+
+↓
+
+Reuse Cache
+
+↓
+
+If Cache Missing
+
+↓
+
+Download Again
+```
+
+Never cache broken SVGs.
+
+Never cache failed downloads.
+
+---
+
+# Step 7 – Handle Errors Gracefully
+
+If one SVG fails:
+
+```
+Continue Rendering
+
+↓
+
+Log Error
+
+↓
+
+Load Remaining Icons
+```
+
+One missing icon must **not** stop PDF generation.
+
+---
+
+# Step 8 – Render at High Quality
+
+Every SVG must:
+
+* remain vector
+* keep transparency
+* preserve original viewBox
+* preserve fills
+* preserve strokes
+* never rasterize
+* never blur
+* never pixelate
+
+---
+
+# Step 9 – Keep Size Consistent
+
+Every icon should render using one shared size.
+
+Example workflow:
+
+```
+Load SVG
+
+↓
+
+Scale to Standard Size
+
+↓
+
+Maintain Aspect Ratio
+
+↓
+
+Center Vertically
+
+↓
+
+Render
+```
+
+Never stretch icons.
+
+Never distort icons.
+
+---
+
+# Step 10 – Validate Before Export
+
+Before creating the PDF:
+
+Verify that
+
+✓ Every heading exists in the dictionary.
+
+✓ Every heading has one matching SVG URL.
+
+✓ Every SVG downloads successfully or loads from cache.
+
+✓ Every icon is rendered.
+
+✓ Every heading displays the correct icon.
+
+✓ No heading is missing an icon.
+
+✓ No incorrect icon is displayed.
+
+---
+
+# Step 11 – Permanent Workflow
+
+From now on, the workflow must always be:
+
+```
+Heading
+
+↓
+
+Dictionary Lookup
+
+↓
+
+GitHub Raw URL
+
+↓
+
+Download SVG
+
+↓
+
+Cache SVG
+
+↓
+
+Render SVG
+
+↓
+
+Generate PDF
+```
+
+The application must **never** use:
+
+* hardcoded images
+* bundled SVG assets
+* previous upload logic
+* default icon arrays
+* array indexes
+* icon position matching
+* filename guessing
+* fallback icons from old code
+
+The **only** valid source for the **"MAP OF YOUR ADVENTURE"** icons is the predefined **Heading → GitHub Raw SVG URL** mapping. This workflow must be used consistently every time the PDF is generated.
