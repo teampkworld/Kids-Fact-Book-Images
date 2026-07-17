@@ -1,6 +1,6 @@
 ### Fix the "TABLE OF CONTENTS" Page Generation Logic
 
-The **TABLE OF CONTENTS** page must always generate **identically on every computer**. The same project, data, and code must always produce the exact same Table of Contents page without any missing entries, blank areas, or layout inconsistencies.
+The **TABLE OF CONTENTS** page must always generate **identically on every computer**. The same project, data, and code must always produce the exact same Table of Contents page without any missing entries, blank areas, or layout inconsistencies. i attached two system geneated table of content pages screenshots for your clarification 
 
 #### Required Logic
 
