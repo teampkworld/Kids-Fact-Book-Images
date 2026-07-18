@@ -1,0 +1,12 @@
+Increase the size of the **SVG transparent icons** by 33.7%. used **only on the Table of Contents page** to improve their visibility and clarity. Keep the icons sharp, high-quality, and fully transparent without changing their design or color.
+
+After increasing the icon size, automatically adjust the layout so that each icon aligns correctly with its corresponding chapter title. Recalculate the spacing, padding, and line alignment to maintain a clean and professional appearance.
+
+Also, adjust the **"TABLE OF CONTENTS"** heading so that it is **perfectly centered** both horizontally and visually on the page. Fine-tune the top and bottom padding, decorative divider, and surrounding spacing to achieve a balanced layout.
+
+Ensure that:
+
+* Only the **Table of Contents page** is modified.
+* The larger icons do not overlap the text or page numbers.
+* All headings, icons, dotted leader lines, and page numbers remain properly aligned.
+* The page maintains a clean, professional, and print-ready layout with consistent spacing and perfect visual balance.
