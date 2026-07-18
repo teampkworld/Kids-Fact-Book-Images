@@ -1,0 +1,122 @@
+## Update Table of Contents SVG Icons and Standardize Icon Quality
+
+### Current Issue
+
+The **Table of Contents** page contains SVG icons for the following sections:
+
+* **MY FAVORITE FACTS**
+* **FACT EXPLORER CHALLENGE**
+* **AMAZING FACT COLLECTOR**
+
+However, the SVG icons for these sections are **smaller than the other Table of Contents icons**, especially those with transparent backgrounds. As a result, the page looks inconsistent and unbalanced.
+
+---
+
+# Required Implementation
+
+Update the SVG icons associated with the following headings:
+
+* **MY FAVORITE FACTS**
+* **FACT EXPLORER CHALLENGE**
+* **AMAZING FACT COLLECTOR**
+
+Replace them with the latest SVG files from the GitHub repository and ensure they are rendered consistently throughout the application and the generated PDF.
+
+---
+
+# Size Standardization
+
+All Table of Contents icons must follow the same visual specifications.
+
+Ensure that:
+
+* Increase the size of the above three SVG icons to match the dimensions of the other Table of Contents icons.
+* All icons should have a consistent visual height and width.
+* Maintain the original aspect ratio—do not stretch or distort the SVG.
+* Center each icon correctly within its allocated space.
+* Ensure consistent spacing between the icon and its corresponding heading.
+
+Icons with transparent backgrounds must **not appear visually smaller** than solid icons. Their visible artwork should occupy approximately the same visual area as every other icon.
+
+---
+
+# SVG Rendering Quality
+
+Every SVG must be rendered with professional quality.
+
+Ensure that each icon is:
+
+* Sharp and crisp at all zoom levels.
+* High-resolution vector quality.
+* Clean, smooth, and free from jagged edges.
+* Bright and clearly visible.
+* Perfectly aligned.
+* Properly centered.
+* Fully rendered without clipping.
+* Free from pixelation or blurry edges.
+* Embedded as true vector graphics in the generated PDF whenever possible.
+
+---
+
+# Automatic SVG Update System
+
+Implement automatic SVG asset management.
+
+Whenever an SVG file is updated in the GitHub repository:
+
+* Detect that the SVG asset has changed.
+* Refresh any cached version.
+* Load the latest SVG automatically.
+* Replace the previous version without requiring manual code changes.
+
+This automatic synchronization should apply both now and for all future SVG updates.
+
+---
+
+# Cache Management
+
+Prevent outdated SVG files from being displayed.
+
+Whenever the application loads or generates a PDF:
+
+* Invalidate browser cache if necessary.
+* Invalidate application cache.
+* Invalidate memory cache.
+* Invalidate PDF asset cache.
+* Reload the newest SVG assets before rendering.
+
+The application must never continue displaying outdated SVG icons after they have been updated in GitHub.
+
+---
+
+# PDF Requirements
+
+The generated PDF must use the exact same updated SVG icons shown in the application preview.
+
+Verify that:
+
+* The icons appear at the correct size.
+* All SVGs remain sharp after export.
+* No icon becomes blurry, compressed, clipped, or rasterized.
+* Transparent SVGs render correctly.
+* All three icons visually match the size and quality of the remaining Table of Contents icons.
+
+---
+
+# Validation Checklist
+
+Before generating the final PDF, verify that:
+
+* ✅ **MY FAVORITE FACTS** uses the latest SVG icon.
+* ✅ **FACT EXPLORER CHALLENGE** uses the latest SVG icon.
+* ✅ **AMAZING FACT COLLECTOR** uses the latest SVG icon.
+* ✅ All three icons match the size of the other Table of Contents icons.
+* ✅ Transparent SVGs no longer appear smaller than the rest.
+* ✅ Every SVG is sharp, clean, bright, and perfectly rendered.
+* ✅ All icons are centered and consistently aligned.
+* ✅ Preview and PDF display identical icons.
+* ✅ Future SVG updates are detected and applied automatically without manual intervention.
+
+## Expected Result
+
+The Table of Contents should have a **uniform, professional appearance**, with every SVG icon displayed at a consistent size and quality. The three specified headings must always use the **latest GitHub SVG assets**, and the system must automatically detect and apply future SVG updates while preventing outdated cached icons from being displayed.
