@@ -1,0 +1,21 @@
+The **transparent SVG images** associated with the following headings on the **Table of Contents** page are rendering with a **solid black background**. This is incorrect because the original SVG files have transparent backgrounds.
+
+**Affected headings:**
+
+* **MY FAVORITE FACTS**
+* **FACT EXPLORER CHALLENGE**
+* **AMAZING FACT COLLECTOR**
+
+### Required Fix
+
+* Preserve the **original transparent background** of each SVG image.
+* Do **not** render a black background in **Monochrome** or **Grayscale** PDF output.
+* Ensure the SVG transparency (alpha channel) is preserved during rendering and PDF generation.
+* Display only the icon artwork, with the background remaining fully transparent.
+* Do not flatten the SVG into a solid black rectangle or replace transparency with black.
+* Render the SVGs at high quality so they remain sharp, clean, and professional.
+* Ensure the transparency is preserved consistently in both the application preview and the final PDF.
+
+### Expected Result
+
+The SVG images for **MY FAVORITE FACTS**, **FACT EXPLORER CHALLENGE**, and **AMAZING FACT COLLECTOR** should appear exactly like the original transparent SVG files, with **no black background**, **no unwanted monochrome fill**, and **crisp, clean rendering** in both grayscale and monochrome PDF outputs.
