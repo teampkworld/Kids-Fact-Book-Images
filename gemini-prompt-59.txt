@@ -1,7 +1,0 @@
-1.Investigate the PDF generation logic in 'src/utils/pdfWorkerHelper.ts' and 'src/utils/pdfGenerator.ts' to determine why the Table of Contents pages are rendering empty. Ensure that the text insertion loop for the TOC correctly populates the headers and page numbers without clearing them accidentally.
-
-2.Add explicit console logging within the PDF generator's table of contents building function to trace whether the fact titles and page references are being passed correctly during the PDF creation stream.
-
-3.Refactor the Table of Contents generation to use a fixed-height layout constraint that ensures even if some titles are long, the TOC page components remain visible and properly positioned on the page.
-
-4.Implement a structural validation step in the PDF worker to ensure that every page object intended for the Table of Contents cont`ains non-empty title text before it is drawn to the canvas.

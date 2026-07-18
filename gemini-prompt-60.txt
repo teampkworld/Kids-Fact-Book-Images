@@ -1,0 +1,20 @@
+**Fix the Table of Contents Transparent Icon Rendering**
+
+The transparent SVG/PNG icons on the **Table of Contents** page are rendering as **solid black boxes/backgrounds** in the generated PDF instead of displaying with proper transparency. i attached screenshot for your clarification.
+
+### Required Fix
+
+* Investigate the PDF rendering pipeline to determine why the transparency (alpha channel) is being lost.
+* Preserve the original transparency of all Table of Contents icons during PDF generation.
+* Do not flatten transparent backgrounds to black.
+* Ensure all SVG/PNG icons render with transparent backgrounds exactly as they appear in the source files.
+* Verify that the PDF library correctly supports alpha transparency and SVG rendering.
+* If necessary, convert SVGs to a compatible vector or transparent PNG format before embedding, while preserving image quality.
+* Ensure the fix works for both **compressed** and **non-compressed** PDF generation.
+
+### Expected Result
+
+* ✅ All Table of Contents icons display with transparent backgrounds.
+* ✅ No black squares or black backgrounds appear behind any icon.
+* ✅ Icons remain sharp, properly aligned, and print-ready.
+* ✅ The Table of Contents in the generated PDF matches the on-screen preview exactly.
