@@ -1,5 +1,5 @@
 Fix TABLE OF CONTENTS SVG Icons**
-
+i attached screen shot for your clarification.
 The **"FACT EXPLORER CHALLENGE"** and **"AMAZING FACT COLLECTOR"** SVG transparent icons on the **TABLE OF CONTENTS** page are rendering incorrectly in solid black. Fix the SVG rendering so these icons preserve their original vector appearance, including transparency, fills, strokes, and `viewBox`. They must render exactly as the original SVG files without any unwanted color replacement.
 
 Additionally:
