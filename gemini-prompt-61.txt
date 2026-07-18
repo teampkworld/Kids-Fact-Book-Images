@@ -1,0 +1,13 @@
+Fix TABLE OF CONTENTS SVG Icons**
+
+The **"FACT EXPLORER CHALLENGE"** and **"AMAZING FACT COLLECTOR"** SVG transparent icons on the **TABLE OF CONTENTS** page are rendering incorrectly in solid black. Fix the SVG rendering so these icons preserve their original vector appearance, including transparency, fills, strokes, and `viewBox`. They must render exactly as the original SVG files without any unwanted color replacement.
+
+Additionally:
+
+* **Keep the SVG icons** for every Table of Contents entry.
+* **Remove only the bullet points** that appear alongside the icons. Do not remove or modify the icons themselves.
+* Increase the SVG icon size slightly (approximately 15–25%) while maintaining the original aspect ratio.
+* Improve icon clarity by rendering the SVGs directly as vectors rather than rasterizing them.
+* Preserve full SVG quality, transparency, anti-aliasing, and sharp edges in the exported PDF.
+* Ensure all icons are the same size, aligned consistently, vertically centered with the heading text, and maintain uniform spacing throughout the **TABLE OF CONTENTS** page.
+* Do not modify any other layout, typography, leader dots, page numbers, or spacing. Only fix the SVG rendering, remove the bullet points, and improve the icon size and clarity.
