@@ -1,0 +1,13 @@
+The **SVG transparent icons** on the **Table of Contents** page are rendering with a **solid black background**, even though the original SVG files have transparent backgrounds. This is incorrect.
+
+Fix the SVG rendering logic so that the icons preserve their **true transparency** during PDF generation, including **Monochrome** and **Grayscale** output.
+
+### Requirements
+
+* Preserve the SVG's **transparent background** exactly as in the original file.
+* Do **not** render a black, white, or any other colored background behind the icons.
+* Ensure only the icon itself is displayed, with the background remaining fully transparent.
+* Correctly render the SVG alpha/transparency layer instead of flattening it into a solid black rectangle.
+* Maintain sharp, high-resolution vector quality in both the application preview and the generated PDF.
+* Ensure the fix works consistently for all SVG icons on the **Table of Contents** page.
+* The icons should appear clean, crisp, and professionally rendered in both **Monochrome** and **Grayscale** PDF outputs, without any unwanted background fill.
