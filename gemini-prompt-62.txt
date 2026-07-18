@@ -1,4 +1,4 @@
-Increase the size of the **SVG transparent icons** by 33.7%. used **only on the Table of Contents page** to improve their visibility and clarity. Keep the icons sharp, high-quality, and fully transparent without changing their design or color.
+Increase the size of the **SVG transparent icons** by 33.7%. used **only on the Table of Contents page** to improve their visibility and clarity. sharpen icons, bright, Keep the icons sharp, high-quality, and fully transparent without changing their design or color. each svg icon visable clean and clear.
 
 After increasing the icon size, automatically adjust the layout so that each icon aligns correctly with its corresponding chapter title. Recalculate the spacing, padding, and line alignment to maintain a clean and professional appearance.
 
