@@ -1,0 +1,163 @@
+## Dynamic Text Auto-Fit Logic for the 31 Grid Fact Descriptions
+
+Use the attached reference image as the **layout and design standard**.
+
+**Reference Image:**
+`https://raw.githubusercontent.com/teampkworld/Kids-Fact-Book-Images/main/Untit562led.jpg`
+
+---
+
+# Current Problem
+
+The **31 Grid Fact Description** layout is currently using a fixed text size.
+
+However, the descriptions uploaded by the user are not all the same length:
+
+* Some descriptions are short.
+* Some descriptions are medium.
+* Some descriptions are much longer.
+
+Because of this, some cards contain excessive empty space, while others overflow or appear too crowded.
+
+This should never happen.
+
+---
+
+# Required Implementation
+
+Implement a **dynamic text auto-fit engine** for the **31 Grid Fact Description** section.
+
+The system must automatically calculate the available space inside each fact card and adjust the typography so that **every description fits perfectly within its assigned area**, regardless of its length.
+
+---
+
+# Dynamic Layout Rules
+
+## Case 1 – Short Description
+
+If the description is shorter than the available text area:
+
+* Keep the default font size.
+* Keep the default line spacing.
+* Do not enlarge the text.
+* Do not stretch the text vertically.
+* Leave the remaining space naturally blank.
+* Maintain the existing alignment and layout.
+
+---
+
+## Case 2 – Medium Description
+
+If the description nearly fills the available space:
+
+* Keep the default font size if it fits.
+* If needed, reduce the font size slightly.
+* Adjust line spacing proportionally.
+* Ensure the entire description remains visible without changing the layout.
+
+---
+
+## Case 3 – Long Description
+
+If the description exceeds the available space:
+
+Automatically:
+
+* Reduce the font size gradually.
+* Slightly reduce line height.
+* Slightly reduce paragraph spacing.
+* Recalculate the layout after each adjustment.
+* Continue until the full description fits within the allocated text area.
+
+The reduction should be subtle so the text remains comfortable to read.
+
+---
+
+# Responsive Auto-Fit Algorithm
+
+Before rendering each grid card:
+
+1. Calculate the available text area below the image.
+2. Measure the title height.
+3. Measure the description height.
+4. Compare the required height with the available height.
+5. If the description does not fit:
+
+   * Reduce the font size incrementally.
+   * Adjust line spacing proportionally.
+   * Recalculate until the text fits.
+6. Render the card only after all content fits correctly.
+
+---
+
+# Layout Protection
+
+The auto-fit algorithm must **never** change the layout of the card.
+
+Do **not** modify:
+
+* Image size
+* Image position
+* Title position
+* Badge position
+* Icon position
+* Card width
+* Card height
+* Grid spacing
+* Margins
+* Overall page layout
+
+Only the **description typography** may adjust dynamically.
+
+---
+
+# Typography Limits
+
+The system may adjust:
+
+* Font size
+* Line height
+* Paragraph spacing
+
+The system must **never**:
+
+* Crop text
+* Hide text
+* Overflow outside the card
+* Overlap the image
+* Overlap the title
+* Push content outside the printable area
+* Increase the height of the grid card
+
+---
+
+# Universal Rule
+
+This dynamic auto-fit logic must apply to:
+
+* The current book.
+* Every future book.
+* Every newly uploaded **31 Grid Facts** document.
+* Any description length supplied by the user.
+
+The layout engine must adapt automatically without requiring manual adjustments.
+
+---
+
+# Validation Checklist
+
+Before generating the PDF, verify that:
+
+* ✅ Every description fits completely within its assigned grid area.
+* ✅ No text is clipped or truncated.
+* ✅ No text overlaps the image, title, or icon.
+* ✅ Short descriptions retain the normal font size.
+* ✅ Longer descriptions are reduced only as much as necessary.
+* ✅ All cards remain visually consistent.
+* ✅ Grid height and page layout remain unchanged.
+* ✅ The generated PDF matches the application preview exactly.
+* ✅ This auto-fit logic is applied automatically to all future books and all future user-uploaded 31 Grid Fact descriptions.
+
+## Expected Result
+
+Every one of the **31 Grid Fact cards** should look professionally balanced, regardless of how short or long the description is. The typography should automatically adapt to the available space while preserving the existing design, alignment, and page layout. No manual adjustments should ever be required for the current book or any future book.
