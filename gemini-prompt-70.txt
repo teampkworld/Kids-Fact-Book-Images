@@ -1,0 +1,224 @@
+## UI Styling Update – Preserve Layout Exactly While Updating Fact Labels and Fact Titles
+
+Use the attached reference image as the **only design reference**.
+
+**Reference Image:**
+`https://raw.githubusercontent.com/teampkworld/Kids-Fact-Book-Images/main/Sshot.jpeg`
+
+---
+
+# 1. Update Every "Fact # + Category" Label Without Changing the Layout
+
+## Current Examples
+
+* Fact #2 — Space
+* Fact #4 — Ocean
+* Fact #3 — Animals
+* Fact #25 — Science
+* Fact #108 — Geography
+* ...and every other fact label in the book.
+
+---
+
+## Required Change
+
+Only change the **visual appearance** of these labels.
+
+Convert each one into a **compact black rounded rectangle (pill/badge)** exactly like the reference image.
+
+**Do not change anything else.**
+
+---
+
+## Layout Preservation (Mandatory)
+
+The position of each label must remain **exactly where it is now**.
+
+Do **not** change:
+
+* X position
+* Y position
+* Alignment
+* Margins
+* Padding around the fact box
+* Fact box height
+* Fact box width
+* Text flow
+* Typography of the remaining content
+
+The badge must occupy the same location currently used by the plain text label.
+
+After the badge is applied:
+
+* The title below must not move.
+* The description must not move.
+* The icon must not move.
+* The "How It Works" section must not move.
+* The "Think About It" section must not move.
+* No content should shift upward or downward by even a few pixels.
+
+The only visible change should be that the existing text is now displayed inside a black rounded rectangle.
+
+---
+
+## Badge Size Rules
+
+The badge must remain compact.
+
+Do **not** make it oversized.
+
+Requirements:
+
+* Auto-width based on the text length.
+* Fixed height.
+* Black background.
+* White bold text.
+* Rounded corners.
+* Equal internal padding.
+* Vertically centered text.
+* Horizontally centered text.
+
+The badge height should be approximately the same as the current text height so that it occupies nearly the same vertical space.
+
+---
+
+## Dynamic Width
+
+Examples:
+
+```
+Fact #2 — Space
+```
+
+↓
+
+Small badge
+
+```
+Fact #987 — General Knowledge
+```
+
+↓
+
+Wider badge
+
+Never use one fixed width.
+
+---
+
+# 2. Update All 31 Image Fact Titles
+
+Apply the **same visual style** to the **31 Image Fact grid pages**.
+
+Every fact title should appear inside a compact black rounded rectangle exactly like the reference image.
+
+---
+
+## Mandatory Layout Rule
+
+The title must remain in its **current position**.
+
+Do **not** move:
+
+* the title,
+* the image,
+* the description,
+* the spacing,
+* the grid,
+* the page layout.
+
+The title should simply change from plain text to a styled rounded badge.
+
+Nothing else should move.
+
+---
+
+## Title Badge Rules
+
+Each title badge must be:
+
+* Black background.
+* White bold text.
+* Rounded corners.
+* Auto-width.
+* Fixed height.
+* Compact.
+* Centered vertically within the badge.
+* Properly aligned in its existing position.
+
+---
+
+## Dynamic Width
+
+Example
+
+```
+Penguins
+```
+
+↓
+
+Small badge
+
+Example
+
+```
+The Incredible Journey of Monarch Butterflies
+```
+
+↓
+
+Wider badge
+
+Never stretch the badge across the page.
+
+---
+
+# Absolutely Do Not Change
+
+This update is a **styling-only change**.
+
+Do **not** modify:
+
+* page layout,
+* element positions,
+* margins,
+* spacing,
+* typography of other text,
+* image size,
+* image position,
+* description position,
+* box dimensions,
+* page dimensions,
+* PDF layout.
+
+The entire book must remain visually identical except for the updated badge styling.
+
+---
+
+# PDF Rendering
+
+The badges must render identically in:
+
+* Preview
+* Generated PDF
+* Compressed PDF
+* Non-compressed PDF
+
+No layout shifts or rendering differences are permitted.
+
+---
+
+# Validation Checklist
+
+Before generating the final PDF, verify that:
+
+* ✅ Every **"Fact # + Category"** label has been converted into a compact black rounded badge.
+* ✅ All **31 Image Fact titles** have been converted into matching black rounded badges.
+* ✅ Every badge remains in the **exact same position** as the original text.
+* ✅ No other content moves vertically or horizontally.
+* ✅ Fact boxes retain their original size and layout.
+* ✅ The badges are compact, not oversized.
+* ✅ Badge width adjusts automatically to the text length.
+* ✅ Text remains fully visible and centered.
+* ✅ The final appearance matches the attached reference image while preserving the existing page layout exactly.
