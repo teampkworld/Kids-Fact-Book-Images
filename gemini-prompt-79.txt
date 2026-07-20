@@ -1,0 +1,14 @@
+Write the PDF generation logic so that **all text throughout the entire book** is rendered with **maximum sharpness, clarity, and print quality**. The exported PDF must be professional, crisp, and fully optimized for high-resolution printing.
+
+### Requirements
+
+* Render all text as **true vector text**, not rasterized images.
+* Embed **all fonts** completely in the PDF to ensure consistent rendering across all devices.
+* Use high-quality font rendering with anti-aliasing for smooth, sharp characters.
+* Ensure all text is crisp at **100% zoom** and remains sharp when zoomed to **400–800%** without pixelation or blurring.
+* Prevent any compression or optimization that reduces text quality.
+* Preserve the exact typography, font size, font weight, letter spacing, line spacing, and alignment throughout the book.
+* Ensure bold, italic, and regular fonts render correctly and remain fully embedded.
+* Generate a **high-resolution, print-ready PDF** optimized for Amazon KDP with professional-quality text output.
+* Maintain consistent text quality across every page, including headings, body text, captions, badges, page numbers, Table of Contents, Index pages, and all other text elements.
+* Do not rasterize any text during PDF generation. Keep all text fully searchable, selectable, and vector-based for maximum print clarity.
