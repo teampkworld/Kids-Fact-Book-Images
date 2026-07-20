@@ -1,0 +1,129 @@
+### Feature Enhancement Requirements
+
+#### 1. Add Additional Book Page Dimension (8.5 × 11 inches)
+
+In the **Book Page Dimensions** section, add an additional standard trim size:
+
+* **8.5 × 11 inches (Letter Size)**
+
+This option must be fully integrated into the application, not just added to the UI. Selecting this size should automatically update all document calculations and generation logic, including:
+
+* Canvas dimensions
+* Bleed margins
+* Safe margins
+* Print margins
+* Export settings (PDF, DOCX, etc.)
+* Preview rendering
+* Template scaling
+* Page layout calculations
+* Typography spacing
+* Header and footer positioning
+
+The generated output must be completely print-ready and accurately match professional publishing specifications for an **8.5 × 11 inch** book.
+
+---
+
+#### 2. User Template Upload & Custom Template Library
+
+Add a new feature that allows users to upload their own book templates and save them within the project.
+
+### Upload Requirements
+
+Allow users to upload templates in formats such as:
+
+* PDF
+* DOCX
+* PPTX
+* SVG
+* PNG
+* JPG
+* PSD (optional)
+* AI (optional)
+
+After upload, automatically:
+
+* Generate a thumbnail preview.
+* Extract page size and orientation.
+* Detect bleed and safe areas when possible.
+* Store the template permanently within the current project.
+* Preserve the original file without modifying its quality.
+
+### Preset Library Enhancement
+
+Inside the **Preset Templates** section, create a new tab called:
+
+**My Templates**
+
+The Preset Templates section should now contain tabs such as:
+
+* Professional Templates
+* Minimal Templates
+* Business Templates
+* Educational Templates
+* Children's Book Templates
+* Magazine Templates
+* Comic Templates
+* Coloring Book Templates
+* Journal Templates
+* Planner Templates
+* **My Templates** (User Uploaded)
+
+The **My Templates** tab should:
+
+* Display every uploaded template.
+* Show large thumbnail previews.
+* Display template name.
+* Display page size.
+* Display upload date.
+* Allow Rename.
+* Allow Duplicate.
+* Allow Replace.
+* Allow Delete.
+* Allow Favorite.
+* Allow Search.
+* Allow Sort.
+* Allow Filter by page size.
+* Allow one-click Apply.
+
+Selecting a user template should instantly apply it exactly like a built-in preset while preserving all original layout characteristics.
+
+---
+
+#### 3. Fix the Professional Templates Library (100+ Templates)
+
+The application claims to include **100+ Professional Templates**, but currently only approximately **10–15 templates** are displayed.
+
+This needs to be corrected.
+
+Requirements:
+
+* Display **every available professional template** in the library.
+* Ensure the full collection (100+ templates) is loaded correctly.
+* Remove any hardcoded display limits.
+* Fix pagination, lazy loading, or filtering issues preventing templates from appearing.
+* Ensure no templates are hidden because of loading or rendering bugs.
+* Dynamically load the entire template catalog from the data source.
+
+Each template should include:
+
+* High-quality thumbnail
+* Template name
+* Category
+* Style
+* Page size
+* Orientation
+* Preview
+* Favorite option
+* Search support
+* Filter support
+* Instant Apply button
+
+The library should support smooth scrolling and virtualization so that displaying over 100 templates remains fast and responsive.
+
+### Expected Result
+
+After implementing these improvements:
+
+* The **Book Page Dimensions** section includes a fully functional **8.5 × 11 inch** option.
+* Users can upload and manage unlimited custom templates through the new **My Templates** tab.
+* The **Professional Templates** library correctly displays the complete collection of **100+ templates** rather than only 10–15, with reliable loading, search, filtering, and instant application functionality.
