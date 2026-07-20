@@ -6,5 +6,6 @@ Update the card styling as follows:
 * Change **all text inside those cards** to **white** to maintain proper contrast and readability.
 * Change the **black rounded category pill/badge** (e.g., *Fact #1 — Animal*) to a **white** background.
 * Change the **text inside the rounded pill/badge** to **black**.
+* Change to modify the all rounded pill/badge** to recatangular rounded badge**.
 * Preserve the existing layout, spacing, borders, typography, alignment, icons, and card dimensions exactly as they are.
 * Apply these changes **only** to the specified light-gray Fact Cards shown in the attached screenshot. Do not modify any other cards or sections of the book.
