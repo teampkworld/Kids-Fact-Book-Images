@@ -1,0 +1,44 @@
+## Add a New "Computer & Technology Books" Genre to the Book Genre/Type Section
+
+### Required Implementation
+
+In the **Book Genre/Type** section, add a new genre option:
+
+**Computer & Technology Books**
+
+This genre should be designed with a modern, professional technology theme that is visually consistent with the existing genre cards while reflecting the subject matter.
+
+### Design Requirements
+
+* Create a unique **Computer & Technology Books** genre card.
+* Use a clean, modern technology-inspired design.
+* Include a suitable icon (such as a computer, laptop, coding symbol, circuit board, AI chip, keyboard, cloud, or digital technology graphic).
+* Apply a professional color palette (e.g., blue, cyan, navy, dark gray, or other technology-themed colors).
+* Match the existing card size, typography, spacing, rounded corners, shadows, and hover effects used throughout the application.
+* Ensure the new genre blends seamlessly with the current UI and feels like a native part of the design.
+
+### Functionality
+
+When the user selects **Computer & Technology Books**:
+
+* Load templates specifically designed for computer and technology books.
+* Apply layouts suitable for programming, software, AI, cybersecurity, networking, data science, cloud computing, robotics, hardware, and other technology-related content.
+* Support code blocks, tables, screenshots, diagrams, flowcharts, technical illustrations, and professional documentation layouts where applicable.
+
+### Compatibility
+
+The new genre must work with all existing features, including:
+
+* Live Preview
+* Professional Book Page Designer
+* KDP Interior Generator
+* KDP Cover Creator
+* PDF Export
+* DOCX Export
+* Theme Selection
+* Typography Settings
+* Automatic Page Formatting
+
+### Expected Result
+
+The **Book Genre/Type** section should include a fully functional **Computer & Technology Books** option with a polished, technology-themed design that integrates seamlessly with the application's existing style and automatically applies layouts optimized for technical and computer-related publications.
