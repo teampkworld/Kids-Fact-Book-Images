@@ -1,6 +1,4 @@
-**Rewritten Logic Prompt:**
-
-Change **only** the light-gray background Fact Cards (as marked by the red arrows in the attached reference image) to the exact background color **Hex: `#212222`**. Do not modify any other Fact Cards or page elements.
+Change **only** the every light-gray background Fact Cards (as marked by the red arrows in the attached reference image) to the exact background color **Hex: `#212222`**. Do not modify any other Fact Cards or page elements.
 
 Update the card styling as follows:
 
