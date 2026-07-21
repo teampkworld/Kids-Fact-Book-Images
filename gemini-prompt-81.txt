@@ -1,0 +1,156 @@
+## Book Spine Title Editor – Feature Enhancements and Auto-Update Logic
+
+### Required Enhancements
+
+Improve the **Book Spine Title Editor** by adding the following features and fixing the current update issues.
+
+---
+
+## 1. Increase Letter Spacing Range
+
+The current **Letter Spacing** control has a maximum value of **10**.
+
+Update the control to support a wider adjustment range:
+
+* Minimum: **0**
+* Maximum: **20**
+* Allow decimal values (optional) for finer adjustments.
+* Update the live preview immediately whenever the value changes.
+
+This gives users greater flexibility for designing spine titles on both narrow and wide spines.
+
+---
+
+## 2. Add Line Spacing Control
+
+Add a new option directly below **Letter Spacing**:
+
+**Line Spacing**
+
+This option should allow users to adjust the spacing between multiple lines of spine text.
+
+Requirements:
+
+* Real-time preview updates.
+* Automatically adjust text positioning.
+* Prevent overlapping lines.
+* Maintain proper vertical alignment within the spine.
+* Apply to both preview and exported PDF.
+
+---
+
+## 3. Fix Automatic Live Updates
+
+### Current Issue
+
+After enabling the **Book Spine Title Editor**, changes made to the editor options are not reflected automatically in the cover preview.
+
+### Required Fix
+
+Implement a reactive update system so that every modification is applied immediately without requiring manual refresh, regeneration, or reopening the editor.
+
+The preview should automatically update whenever the user changes:
+
+* Spine title text
+* Font family
+* Font size
+* Bold
+* Italic
+* Underline
+* Text color
+* Background color
+* Letter spacing
+* Line spacing
+* Text alignment
+* Text rotation
+* Spine title position
+* Book dimensions
+* Page count
+* Spine width
+
+Every change must trigger an immediate re-render of the spine preview.
+
+---
+
+## 4. Add Custom Spine Background Image
+
+Add a new option:
+
+**Spine Background Image**
+
+Allow the user to upload or select a separate image specifically for the spine.
+
+### Features
+
+* Upload a custom image.
+* Replace the existing spine background.
+* Remove the custom background and return to the default design.
+* Live preview updates instantly.
+* Preserve image quality in the exported PDF.
+
+### Image Controls
+
+Provide options to:
+
+* Fit
+* Fill
+* Stretch (optional)
+* Center
+* Repeat (optional)
+* Scale
+* Crop
+
+Maintain the image quality without introducing blur, pixelation, or compression artifacts.
+
+---
+
+## 5. Automatic Spine Layout Recalculation
+
+Whenever any spine-related setting changes, automatically recalculate:
+
+* Spine width
+* Available text area
+* Font size (if auto-fit is enabled)
+* Letter spacing
+* Line spacing
+* Text positioning
+* Background image scaling
+
+The spine layout should always remain correctly aligned and fully contained within the printable spine area.
+
+---
+
+## 6. PDF Export
+
+Ensure the exported KDP cover PDF exactly matches the live preview.
+
+The PDF must preserve:
+
+* Spine title
+* Font
+* Font size
+* Letter spacing
+* Line spacing
+* Text color
+* Background color
+* Custom spine background image
+* Alignment
+* Positioning
+
+No visual differences should exist between the preview and the exported PDF.
+
+---
+
+## Validation Checklist
+
+Before generating the final KDP cover PDF, verify that:
+
+* ✅ Letter Spacing supports values from **0 to 20**.
+* ✅ A **Line Spacing** option is available below Letter Spacing.
+* ✅ Every editor change updates the preview automatically in real time.
+* ✅ No manual refresh or regeneration is required.
+* ✅ Users can upload and manage a custom spine background image.
+* ✅ The spine background image is rendered at full quality.
+* ✅ All spine elements remain within the printable spine area.
+* ✅ The exported PDF matches the live preview exactly.
+* ✅ All new features continue to work correctly for future updates and future book projects without requiring additional code changes.
