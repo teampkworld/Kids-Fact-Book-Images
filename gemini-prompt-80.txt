@@ -2,7 +2,7 @@
 
 ### Required Implementation
 
-In the **Book Cover Generator** section, add a dedicated **Book Spine Title Editor** that allows the user to customize the text displayed in the **spine area** between the front cover and back cover.
+In the all **Book Cover Generator** sections, add a dedicated **Book Spine Title Editor** that allows the user to customize the text displayed in the **spine area** between the front cover and back cover.
 
 The spine title must be positioned automatically within the printable spine area based on the selected KDP cover dimensions and page count.
 
