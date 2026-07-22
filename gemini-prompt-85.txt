@@ -1,4 +1,4 @@
-## Fix Book Spine Title Editor – Ensure Preview and PDF Render Identically
+1) ## Fix Book Spine Title Editor – Ensure Preview and PDF Render Identically
 
 ### Current Issue
 
@@ -107,3 +107,94 @@ Before generating the final KDP cover PDF, verify that:
 * ✅ Spine width calculations are identical.
 * ✅ The preview is a true WYSIWYG representation of the exported PDF.
 * ✅ The exported PDF matches the preview pixel-for-pixel, with no differences in typography, scaling, or layout.
+
+2) ## Add Gradient Background Presets for the Book Spine
+
+### Required Implementation
+
+In the **Book Spine Title Editor**, add a new section called **Spine Background Style** that allows users to apply professional gradient backgrounds to the book spine.
+
+---
+
+### Spine Background Options
+
+Provide the following background options:
+
+* Solid Color
+* Transparent
+* Image Upload
+* **Gradient Presets** (New)
+
+When **Gradient Presets** is selected, display a gallery of professionally designed gradients that can be applied to the spine with a single click.
+
+---
+
+### Gradient Library
+
+Include a collection of modern, high-quality gradient styles, such as:
+
+* Blue Gradient
+* Purple Gradient
+* Red Gradient
+* Orange Gradient
+* Yellow Gradient
+* Green Gradient
+* Teal Gradient
+* Cyan Gradient
+* Pink Gradient
+* Gold Gradient
+* Silver Gradient
+* Rainbow Gradient
+* Sunset Gradient
+* Ocean Gradient
+* Sky Gradient
+* Forest Gradient
+* Galaxy Gradient
+* Fire Gradient
+* Luxury Black & Gold
+* Dark Modern Gradient
+
+The gradients should be smooth, vibrant, high-resolution, and suitable for professional KDP book covers.
+
+---
+
+### Gradient Customization
+
+Allow users to customize the selected gradient with options such as:
+
+* Gradient direction (Horizontal, Vertical, Diagonal, Radial)
+* Primary color
+* Secondary color
+* Gradient angle
+* Gradient intensity
+* Opacity
+
+---
+
+### Live Preview
+
+Whenever the user selects or modifies a gradient:
+
+* Update the spine preview instantly.
+* Apply the gradient only to the spine background.
+* Keep the spine title fully visible and readable.
+* Preserve the existing text formatting and alignment.
+
+---
+
+### PDF Export
+
+The selected gradient background must be rendered in the exported KDP cover PDF exactly as shown in the live preview, with no color shifts, banding, blur, or quality loss.
+
+---
+
+### Validation Checklist
+
+Before generating the final cover PDF, verify that:
+
+* ✅ Users can choose from multiple professional gradient presets.
+* ✅ Gradients render smoothly at high quality.
+* ✅ The spine title remains clear and readable over the selected gradient.
+* ✅ The live preview matches the exported PDF exactly.
+* ✅ Gradient backgrounds scale correctly for all spine widths and book sizes.
+* ✅ The feature works consistently for all current and future KDP book projects.
