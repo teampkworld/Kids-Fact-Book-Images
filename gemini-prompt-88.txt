@@ -1,0 +1,155 @@
+## KDP Cover Creator – Enhance Book Spine Title Editor with More Fonts, PDF Font Embedding, Text Case, and Text Outline Options
+
+### Required Implementation
+
+In the **KDP Cover Creator** tool, under the **Book Cover** section, enhance the **Book Spine Title Editor** with additional typography features while maintaining all existing functionality.
+
+---
+
+## 1. Expand the Font Library
+
+Keep all of the current fonts and add a much larger collection of professional fonts suitable for book covers.
+
+Include categories such as:
+
+* Serif
+* Sans Serif
+* Display
+* Modern
+* Elegant
+* Classic
+* Kids
+* Handwritten
+* Bold
+* Decorative
+
+Provide a searchable font selector with a live preview of each font.
+
+The selected font should be applied instantly to the spine title in the cover preview.
+
+---
+
+## 2. Proper Font Embedding in PDF
+
+Implement correct font embedding during PDF generation.
+
+### Requirements
+
+* Embed the actual font used by the user into the PDF.
+* Do not substitute fonts during export.
+* Preserve all font properties exactly as shown in the preview.
+* Ensure fonts remain sharp and selectable in the PDF.
+* Prevent missing font errors on any device.
+* Maintain identical typography in both the preview and the exported PDF.
+
+If a selected font cannot legally or technically be embedded, automatically notify the user and substitute it with the closest supported font only after confirmation.
+
+---
+
+## 3. Spine Title Text Case Option
+
+Add a new option called **Text Case** in the **Book Spine Title Editor**.
+
+### Available Options
+
+* Original Case (Exactly as entered)
+* UPPERCASE
+* lowercase
+* Title Case
+* Sentence case
+
+When the user selects a text case, automatically transform the displayed spine title while preserving the original input value internally.
+
+The preview should update immediately, and the exported PDF must use the selected text case.
+
+---
+
+## 4. Add Text Outline (Stroke) Option
+
+Add a new **Text Outline** section for the **Spine Title**.
+
+### Enable / Disable
+
+Provide a toggle:
+
+* Outline: **On / Off**
+
+When enabled, apply an outline (stroke) around the spine title text.
+
+### Outline Customization
+
+Allow the user to customize:
+
+* **Outline Color** (color picker)
+* **Outline Thickness** (adjustable slider or numeric input)
+* **Outline Opacity** (optional)
+
+The outline should render smoothly and remain sharp at all font sizes.
+
+### Rendering Requirements
+
+* The outline must scale proportionally with the font size.
+* It must not distort or blur the text.
+* It must improve readability over any spine background, including solid colors, gradients, and background images.
+* The outline should be rendered identically in both the live preview and the exported PDF.
+
+---
+
+## 5. Live Preview
+
+Any change to:
+
+* Font
+* Font Size
+* Bold
+* Italic
+* Letter Spacing
+* Line Spacing
+* Text Color
+* Background
+* Text Case
+* Outline On/Off
+* Outline Color
+* Outline Thickness
+
+must update the spine preview instantly without requiring manual refresh or regeneration.
+
+---
+
+## 6. PDF Rendering Consistency
+
+The same rendering engine must be used for both the preview and the PDF export.
+
+The PDF must preserve exactly:
+
+* Font family
+* Embedded font
+* Font size
+* Text case
+* Letter spacing
+* Line spacing
+* Alignment
+* Rotation
+* Position
+* Text color
+* Outline color
+* Outline thickness
+
+There must be no visual differences between the live preview and the exported PDF.
+
+---
+
+## Validation Checklist
+
+Before generating the final KDP cover PDF, verify that:
+
+* ✅ All existing fonts remain available.
+* ✅ A larger professional font library has been added.
+* ✅ The selected font is properly embedded in the PDF whenever supported.
+* ✅ No font substitution occurs during export unless necessary and confirmed.
+* ✅ A **Text Case** option is available with **Original Case, UPPERCASE, lowercase, Title Case, and Sentence Case**.
+* ✅ A **Text Outline** option is available with **Enable/Disable**, **Outline Color**, and **Outline Thickness** controls.
+* ✅ The outline renders cleanly and enhances text readability.
+* ✅ The selected text case, outline color, and outline thickness are reflected instantly in the preview and final PDF.
+* ✅ The preview and exported PDF are visually identical.
+* ✅ All typography remains sharp, accurately rendered, and fully print-ready for Amazon KDP.
