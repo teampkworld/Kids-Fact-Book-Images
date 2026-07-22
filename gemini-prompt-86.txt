@@ -2,7 +2,7 @@
 
 ### Objective
 
-Using the current **black-and-white book** as the base, create a **premium full-color edition** without changing the existing structure, layout, or content. The goal is to transform the visual presentation into a vibrant, modern, and engaging children's book while preserving every page's design and functionality.
+create a **premium full-color edition** without changing the existing structure, layout, or content. The goal is to transform the visual presentation into a vibrant, modern, and engaging children's book while preserving every page's design and functionality.
 
 ---
 
