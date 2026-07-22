@@ -1,4 +1,4 @@
-## Fix Book Spine Title Editor – Font Size Scaling Logic
+1) ## Fix Book Spine Title Editor – Font Size Scaling Logic
 
 ### Current Issue
 
@@ -82,3 +82,93 @@ Before generating the final cover PDF, verify that:
 * ✅ The live preview updates immediately after every font size change.
 * ✅ The exported PDF matches the live preview exactly.
 * ✅ The font size logic works correctly for all fonts, all book sizes, and all spine widths.
+
+2) ## Fix Book Spine Title Rendering – Preview and PDF Output
+
+### Current Issue
+
+After the recent implementation, the **Book Spine Title** is no longer rendering correctly.
+
+When the **Book Spine Title Editor** is enabled and a title is entered:
+
+* The spine title does **not** appear in the live preview.
+* The spine title does **not** appear in the exported PDF.
+* Only a blank spine area is displayed, even though the title and formatting options have been configured.
+
+---
+
+## Required Fix
+
+Identify and resolve the rendering issue so that the spine title is displayed correctly in both the **live preview** and the **generated KDP cover PDF**.
+
+The rendering engine must always use the current values entered in the **Book Spine Title Editor**.
+
+---
+
+## Rendering Logic
+
+When **Book Spine Title Editor = Enabled**:
+
+* Display the spine title immediately in the live preview.
+* Apply all selected formatting options:
+
+  * Font family
+  * Font size
+  * Bold
+  * Italic
+  * Underline
+  * Text color
+  * Background color (if enabled)
+  * Letter spacing
+  * Line spacing
+  * Text rotation
+  * Alignment
+* Position the title correctly within the spine area.
+
+When **Book Spine Title Editor = Disabled**:
+
+* Hide the spine title completely.
+* Display a blank spine.
+
+---
+
+## Synchronization
+
+Ensure that the preview and PDF generation use the **same rendering logic and data source**.
+
+There should be no separate rendering paths that can become out of sync.
+
+Any change made in the editor must immediately update:
+
+* Live preview
+* Internal rendering state
+* Final exported PDF
+
+---
+
+## Debug Checks
+
+Verify that:
+
+* The spine title value is being saved correctly.
+* The rendering component receives the current title text.
+* The title is not being clipped, hidden, or rendered outside the spine area.
+* Font loading completes before rendering.
+* Layer order (z-index/render order) does not place the title behind other elements.
+* Text opacity, visibility, and color are valid.
+* The spine title is included in both the preview canvas and the PDF export pipeline.
+
+---
+
+## Validation Checklist
+
+Before generating the final KDP cover PDF, verify that:
+
+* ✅ The spine title appears immediately in the live preview when enabled.
+* ✅ The spine title appears correctly in the exported PDF.
+* ✅ All formatting options are applied correctly.
+* ✅ The title is centered and fully visible within the spine.
+* ✅ No blank spine is shown when a valid title exists.
+* ✅ The preview and PDF output are identical.
+* ✅ Enabling or disabling the **Book Spine Title Editor** correctly shows or hides the spine title without affecting any other cover elements.
+
