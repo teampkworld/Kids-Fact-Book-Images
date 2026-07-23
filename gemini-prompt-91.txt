@@ -2,7 +2,7 @@
 
 ### Required Implementation
 
-Add a new feature to the **SVG Coloring Book App** under the **SVG Recolor** section called **Batch Preset Renderer** (or **Generate All Presets**).
+Add a new feature to the **SVG Coloring Book App** under the **SVG Recolor** section called **Batch Preset Renderer** (or **Generate All Presets**). All the existing options should remain the same, dont change.
 
 This feature should allow users to upload one or multiple SVG files and automatically generate every color variation using the selected preset category, then display all results together as a collage while preserving the original SVG quality.
 
