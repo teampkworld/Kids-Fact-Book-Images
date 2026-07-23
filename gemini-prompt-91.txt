@@ -1,0 +1,221 @@
+## SVG Recolor Tool – Batch Preset Renderer & SVG Collage Export
+
+### Required Implementation
+
+Add a new feature to the **SVG Coloring Book App** under the **SVG Recolor** section called **Batch Preset Renderer** (or **Generate All Presets**).
+
+This feature should allow users to upload one or multiple SVG files and automatically generate every color variation using the selected preset category, then display all results together as a collage while preserving the original SVG quality.
+
+---
+
+# Upload Support
+
+Support both:
+
+* **Single SVG Upload**
+* **Bulk SVG Upload (Multiple SVG Files)**
+
+The uploaded SVG files must remain fully editable vector graphics throughout the entire workflow.
+
+---
+
+# Preset Source Selection
+
+Allow the user to choose which presets will be applied.
+
+Example:
+
+* Apply All Presets
+* Popular Presets
+* Modern Presets
+* Pastel Presets
+* Neon Presets
+* Nature Presets
+* Dark Presets
+* Rainbow Presets
+* Custom Presets
+* **User Selected Presets Only** (New Option)
+
+When **User Selected Presets Only** is enabled, only the presets explicitly selected by the user should be applied.
+
+---
+
+# Automatic Batch Rendering
+
+After the user selects the SVG file(s) and preset category, the application should automatically:
+
+1. Read the original SVG.
+2. Preserve all SVG elements.
+3. Apply the first preset.
+4. Save the result.
+5. Apply the second preset.
+6. Save the result.
+7. Continue until every preset in the selected category has been applied.
+
+For example:
+
+* If the selected category contains **8 presets**, generate **8 separate SVG files** from the same uploaded artwork.
+* If the selected category contains **50 presets**, generate **50 separate SVG files**.
+* If the user uploads **10 SVG files** and selects a category containing **20 presets**, generate **200 recolored SVG files** automatically.
+
+No preset should be skipped.
+
+---
+
+# Preserve Original SVG Structure
+
+The recoloring process must modify **only the colors**.
+
+Do **not** change:
+
+* SVG paths
+* Shapes
+* Curves
+* Layers
+* Groups
+* Stroke widths
+* Fill rules
+* Opacity
+* Masks
+* Clip paths
+* Filters
+* ViewBox
+* Dimensions
+* Line joins
+* Line caps
+* Transformations
+
+Only replace the color values according to the selected gradient preset.
+
+The SVG must remain a true vector graphic.
+
+---
+
+# Preserve SVG Properties
+
+Every generated file must retain:
+
+* Fill
+* Stroke
+* Stroke Width
+* Stroke Linecap
+* Stroke Linejoin
+* Opacity
+* Layer Structure
+* Groups
+* Masks
+* Blend Modes
+* Vector Precision
+* Transparency
+* Original Dimensions
+
+No rasterization is allowed.
+
+---
+
+# Photo Collage Preview
+
+After all preset variations have been generated, automatically create a **collage preview**.
+
+The collage should display every generated variation in a clean grid layout.
+
+Example:
+
+* 2 × 4
+* 3 × 5
+* 4 × 6
+
+The layout should adjust automatically based on the number of generated images.
+
+Each tile should display:
+
+* The recolored SVG preview.
+* The preset name below or above the image (optional but recommended).
+
+The collage is **for preview purposes only**.
+
+---
+
+# Original SVG Output
+
+The generated results must remain as **individual SVG files**, not flattened PNG or JPEG images.
+
+The collage preview is only a visual gallery. The actual output must preserve vector format.
+
+Provide export options such as:
+
+* Download Individual SVG
+* Download All SVG Files
+* Download ZIP Package
+* Download Collage Preview (PNG/PDF, optional)
+
+---
+
+# Live Preview
+
+Generate the collage immediately after processing.
+
+The user should not need to refresh the page.
+
+The preview must accurately represent the generated SVG files.
+
+---
+
+# Performance
+
+Optimize batch processing for large jobs.
+
+For example:
+
+* 100 SVG files × 50 presets = 5,000 generated SVGs
+
+The application should:
+
+* Process files asynchronously.
+* Display progress indicators.
+* Avoid freezing the UI.
+* Use efficient memory management.
+* Support cancellation if required.
+
+---
+
+# User-Selected Custom Presets
+
+Add a multi-select interface that allows users to choose only specific presets.
+
+Example:
+
+☑ Custom Preset 01
+☑ Custom Preset 04
+☑ Custom Preset 09
+☑ Custom Preset 15
+
+Only the checked presets should be applied.
+
+---
+
+# Quality Requirements
+
+Every generated SVG must:
+
+* Preserve the original vector quality.
+* Remain sharp at any zoom level.
+* Maintain transparency.
+* Preserve all SVG properties.
+* Apply the selected gradient accurately.
+* Match the preview exactly.
+
+---
+
+# Validation Checklist
+
+Before completing the generation, automatically verify:
+
+* ✅ Every selected preset has been applied exactly once.
+* ✅ All generated files remain valid SVG vector files.
+* ✅ Only colors have changed; no geometry has been modified.
+* ✅ All fills, strokes, styles, layers, and transparency are preserved.
+* ✅ The collage preview displays every generated variation correctly.
+* ✅ Individual SVG files can be downloaded separately or as a ZIP package.
+* ✅ The preview and exported SVG files match exactly.
+* ✅ The system supports both single and bulk SVG uploads without loss of quality or performance.
