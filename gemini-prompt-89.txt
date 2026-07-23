@@ -1,0 +1,115 @@
+## SVG Recolor – Import All Gradient Presets into the Gradient Presets Section
+
+### Required Implementation
+
+In the **SVG Coloring Book App**, under the **SVG Recolor** tool, expand the existing **Gradient Presets** section by importing the complete collection of gradient presets from the following reference website:
+
+**Reference Website:**
+[https://colorhunt.co/palettes/gradient](https://colorhunt.co/palettes/gradient)
+
+The goal is to provide users with a large library of ready-to-use, professionally designed gradient presets directly within the application.
+
+---
+
+## Import All Gradient Presets
+
+Retrieve all available gradient presets from the reference website and add them to the application's **Gradient Presets** library.
+
+Each preset should preserve:
+
+* Gradient color combination
+* Gradient direction (when applicable)
+* Overall visual appearance
+* High-quality color transitions
+
+The imported presets should be displayed exactly as selectable preset cards.
+
+---
+
+## Scrollable Preset Gallery
+
+Since the number of gradient presets is large, do **not** display all presets in a single static list.
+
+Instead, implement a **scrollable preset gallery**.
+
+Requirements:
+
+* Vertical or horizontal scrolling (whichever best suits the UI).
+* Smooth scrolling.
+* Lazy loading or virtual scrolling for performance if needed.
+* Fast loading, even with hundreds of presets.
+* Responsive layout for all screen sizes.
+
+---
+
+## Preset Preview
+
+Each preset should display:
+
+* A live gradient preview.
+* Preset name or ID (optional).
+* Hover effect (desktop).
+* Selected state indicator.
+
+The preview should accurately represent the applied gradient.
+
+---
+
+## One-Click Apply
+
+When the user clicks any gradient preset:
+
+* Apply the selected gradient immediately to the SVG artwork.
+* Update the preview in real time.
+* Preserve the SVG vector paths and transparency.
+* Do not modify the SVG geometry or layer structure.
+
+No manual confirmation or regeneration should be required.
+
+---
+
+## Search and Filter (Recommended)
+
+To improve usability, add:
+
+* Gradient search.
+* Category filters.
+* Favorite presets.
+* Recently used presets.
+
+This will help users quickly find the desired gradient from a large collection.
+
+---
+
+## Performance Requirements
+
+Even with a large preset library:
+
+* The UI must remain responsive.
+* Scrolling must be smooth.
+* Gradient previews should load efficiently.
+* Memory usage should be optimized.
+
+Avoid rendering every preset at once; use lazy loading or virtualization where appropriate.
+
+---
+
+## Future-Proof Design
+
+Design the preset system so new gradients can be added easily in the future without modifying the application logic.
+
+The application should load presets dynamically from a centralized preset library rather than relying on hardcoded values.
+
+---
+
+## Validation Checklist
+
+Before releasing the feature, verify that:
+
+* ✅ All available gradient presets from the reference website have been imported into the **Gradient Presets** section.
+* ✅ The presets are displayed in a smooth, scrollable gallery.
+* ✅ Each preset includes an accurate visual preview.
+* ✅ Selecting a preset applies it instantly to the SVG artwork.
+* ✅ SVG transparency and vector quality are preserved.
+* ✅ The interface remains fast and responsive, even with a large number of presets.
+* ✅ The system supports future additions of new gradient presets without requiring code changes to the UI or rendering engine.
