@@ -1,0 +1,250 @@
+**Apply a Premium Color Theme Across the Entire Kids Facts Book**
+
+The current book design is mostly black-and-white. Redesign it into a **premium, colorful children's educational book** while **keeping the existing layout, page structure, spacing, images, sections, and content exactly the same**. Only the visual theme, colors, and styling should change.
+
+## 1. Category Color Palettes
+
+Currently, multiple categories are sharing the same color palette. This should not happen.
+
+### Required Logic
+
+* Every category must have its **own unique color palette**.
+* Do **not reuse** the same palette across different categories.
+* Assign a consistent palette that is used everywhere that category appears throughout the book.
+
+Example:
+
+* Animals → Forest Green Theme
+* Space → Galaxy Blue Theme
+* Ocean → Aqua Blue Theme
+* Dinosaurs → Jungle Green Theme
+* Science → Purple Theme
+* Nature → Leaf Green Theme
+* Technology → Cyan Theme
+* Geography → Earth Brown Theme
+* History → Golden Brown Theme
+* Mathematics → Orange Theme
+* Music → Violet Theme
+* Sports → Red Theme
+* Human Body → Coral Theme
+* Inventions → Steel Blue Theme
+* Transportation → Navy Theme
+* Plants → Emerald Theme
+* Birds → Sky Blue Theme
+* Weather → Teal Theme
+* Food → Orange-Gold Theme
+* World Facts → Indigo Theme
+* World Records → Gold Theme
+* Culture → Maroon Theme
+* Language → Royal Blue Theme
+* Art → Pink Theme
+* General Knowledge → Deep Blue Theme
+
+Each category must always display the same assigned colors throughout the entire book.
+
+---
+
+# 2. Unique Background for Every Page
+
+Currently many pages use the same background.
+
+### Required Logic
+
+Every page should have its own unique background.
+
+Requirements:
+
+* Light-colored backgrounds only.
+* Kid-friendly educational theme.
+* High readability.
+* Soft pastel colors.
+* No dark backgrounds.
+* No heavy gradients.
+* No distracting textures.
+* Print-friendly colors.
+
+Every page should feel different while maintaining one consistent book theme.
+
+Examples:
+
+* Soft Sky Blue
+* Light Mint
+* Cream
+* Soft Peach
+* Light Lavender
+* Pale Yellow
+* Soft Aqua
+* Light Coral
+* Ice Blue
+* Light Lime
+* Light Pink
+* Warm Ivory
+
+No two adjacent pages should have the exact same background color.
+
+---
+
+# 3. Colorize the 31 Image Fact Pages
+
+Currently the 31 Image Fact pages still appear mostly monochrome.
+
+They should match the colorful design already used in the 1000 Facts section.
+
+Apply a **Colorized Modular Layout**.
+
+The following elements should all be colorized:
+
+* Fact Titles
+* Description Text
+* Category Icons
+* Section Headers
+* Grid Cards
+* Header Bars
+* Divider Lines
+* Decorative Shapes
+* Borders
+* Callout Boxes
+* Number Badges
+* Image Frames
+* Footer Accents
+
+Everything should visually match the colorful educational style of the rest of the book.
+
+---
+
+# 4. Colorize All Text
+
+Currently much of the text is black.
+
+Instead, apply a professionally designed typography color system.
+
+Examples:
+
+Main Headings
+
+* Dark Navy
+* Royal Blue
+* Deep Purple
+
+Subheadings
+
+* Category Color
+
+Fact Titles
+
+* White text on colored rounded banners
+
+Fact Numbers
+
+* White text on colored badges
+
+"How it Works"
+
+* Dark Blue
+
+"Think About It"
+
+* Dark Green
+
+Descriptions
+
+* Dark Charcoal
+
+Captions
+
+* Slate Gray
+
+Page Numbers
+
+* Category Accent Color
+
+Footer Labels
+
+* Category Accent Color
+
+Text must always maintain excellent readability and print quality.
+
+Never use low-contrast color combinations.
+
+---
+
+# 5. Colorize Every Design Element
+
+Convert every monochrome design element into a colorful children's educational style.
+
+Apply colors to:
+
+* Header Bars
+* Outer Page Borders
+* Inner Frames
+* Fact Cards
+* Rounded Labels
+* Callout Boxes
+* Divider Lines
+* Decorative Icons
+* Milestone Sections
+* Journey Headers
+* Achievement Badges
+* Level Badges
+* Gold Star Checkpoints
+* Progress Sections
+* Section Separators
+* Decorative Shapes
+
+All colors should follow the assigned category palette.
+
+---
+
+# 6. Maintain Existing Layout
+
+Do **not** change:
+
+* Page order
+* Margins
+* Spacing
+* Grid layout
+* Image positions
+* Fact positions
+* Typography hierarchy
+* PDF dimensions
+* KDP safe areas
+* Content flow
+
+Only replace the visual styling.
+
+---
+
+# 7. Professional Children's Theme
+
+The finished book should resemble a premium children's educational publication.
+
+Visual style:
+
+* Bright
+* Modern
+* Educational
+* Fun
+* Colorful
+* Clean
+* Print-ready
+* KDP compliant
+* Highly readable
+* Consistent from the first page to the last
+
+The entire book should feel like a single professionally designed series rather than a collection of individual pages.
+
+---
+
+# 8. Validation Rules
+
+Before generating the final PDF, automatically verify:
+
+* ✅ Every category has its own unique color palette.
+* ✅ No two categories share the same primary palette.
+* ✅ Every page uses a unique, light-colored background.
+* ✅ All 31 Image Fact pages match the colorful design of the 1000 Facts pages.
+* ✅ Headers, borders, badges, banners, callouts, fact cards, and milestones are fully colorized.
+* ✅ All text colors remain sharp, readable, and print-safe.
+* ✅ Images remain unchanged.
+* ✅ Layout, spacing, alignment, margins, and KDP dimensions remain exactly the same.
+* ✅ The final PDF is professional, visually consistent, colorful, and ready for Amazon KDP printing.
