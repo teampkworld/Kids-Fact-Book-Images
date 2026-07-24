@@ -1,0 +1,15 @@
+**Fix PDF Generation Error in KDP Cover Creator**
+
+When generating the **Book Cover PDF** in the **KDP Cover Creator**, the application fails with the following error:
+
+> **PDF Generation Failed**
+> `Cannot read properties of undefined (reading 'widths')`
+
+**Required Fix:**
+
+* Find the object that is `undefined` before `.widths` is accessed and ensure it is properly initialized.
+* Validate all required layout data (cover size, spine, bleed, margins, images, fonts, tables, and layout objects) before starting PDF generation.
+* Add null/undefined checks before accessing `.widths` or any other object properties.
+* Use the same validated layout data for both the **Preview** and the **PDF Export** to prevent inconsistencies.
+* If required data is missing, show a clear validation message instead of crashing.
+* After fixing, verify that **Paperback** and **Hardcover** cover PDFs generate successfully without errors and that the exported PDF matches the preview exactly.
