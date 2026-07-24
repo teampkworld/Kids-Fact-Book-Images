@@ -1,0 +1,60 @@
+**Colorize All 1000 Fact Boxes – Remove White Backgrounds**
+
+In the current book layout, many of the **1000 Fact Boxes** use a plain white background. This should be changed throughout the entire book.
+
+### Required Changes
+
+1. **Remove all white backgrounds** from every Fact Box in the 1000 Facts section.
+
+   * No Fact Box should have a pure white (`#FFFFFF`) background.
+   * Apply this consistently across all pages and all categories.
+
+2. **Replace the white background with a light, theme-appropriate color.**
+
+   * Use soft pastel or light-tinted backgrounds that complement the category's unique color palette.
+   * Examples include:
+
+     * Light Blue
+     * Soft Green
+     * Pale Yellow
+     * Light Peach
+     * Soft Lavender
+     * Light Mint
+     * Cream
+     * Soft Aqua
+   * The chosen color should match the category theme while maintaining visual consistency throughout the book.
+
+3. **Maintain excellent text readability.**
+
+   * Ensure sufficient contrast between the background and the text.
+   * All headings, fact titles, descriptions, icons, and callout text must remain sharp, clean, and easy to read.
+   * Never use background colors that reduce readability or print quality.
+
+4. **Preserve the existing layout.**
+
+   * Do **not** change:
+
+     * Fact Box size
+     * Margins
+     * Padding
+     * Border radius
+     * Borders
+     * Alignment
+     * Typography
+     * Position of any content
+   * Only replace the background color.
+
+5. **Apply this to all current and future books.**
+
+   * Every generated book should automatically use light-colored Fact Box backgrounds instead of white.
+   * The background color should be selected based on the assigned category color palette, ensuring a consistent and professional design across the entire book series.
+
+### Validation Rules
+
+Before generating the final PDF, automatically verify that:
+
+* ✅ No Fact Box uses a pure white background.
+* ✅ Every Fact Box has a light, category-appropriate background color.
+* ✅ Text contrast meets readability standards.
+* ✅ All content remains in its original position.
+* ✅ The overall design is colorful, cohesive, child-friendly, print-ready, and fully KDP compliant.
