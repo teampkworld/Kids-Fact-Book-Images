@@ -1,0 +1,75 @@
+**Fix PDF Generation Error in KDP Cover Creator**
+
+When generating the **Book Cover PDF** in the **KDP Cover Creator** section, the application fails with the following runtime error:
+
+> **PDF Generation Failed**
+> `Cannot read properties of undefined (reading 'widths')`
+
+This indicates that the PDF generator is trying to access the `widths` property of an object that is `undefined` or has not been initialized.
+
+### Required Fix
+
+1. **Identify the root cause.**
+
+   * Locate every place where `.widths` is accessed during PDF generation.
+   * Ensure the object exists before reading its `widths` property.
+   * If the object is missing, initialize it with valid default values instead of allowing the application to crash.
+
+2. **Validate all required objects before PDF generation begins.**
+
+   * Cover layout configuration
+   * Page dimensions
+   * Front cover
+   * Back cover
+   * Spine configuration
+   * Safe area
+   * Bleed
+   * Margins
+   * Barcode area
+   * Font data
+   * Image metadata
+   * Canvas/layout objects
+
+   If any required object is missing or undefined, stop the process gracefully and display a clear validation error instead of a runtime exception.
+
+3. **Add defensive programming checks.**
+
+   * Never access properties such as:
+
+     * `.width`
+     * `.widths`
+     * `.height`
+     * `.pages`
+     * `.fonts`
+     * `.images`
+   * without first confirming that the parent object is defined.
+
+4. **Synchronize the preview and PDF renderer.**
+
+   * Both should use the same validated layout object.
+   * Avoid creating separate layout objects for preview and export, as this can lead to undefined values during PDF generation.
+
+5. **Improve error handling.**
+
+   * Replace generic runtime failures with meaningful messages.
+   * Log the exact component, variable, and function causing the issue to simplify debugging.
+
+6. **Perform complete validation before rendering.**
+   Verify that:
+
+   * Cover dimensions are valid.
+   * Spine width is calculated.
+   * Fonts are loaded.
+   * Images are loaded successfully.
+   * Layout arrays are initialized.
+   * Table/layout width arrays are populated before the PDF renderer attempts to read `.widths`.
+
+### Final Validation
+
+After implementing the fix, verify that:
+
+* ✅ No `Cannot read properties of undefined (reading 'widths')` error occurs.
+* ✅ Book cover PDFs generate successfully for both **Paperback** and **Hardcover**.
+* ✅ The preview matches the exported PDF exactly.
+* ✅ All images, text, spine, bleed, margins, safe areas, and barcode regions render correctly.
+* ✅ Missing or invalid data is handled gracefully without crashing the application.
