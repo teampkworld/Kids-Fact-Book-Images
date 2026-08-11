@@ -1,0 +1,193 @@
+## SVG Recolor → Batch Preset Renderer – UI and Dynamic Grid Background Improvements
+
+Implement the following **two changes** in the:
+
+**SVG Recolor → Batch Preset Renderer**
+
+section.
+
+---
+
+# 1. Add “Each Image Element Grid Background Color”
+
+Add a new option named:
+
+### **Each Image Element Grid Background Color**
+
+This option must automatically determine the most suitable **grid/cell background color for each individual image element** based on the actual colors contained in that image/SVG.
+
+### Required Logic
+
+The system must analyze each individual image/SVG element and automatically select a background color that provides **clear visual separation and strong contrast** with that specific element.
+
+The background color must be selected **independently for every image element**.
+
+For example:
+
+* **Dark image/SVG element → Light or appropriately contrasting grid background**
+* **Light image/SVG element → Dark or appropriately contrasting grid background**
+* **Medium-tone element → Select a suitable contrasting medium/light/dark background**
+* **Very light element → Select a sufficiently dark background so the artwork remains clearly visible**
+* **Very dark element → Select a sufficiently light background so the artwork remains clearly visible**
+
+### Important
+
+Do **not** use a simple fixed rule such as:
+
+```text
+Dark → White
+Light → Black
+```
+
+Instead, analyze the actual dominant/representative colors of each individual image element and select the **best visually contrasting background color**.
+
+The goal is to make every image element clearly visible.
+
+---
+
+### Automatic Contrast Logic
+
+For each image element:
+
+```text
+Analyze Image/SVG Colors
+        ↓
+Determine Dominant / Representative Color
+        ↓
+Calculate Relative Brightness / Luminance
+        ↓
+Determine Suitable Contrast Range
+        ↓
+Select Best Grid Background Color
+        ↓
+Apply Only to That Image Element's Grid Cell
+```
+
+The selected background must not overpower the artwork.
+
+### Example
+
+If an SVG contains predominantly:
+
+* **Very dark artwork** → use a light background.
+* **Very light artwork** → use a dark background.
+* **Pink/red artwork** → choose a contrasting background that keeps the artwork clearly visible.
+* **Blue artwork** → choose a background with sufficient tonal/color contrast.
+* **Mixed colors** → analyze the overall visual composition and choose the background that provides the best overall visibility.
+
+### Per-Element Requirement
+
+Do **not** apply one background color to the entire collage.
+
+Each grid cell must be evaluated independently:
+
+```text
+Image 1 → Background Color A
+Image 2 → Background Color B
+Image 3 → Background Color C
+Image 4 → Background Color D
+...
+```
+
+The background color may repeat between elements **only when the same color is genuinely the best contrast choice**. Do not force unnecessary color variation.
+
+### Visual Quality
+
+The automatically selected background must:
+
+* Clearly separate the artwork from the background.
+* Maintain strong contrast.
+* Avoid making light artwork disappear.
+* Avoid making dark artwork disappear.
+* Avoid visually clashing with the artwork.
+* Keep the original image/SVG unchanged.
+* Not recolor, modify, or distort the actual artwork.
+* Use a clean **solid background color**.
+* Avoid gradients, patterns, textures, or unnecessary effects.
+
+### User Control
+
+Add this as a selectable option in:
+
+**SVG Recolor → Batch Preset Renderer**
+
+The user should be able to enable:
+
+**☑ Each Image Element Grid Background Color**
+
+When enabled, the application automatically calculates the best background color for each individual grid element.
+
+---
+
+# 2. Make “Choose Preset Selection Mode” Visible by Default
+
+In:
+
+**SVG Recolor → Batch Preset Renderer → Collage & Layout Options**
+
+there is currently an option:
+
+### **Choose Preset Selection Mode**
+
+The current UI requires the user to click a **down-arrow/expand control** before the option becomes visible.
+
+Change this behavior.
+
+### Required UI Behavior
+
+**“Choose Preset Selection Mode” must be fully visible by default.**
+
+The user should **not have to click the down arrow** to see or access this option.
+
+The control should be expanded automatically when the **Collage & Layout Options** section is displayed.
+
+### Important
+
+* Remove the requirement to click the down arrow just to reveal this option.
+* Keep the existing functionality unchanged.
+* Keep all existing preset-selection controls available.
+* Do not hide the selection mode by default.
+* The user must immediately see the available preset selection options.
+
+### If the Expand/Collapse Arrow Is Retained
+
+If the existing UI design requires an expand/collapse arrow, the section should still **start in the expanded state by default**.
+
+For example:
+
+```text
+Collage & Layout Options
+────────────────────────────────
+
+Choose Preset Selection Mode
+○ Option A
+○ Option B
+○ Option C
+...
+```
+
+The user can still collapse the section if desired, but **the initial/default state must be expanded and fully visible**.
+
+---
+
+## Final Expected Result
+
+Under:
+
+**SVG Recolor → Batch Preset Renderer**
+
+implement both changes:
+
+### Feature 1
+
+**Each Image Element Grid Background Color**
+
+→ Automatically analyzes each image/SVG and selects the most suitable contrasting solid background for its individual grid cell.
+
+### Feature 2
+
+**Choose Preset Selection Mode**
+
+→ Immediately visible by default inside **Collage & Layout Options**, without requiring the user to click the down arrow first.
+
+Both changes must work correctly without affecting the existing SVG recoloring, batch processing, collage generation, or export functionality.
