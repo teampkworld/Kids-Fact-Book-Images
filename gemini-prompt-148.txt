@@ -1,0 +1,40 @@
+### KDP Font Embedding Fix — Required Logic
+
+After generating the Facts Book PDF, KDP is showing this warning:
+
+> **“Fonts are not properly embedded in your file.”**
+
+Fix the PDF-generation process so that **all fonts used anywhere in the entire book are fully embedded directly into the final PDF**.
+
+### Implementation
+
+* Embed every font used in all 1,000 Fact Boxes and all other book pages.
+* Do not use system-dependent or unembedded fonts.
+* Use properly licensed **TTF/OTF fonts with full PDF embedding support**.
+* Embed the complete required font subset/glyphs, including bold, italic, and other font variants actually used.
+* Ensure **“Think about it”** italic text and all bold text use properly embedded font variants.
+* Do not convert the text to images or outlines just to hide the warning.
+* Preserve the existing font family, sizes, formatting, spacing, alignment, and visual appearance.
+* Prevent font substitution or fallback during PDF generation.
+
+### Pre-Export Validation
+
+Before allowing the PDF to download:
+
+```text
+Generate PDF
+↓
+Detect every font used
+↓
+Verify every font is embedded
+↓
+Check Bold / Italic / Regular variants
+↓
+Check all pages and glyphs
+↓
+Any unembedded font?
+   YES → Embed/fix it → Validate again
+   NO  → Export final PDF
+```
+
+The final PDF must contain **fully embedded fonts throughout the entire book**, so when uploaded to KDP, KDP does not need to substitute or embed the fonts itself and the book's appearance remains unchanged.
