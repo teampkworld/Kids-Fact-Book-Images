@@ -1,0 +1,49 @@
+### PDF Image Processing — Fix Missing GitHub-Linked Images
+
+In the generated PDF, some images are embedded using **GitHub-hosted image links**. After the PDF is processed/generated, those images are not rendered correctly and appear as **empty placeholder boxes** instead.
+
+Fix the PDF generation logic so that **all linked images are properly loaded, embedded, and displayed inside the final PDF**.
+
+### Required Logic
+
+* Detect every image referenced through a GitHub URL or other external image URL.
+* Fetch and resolve the actual image file **before PDF generation**.
+* Convert the downloaded image into a PDF-compatible local/embedded image resource.
+* Embed the actual image data into the PDF instead of storing only the external URL.
+* Preserve the original image dimensions, aspect ratio, quality, transparency, and placement.
+* Do not replace missing images with placeholder boxes.
+* Do not leave external image URLs as the only image reference inside the PDF.
+* Handle PNG, JPEG, SVG, and other supported image formats correctly.
+* If an image URL redirects to another location, resolve the redirect and use the final image resource.
+* Handle GitHub `raw` file URLs correctly.
+* Add proper error handling and retry logic for temporary image-loading failures.
+
+### Pre-Export Validation
+
+Before exporting the final PDF:
+
+```text
+Find all image references
+        ↓
+Resolve external/GitHub URLs
+        ↓
+Download image data
+        ↓
+Verify image loaded successfully
+        ↓
+Convert/embed into PDF
+        ↓
+Check image dimensions and rendering
+        ↓
+Missing/failed image?
+   YES → Retry / fix before export
+   NO  → Continue
+        ↓
+Generate final PDF
+```
+
+### Critical Requirement
+
+**Never finalize the PDF while a valid image is being represented by a blank placeholder box.** Every successfully referenced GitHub image must be physically embedded in the final PDF so the image remains visible even when the PDF is opened or uploaded on another system without internet access.
+
+Also make sure the fix applies **globally to all PDF pages and all image links**, not just the specific images currently showing the problem.
