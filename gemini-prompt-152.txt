@@ -1,0 +1,62 @@
+### Kids Facts Web App — 31 Grid Facts Unique-Usage Logic
+
+When the user clicks **“Create New Book”**, the app currently generates 1,000 new facts from the **Built-in AI-Generated Database**, but the **31 Grid Content facts are being reused from the previous book**.
+
+Fix the generation logic so that the **31 Grid Content facts are also completely new and unique for every newly created book**.
+
+### Required Logic
+
+* When **Create New Book** is clicked, generate a **new set of 31 Grid Content facts**.
+* The 31 facts must **not be copied, reused, or selected from any previous book**.
+* Maintain a permanent **used-fact history/database** for all previously generated Grid Content facts.
+* Before assigning a new Grid fact, compare it against **all previously used Grid facts across every book**.
+* If a fact has already been used, reject it and generate/select another fact.
+* The system must prevent duplicates even when the wording is slightly changed or paraphrased.
+* Use a combination of a **normalized-text comparison + unique fact ID/hash** to detect duplicates.
+* Store each successfully assigned Grid fact as **used permanently**.
+
+### Generation Flow
+
+```text
+Create New Book
+       ↓
+Generate 1,000 New Facts
+       ↓
+Generate 31 New Grid Facts
+       ↓
+Check each Grid Fact against ALL previous books
+       ↓
+Already used?
+   ├── YES → Reject → Generate replacement
+   └── NO  → Accept
+       ↓
+Check the 31 facts against each other
+       ↓
+Any duplicate?
+   ├── YES → Replace duplicate
+   └── NO  → Continue
+       ↓
+Save 31 accepted facts to permanent used-history
+       ↓
+Create new book
+```
+
+### Important Duplicate Protection
+
+The system must check uniqueness against:
+
+1. **All 31 Grid facts from previous books**
+2. **The current book's other Grid facts**
+3. **The 1,000 facts in the current book**, if Grid facts are not allowed to overlap with the main fact collection
+4. **Previously generated books**, even after restarting or refreshing the app
+5. **Persistent storage/database**, not only temporary browser state
+
+### Final Requirement
+
+The rule must be:
+
+> **Once a Grid Content fact has been used in any book, that fact can never be used again in any future book.**
+
+Do not simply change the fact wording or randomly select another existing fact. Generate a **genuinely new, factually valid, unique Grid fact** whenever a duplicate is detected.
+
+Apply this logic to **every newly created book automatically**, so the 31 Grid Content facts remain unique throughout the entire book-generation series.
