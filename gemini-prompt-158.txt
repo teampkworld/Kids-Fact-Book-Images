@@ -1,0 +1,206 @@
+## Image Discovery Facts (31 Image Facts) — Category-Based Icon Matching Logic
+
+In the **“Image Discovery Facts (31 Image Facts)”** section, use the **31 facts from the user-uploaded Excel file as the source of truth** for the Grid Content.
+
+Every Grid Fact must display the **correct category-specific SVG icon immediately before its title**, based on the actual subject and meaning of that fact.
+
+### Approved Categories
+
+Use only the following categories for fact classification and icon matching:
+
+1. **Animals**
+2. **Art**
+3. **Birds**
+4. **Culture**
+5. **Dinosaurs**
+6. **Food**
+7. **General Knowledge**
+8. **Geography**
+9. **History**
+10. **Human Body**
+11. **Insects**
+12. **Inventions**
+13. **Language**
+14. **Mathematics**
+15. **Music**
+16. **Nature**
+17. **Ocean Life**
+18. **Plants**
+19. **Science**
+20. **Space**
+21. **Sports**
+22. **Technology**
+23. **Transportation**
+24. **Weather**
+25. **World Facts**
+26. **World Records**
+
+### Required Logic
+
+For **each of the 31 Grid Facts**:
+
+1. Read the **complete fact record** from the uploaded Excel file.
+2. Analyze the **title and full fact content**.
+3. Determine the single best matching category from the **26 approved categories** above.
+4. Find the corresponding category SVG icon uploaded by the user in **“Bulk SVG Icons Upload (Fact Pages)”**.
+5. Assign that matching SVG icon to the fact.
+6. Place the icon **immediately before the Fact Title** in the Grid layout.
+7. Repeat this independently for all 31 facts.
+
+### Category Matching Must Be Meaning-Based
+
+Do not choose an icon based only on:
+
+* Serial number
+* Excel row number
+* Position in the 31 Grid
+* Previous-book icon assignments
+* Random selection
+* A fixed repeating sequence
+
+The icon must be selected according to the **main subject of the complete fact**.
+
+For example:
+
+```text
+Animal behavior / animal species
+→ Animals
+
+Painting / drawing / famous artwork
+→ Art
+
+Bird species / bird behavior
+→ Birds
+
+Traditions / customs / cultural practices
+→ Culture
+
+Prehistoric dinosaurs
+→ Dinosaurs
+
+Foods / ingredients / cooking
+→ Food
+
+Broad educational fact with no more specific category
+→ General Knowledge
+
+Countries / continents / maps / geographic features
+→ Geography
+
+Historical people / events / civilizations
+→ History
+
+Human organs / senses / body functions
+→ Human Body
+
+Bees / butterflies / ants / other insects
+→ Insects
+
+Devices / inventions / invented objects
+→ Inventions
+
+Words / letters / writing / languages
+→ Language
+
+Numbers / equations / calculations / mathematical concepts
+→ Mathematics
+
+Songs / composers / musical instruments / music facts
+→ Music
+
+Natural environments / natural processes
+→ Nature
+
+Oceans / marine ecosystems / sea creatures
+→ Ocean Life
+
+Trees / flowers / crops / plant biology
+→ Plants
+
+Scientific principles / experiments / scientific discoveries
+→ Science
+
+Planets / stars / galaxies / universe
+→ Space
+
+Athletics / games / sporting activities
+→ Sports
+
+Computers / digital systems / modern technology
+→ Technology
+
+Vehicles / trains / cars / aircraft / transport systems
+→ Transportation
+
+Rain / storms / clouds / temperature / climate-related weather
+→ Weather
+
+Countries / cultures / global facts that do not fit a more specific category
+→ World Facts
+
+Record-breaking measurements or achievements
+→ World Records
+```
+
+### Important Classification Rule
+
+Read the **entire fact**, not just the title, before selecting the category.
+
+For example, if a fact mentions an animal but is primarily about a **scientific discovery**, classify it as **Science**, not automatically as Animals.
+
+Likewise:
+
+* A shark fact focused on ocean ecology → **Ocean Life**
+* A bird migration fact → **Birds**
+* A plant growth experiment → **Science** if the scientific process is the main subject
+* A famous historical invention → **Inventions** if the invention itself is the primary focus
+* A country-specific cultural tradition → **Culture** rather than automatically using World Facts
+
+The **main educational subject** should determine the icon.
+
+### Strict Requirements
+
+* Use only the 26 approved categories.
+* Every one of the 31 facts must receive **exactly one primary category**.
+* Every assigned category must have its corresponding uploaded SVG icon.
+* Do not use random icons.
+* Do not use placeholder icons when the correct category icon exists.
+* Do not use an icon from a previous book merely because it was previously associated with the same fact number.
+* Do not change or redraw the user's uploaded SVG icons.
+* Preserve the original icon artwork, proportions, and quality.
+* Place the selected icon consistently immediately before the title.
+* Keep icon size, spacing, and alignment consistent across all 31 Grid Facts.
+
+### Validation Before PDF Generation
+
+Run a complete validation for all 31 facts:
+
+```text
+31 Excel Facts
+      ↓
+Read complete fact
+      ↓
+Determine primary category
+      ↓
+Match category to uploaded SVG icon
+      ↓
+Place icon before title
+      ↓
+Validate category ↔ icon
+      ↓
+Validate all 31 records
+      ↓
+Generate PDF
+```
+
+If a fact does not have a valid category match or the corresponding SVG icon cannot be found, **do not silently assign an unrelated icon**. Flag the specific fact and resolve the category/icon mapping before final PDF generation.
+
+### Expected Result
+
+The final **31 Image Discovery Facts Grid** must show:
+
+**Exact Excel Fact → Correct Category → Matching User-Uploaded SVG Icon → Icon Immediately Before Title**
+
+for all 31 facts, using only these 26 categories:
+
+**Animals, Art, Birds, Culture, Dinosaurs, Food, General Knowledge, Geography, History, Human Body, Insects, Inventions, Language, Mathematics, Music, Nature, Ocean Life, Plants, Science, Space, Sports, Technology, Transportation, Weather, World Facts, and World Records.**
