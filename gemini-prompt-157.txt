@@ -1,0 +1,20 @@
+1. Image Discovery Facts (31 Image Facts) — Excel Is the Source of Truth
+
+In AMAZING FACT DISCOVERY — CUSTOM ILLUSTRATIONS UPLOADER → Image Discovery Facts (31 Image Facts), when the user uploads an Excel file, the application must read the 31 image facts directly from that uploaded Excel file and populate the 31 Grid Content from that data. The 31 Grid must not remain empty and must not fall back to unrelated built-in facts.
+
+Required logic
+User uploads Excel
+        ↓
+Read Excel rows
+        ↓
+Validate required columns/data
+        ↓
+Extract the 31 Image Discovery Facts
+        ↓
+Map each fact to Grid 1–31
+        ↓
+Populate the 31 Grid Content
+        ↓
+Use those exact facts for prompt generation
+
+Do not silently replace missing Excel facts with old-book facts or built-in database facts.
