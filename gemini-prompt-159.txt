@@ -1,0 +1,144 @@
+## Image Discovery Facts — Correct Intelligent Category-to-Icon Mapping
+
+The previous icon-mapping logic is **not working correctly**. The system is assigning icons based on an incorrect or superficial category match, which causes clearly wrong results in the interior PDF.
+
+For example:
+
+**“Axolotl's Forever Youth”** is clearly an **Animals** fact, but the generated PDF assigned a **History** icon. This is incorrect.
+
+### Required Fix
+
+Do not map icons using only:
+
+* Fact number
+* Row number
+* Fixed category sequence
+* Keyword matching on one or two words
+* Previous icon assignments
+* Random selection
+* Superficial title matching
+
+Instead, the system must **read and understand the entire fact before assigning its category and icon**.
+
+### Correct Mapping Workflow
+
+```text
+Read complete fact title
+        ↓
+Read complete fact description/content
+        ↓
+Understand the main subject and educational meaning
+        ↓
+Determine the BEST matching approved category
+        ↓
+Find the SVG icon for that exact category
+        ↓
+Assign icon to the fact
+        ↓
+Place icon immediately before the title
+```
+
+### Example
+
+```text
+Fact Title:
+“Axolotl's Forever Youth”
+
+Full Fact:
+Read and understand the complete fact.
+
+Main subject:
+Axolotl = animal
+
+Correct category:
+Animals
+
+Correct icon:
+Animals SVG icon
+```
+
+It must **never** assign History, Culture, Geography, or another unrelated icon simply because of an incorrect mapping rule.
+
+### Intelligent Category Decision
+
+Use the **main subject of the complete fact**, not an incidental word.
+
+For example:
+
+* Animal species or animal behavior → **Animals**
+* Bird-specific fact → **Birds**
+* Dinosaur fact → **Dinosaurs**
+* Human organs/body/senses → **Human Body**
+* Ocean or marine-life subject → **Ocean Life**
+* Planet, galaxy, star, or universe → **Space**
+* Scientific principle/discovery → **Science**
+* Historical event/person/civilization → **History**
+* Invention/device creation → **Inventions**
+* Weather phenomenon → **Weather**
+* Plants/trees/flowers → **Plants**
+* Insects → **Insects**
+* Sports/game/athletic subject → **Sports**
+* Mathematics/calculation/numerical concept → **Mathematics**
+* Music/song/instrument/composer → **Music**
+* Transportation/vehicles → **Transportation**
+* Technology/computing/digital systems → **Technology**
+* Countries/maps/geographic features → **Geography**
+* Traditions/customs/cultural practices → **Culture**
+* Food/ingredients/cooking → **Food**
+* Language/words/writing → **Language**
+* Art/painting/sculpture/artists → **Art**
+* Record-breaking achievement/measurement → **World Records**
+* Broad general educational fact → **General Knowledge**
+* Global/country/world-level fact not fitting a more specific category → **World Facts**
+* Natural environment/process not better classified elsewhere → **Nature**
+
+### Critical Rule
+
+If a fact appears to fit multiple categories, select the category representing the **primary educational subject** of the fact.
+
+For example:
+
+**“An invention that changed transportation”**
+
+If the fact is mainly about the invention itself → **Inventions**.
+
+**“A whale communicates using underwater sounds”**
+
+Main subject → **Ocean Life**, not Science.
+
+**“Scientists discovered that plants communicate through…”**
+
+Main subject → **Science** if the fact focuses on the scientific discovery/process; otherwise **Plants** if the primary focus is the plant behavior itself.
+
+### Validation Requirement
+
+Before generating the interior PDF, validate every one of the **31 facts**:
+
+```text
+31 Facts
+   ↓
+Read complete fact
+   ↓
+Determine primary category
+   ↓
+Select matching SVG icon
+   ↓
+Check category ↔ icon correctness
+   ↓
+Any incorrect mapping?
+   YES → Reclassify and replace icon
+   NO  → Continue
+   ↓
+Generate PDF
+```
+
+### Important
+
+Do not consider the implementation complete simply because **an icon exists beside every title**. The icon must actually **match the meaning and category of the fact**.
+
+The system must automatically catch errors such as:
+
+**Axolotl's Forever Youth → Animals icon ✅**
+**Axolotl's Forever Youth → History icon ❌**
+
+Apply this full-content semantic classification logic to **all 31 Image Discovery Facts** and ensure the same correct mapping is preserved in the web app, Grid view, manuscript, and final PDF output.
