@@ -1,3 +1,5 @@
+previous you implemented code not working, please deeply look at my instruction step by step and rectify this problem : 
+
 ## Image Discovery Facts (31 Image Facts) — Excel Category + Automatic Category Icon Mapping
 
 In the **“Image Discovery Facts (31 Image Facts)”** section, update the uploaded Excel structure so that each of the 31 Image Facts contains these four fields:
