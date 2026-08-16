@@ -1,0 +1,103 @@
+## Image Discovery Facts (31 Image Facts) — Excel Category + Automatic Category Icon Mapping
+
+In the **“Image Discovery Facts (31 Image Facts)”** section, update the uploaded Excel structure so that each of the 31 Image Facts contains these four fields:
+
+| Serial No. | Title | Description | Category |
+| ---------- | ----- | ----------- | -------- |
+
+The **Category** column must contain the category assigned to each individual fact.
+
+### Required Implementation
+
+When the user uploads the Excel file in **Image Discovery Facts (31 Image Facts)**:
+
+1. Read all 31 rows from the uploaded Excel file.
+2. Read the **Serial No., Title, Description, and Category** for each row.
+3. Preserve the category exactly as provided in the Excel file.
+4. Use the **Category** value as the source for selecting the correct icon.
+5. Do not independently assign a different category in the application when a valid category is already provided in the Excel file.
+
+### Bulk SVG Icons Upload (Fact Pages)
+
+In the **“Bulk SVG Icons Upload (Fact Pages)”** section, provide the **26 category SVG icons** by default.
+
+The icon names/category identifiers must match the category names exactly.
+
+The approved category names are:
+
+* Animals
+* Art
+* Birds
+* Culture
+* Dinosaurs
+* Food
+* General Knowledge
+* Geography
+* History
+* Human Body
+* Insects
+* Inventions
+* Language
+* Mathematics
+* Music
+* Nature
+* Ocean Life
+* Plants
+* Science
+* Space
+* Sports
+* Technology
+* Transportation
+* Weather
+* World Facts
+* World Records
+
+### Automatic Icon Mapping
+
+For **only the 31 Grid Facts**, use the **Category column from the uploaded Excel file** to find the matching category icon.
+
+```text
+Excel Category
+      ↓
+Exact Category Name Match
+      ↓
+Find Same-Named SVG Icon
+      ↓
+Place Icon Immediately Before Fact Title
+```
+
+### Example
+
+If the Excel contains:
+
+| Serial No. | Title                         | Description | Category |
+| ---------: | ----------------------------- | ----------- | -------- |
+|          1 | The Axolotl's Forever Youth   | ...         | Animals  |
+|          2 | The Cave Paintings of Lascaux | ...         | Art      |
+|          3 | The Lyrebird's Perfect Mimic  | ...         | Birds    |
+
+Then the 31 Grid should automatically display:
+
+```text
+[Animals Icon] The Axolotl's Forever Youth
+[Art Icon] The Cave Paintings of Lascaux
+[Birds Icon] The Lyrebird's Perfect Mimic
+```
+
+### Strict Rules
+
+* Apply this icon mapping **only to the 31 Grid Facts**.
+* Do not use serial number or row number to select an icon.
+* Do not use random icons.
+* Do not use a fixed icon sequence.
+* Do not infer a different category when the Excel already provides the category.
+* Match the Excel Category to the SVG icon **exactly**.
+* Keep the icon immediately before the corresponding title.
+* Preserve the existing title, fact text, layout, and styling.
+* If the Excel category does not match any of the 26 available icon names, show a clear mapping error instead of assigning an unrelated icon.
+
+### Final Logic
+
+**User Excel → Serial No. + Title + Description + Category → Exact Category Match → Matching SVG Icon → Icon Before Title → 31 Grid Output**
+
+This ensures that the **category provided by the user in the Excel file directly controls which category icon appears before each of the 31 Grid Fact titles**, matching the structure shown in the attached reference.
