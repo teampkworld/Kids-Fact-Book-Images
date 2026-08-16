@@ -1,4 +1,4 @@
-## Kids Facts Book — Dynamic Index Generation and Correction Logic
+above you implemented code nor working, no changes made, please mind your brain to read instructions carefully and fix perfect. ## Kids Facts Book — Dynamic Index Generation and Correction Logic
 
 In the **Kids Facts Book**, the current **Index section is not being generated/indexed correctly**. The index must be rebuilt so that it is based on the **actual content and pagination of the current book**, not on a fixed template, previous book, or cached index data.
 
