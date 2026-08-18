@@ -1,0 +1,64 @@
+# Simple & Detailed Logic — Excel Upload for Quiz
+
+From now on, add an option in the Kids Facts Book to **upload the Knowledge Quiz Excel file (.xlsx)**.
+
+The uploaded Excel file must be the **main source of truth** for both:
+
+* **LEVEL 1 to 5 — FACT DETECTIVE QUIZ** pages
+* **KNOWLEDGE QUIZ ANSWER KEY** pages
+
+## Excel Structure
+
+Map the uploaded Excel columns exactly:
+
+**A → Level**
+**B → Question No.**
+**C → Question**
+**D → Correct Answer**
+**E → Explanation**
+
+## Required Logic
+
+1. User uploads the `.xlsx` quiz file.
+2. Read and validate the Excel structure.
+3. Show a preview of the imported quiz data.
+4. Use the Excel data to generate the **Level 1–5 Fact Detective Quiz** pages.
+5. Use the **same Excel data** to generate the **Knowledge Quiz Answer Key** pages.
+6. Keep the **Level, Question No., Question, Correct Answer, and Explanation exactly matched** to Excel.
+7. Do not rewrite, paraphrase, randomize, or regenerate imported questions or answers.
+8. Do not use old quiz data when a new Excel file is uploaded.
+9. When a new book is created, completely clear the previous book's quiz data and use only the new book's Excel data.
+
+## Validation
+
+Before generating the PDF, check:
+
+* All 5 required columns exist.
+* Level is only 1–5.
+* Question No. is present.
+* Question is not empty.
+* Correct Answer is not empty.
+* Explanation is not empty.
+* No duplicate Level + Question No. records.
+
+If validation fails, show the exact Excel row and error.
+
+## Single Source of Truth
+
+Use this structure:
+
+**Upload Excel → Validate → Store Current Quiz Data → Generate Quiz Pages + Answer Key Pages**
+
+Both PDF sections must come from the **same imported dataset**.
+
+### Final Result
+
+The content shown in:
+
+**LEVEL 1 to 5 — FACT DETECTIVE QUIZ**
+
+and:
+
+**KNOWLEDGE QUIZ ANSWER KEY**
+
+must match the uploaded Excel file exactly, with no missing, changed, duplicated, or stale content.
