@@ -1,4 +1,6 @@
-# Detailed Product Prompt — Convert Any Image to SVG + Batch Image to SVG Converter
+create a additionally one clickable card tool in home page and the tool creation instructions are:
+
+Convert Any Image to SVG + Batch Image to SVG Converter
 
 Create a professional web tool called:
 
