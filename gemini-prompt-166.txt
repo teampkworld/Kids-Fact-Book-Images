@@ -1,0 +1,69 @@
+# ULTIMATE AMAZING FACT CHAMPIONSHIP — Excel Upload & PDF Mapping Logic
+
+From now on, add an option to **upload an “ULTIMATE AMAZING FACT CHAMPIONSHIP” Excel file (.xlsx)**.
+
+The uploaded Excel file must be the **single source of truth** for the content displayed on the corresponding **ULTIMATE AMAZING FACT CHAMPIONSHIP** page(s) in the PDF.
+
+## Excel Structure Mapping
+
+Use the attached Excel format and map the fields as follows:
+
+| Excel Field                          | PDF Mapping                                       |
+| ------------------------------------ | ------------------------------------------------- |
+| **Section / Header**                 | Championship section, heading, or category        |
+| **Item / Question #**                | Task, question, header, or information identifier |
+| **Championship Content & Questions** | Exact text displayed on the PDF page              |
+| **Type / Format**                    | Determines the appropriate display format         |
+
+Support the formats shown in the Excel file, including:
+
+* **Instruction / Text**
+* **Section Header**
+* **Mega-Trivia Question**
+* **True / False Mission**
+
+## Required Mapping
+
+For example:
+
+**Intro & Overview → Info → Instruction / Text**
+Display the supplied introduction text exactly.
+
+**Challenge 1: Mega-Trivia Round → HEADER → Section Header**
+Display it as the section heading.
+
+**Challenge 1 → Task 1 → Mega-Trivia Question**
+Place the complete supplied question in the Mega-Trivia activity area.
+
+**Challenge 2: True or False Mission → Question 1–4 → True / False Mission**
+Place each question in the correct order and format.
+
+## Important Rules
+
+* Preserve the **exact Excel wording**.
+* Preserve the exact question/task numbering.
+* Preserve the exact section order.
+* Do not rewrite, paraphrase, shorten, or regenerate any content.
+* Do not change the supplied questions or answer wording.
+* Map every Excel row to its correct PDF location.
+* Use the **Type / Format** field to determine how each item is displayed.
+* When a new Excel file is uploaded, completely replace the previous championship data.
+* Never mix championship content from different books or previous uploads.
+
+## Validation
+
+Before generating the PDF:
+
+* Confirm all required columns exist.
+* Confirm required cells contain data.
+* Confirm every section and item is mapped.
+* Confirm the order matches Excel.
+* Confirm no required row is missing or duplicated.
+
+If an error is found, show the exact row/field and stop generation until the data is valid.
+
+## Final Workflow
+
+**Upload Excel → Validate Excel → Read Rows → Map Section/Header + Item/Question + Content + Type/Format → Generate ULTIMATE AMAZING FACT CHAMPIONSHIP PDF Page(s)**
+
+The final PDF must contain the **same championship content as the uploaded Excel file**, with exact field-to-field mapping while preserving the existing PDF's **design, layout, dimensions, typography, and visual structure**.
