@@ -1,0 +1,60 @@
+**Issue Reported:**
+
+In the PDF book's **"PDF Background Mode"** section, when the user selects the **"plain white backgrounds"** option, the background color of the following specific pages does not fully blend with the border frame:
+
+- **"MY FAVORITE FACTS"**
+- **"FACT EXPLORER CHALLENGE"**
+- **"AMAZING FACT COLLECTOR"**
+
+**Problem:** White gaps are visible between the page content and the border frame (see screenshot with red arrow marking the issue).
+
+**Fix Required:**
+- Eliminate all white gaps completely
+- Ensure the page's background color fills the border frame perfectly
+- The color should blend seamlessly without spilling outside the frame
+- Maintain clean, professional, and high-quality appearance
+
+---
+
+## QUICK COPY-BLOCK (Short Version)
+
+```
+Fix Background Issue:
+
+Pages affected: "MY FAVORITE FACTS", "FACT EXPLORER CHALLENGE", "AMAZING FACT COLLECTOR"
+
+Problem: White gaps visible between page content and border frame (see red arrow in screenshot).
+
+Solution: Eliminate gaps. Ensure page color fills border frame perfectly. No spillage outside frame. Clean, seamless blend.
+```
+
+---
+
+## FORMATTING INSTRUCTION (For PDF Editor)
+
+```
+✓ Extend background color to fill entire border frame
+✓ Remove all white gaps/edges
+✓ Ensure no color spillage outside frame
+✓ Perfect blending between page and border
+✓ High-quality, professional finish
+```
+
+---
+
+## VISUAL REFERENCE
+
+```
++----------------------------------+
+|   ╔══════════════════════════╗   |
+|   ║  FACT EXPLORER CHALLENGE ║   |  ← Border Frame
+|   ║                           ║   |
+|   ║  (Content inside)         ║   |  ← White Gaps Visible (Red Arrow)
+|   ║                           ║   |
+|   ╚══════════════════════════╝   |
+|                                  |
+|   FIX: Fill color perfectly      |
+|   to edge without gaps           |
++----------------------------------+
+
+
