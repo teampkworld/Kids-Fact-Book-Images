@@ -1,0 +1,64 @@
+## Kids Facts Book — PDF Page Background Options
+
+Implement **two PDF page-background options** in the Kids Facts Book PDF generation system.
+
+### 1. Dynamic Page Background Color Engine
+
+Add a setting named:
+
+**Dynamic Page Background Color Engine**
+
+* **Enabled by default.**
+* When enabled, the PDF generator automatically applies the existing dynamic page-background color logic throughout the book.
+* Background colors should be selected according to the existing project color rules and page design.
+* Apply the background consistently without affecting text readability, Fact Boxes, images, icons, or other content.
+* Ensure the selected background provides sufficient contrast for all page content.
+
+### 2. Plain White Page Background
+
+Add a separate option named:
+
+**Plain White Page Background**
+
+When selected:
+
+* Every PDF page must use **pure white (`#FFFFFF`)** as the page background.
+* Disable the Dynamic Page Background Color Engine for that PDF generation.
+* Do not apply any dynamic, themed, tinted, gradient, or alternate page background colors.
+* Preserve all existing page content and layout exactly.
+
+### Selection Logic
+
+The PDF generator must use the user's selected option:
+
+```text
+PDF Background Mode
+        ↓
+ ┌─────────────────────────────┐
+ │ Dynamic Page Background     │ → Generate with dynamic backgrounds
+ │ Plain White Background      │ → Generate with #FFFFFF backgrounds
+ └─────────────────────────────┘
+        ↓
+Generate PDF
+```
+
+### Important Requirements
+
+* The two modes must be **mutually exclusive**.
+* The user's selection must control the **actual PDF output**, not just the preview.
+* The default selection must be **Dynamic Page Background Color Engine = ON**.
+* Switching to **Plain White Page Background** must completely disable dynamic page backgrounds.
+* Do not change fonts, text, images, Fact Box colors, spacing, margins, borders, or page layout.
+* Ensure the choice is applied consistently to **every page of the generated PDF**.
+
+### Expected Result
+
+The user should be able to choose:
+
+**Dynamic Background → colorful/themed page backgrounds throughout the book**
+
+or
+
+**Plain White Background → every page has a clean pure-white background**
+
+and the generated PDF must exactly follow that selection.
