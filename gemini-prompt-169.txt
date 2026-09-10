@@ -1,40 +1,45 @@
-## Bug Report & Feature Request — "Batch Preset Renderer" (SVG Recolor Section)
+Here is the **most detailed, professional, and developer-ready version** of your request:
+
+---
+
+## Bug Report & Feature Request — "All JPG Collages (ZIP)" Output Quality (Batch Preset Renderer / SVG Recolor)
 
 ### 1. Issue Summary
-When processing SVG files through the **"Batch Preset Renderer"** option within the **"SVG Recolor"** section of the website, the resulting **JPG output is of very poor quality**. The rendered JPGs exhibit:
+When processing SVG files through the **"Batch Preset Renderer"** option inside the **"SVG Recolor"** section, the resulting **"All JPG Collages (ZIP)"** download produces **very poor-quality JPG output**. The rendered collages exhibit:
 
-- **Blur** — edges and fine details appear soft and undefined
-- **Noise** — visible grain and artifacts across solid color areas
-- **Pixelation** — jagged, blocky edges on curves, text, and diagonal lines
+- **Blur** — edges, text, and fine details appear soft and undefined
+- **Noise** — visible grain and artifacts across solid and gradient areas
+- **Pixelation** — jagged, blocky edges on curves, icons, and diagonal lines
 
-This makes the JPG output unusable for professional, print, or commercial purposes.
+This makes the **"All JPG Collages (ZIP)"** output unusable for professional, print, or commercial purposes — unlike the SVG and PNG collage outputs, which render correctly.
 
 ---
 
 ### 2. Root Cause (Likely)
-The current JPG conversion logic may be:
+The current JPG collage conversion logic may be:
 
-- Rendering at a **low default resolution** (e.g., 72 DPI or screen-size only)
-- Using a **low JPEG quality value** (e.g., 60–70%) during encoding
-- **Rasterizing the SVG at a fixed canvas size** instead of scaling to the user-selected dimensions
-- **Lacking anti-aliasing** or supersampling before downscaling
-- Ignoring the **DPI and width/height settings** the user selects
+- Rasterizing the SVG collage at a **low default resolution** (e.g., 72 DPI or screen-size only)
+- Encoding JPGs at a **low quality value** (e.g., 60–70%)
+- **Scaling down** the collage canvas instead of rendering at full target dimensions
+- **Lacking anti-aliasing / supersampling** before final downscaling
+- Ignoring the **user-selected DPI, width, height, and quality settings**
 
 ---
 
-### 3. Requested Fix — High-Quality JPG Output
-Please revise the **logic/code** so that:
+### 3. Requested Fix — High-Quality JPG Collage Output
+Please revise the **logic/code** so that the **"All JPG Collages (ZIP)"** output:
 
-- SVGs are **rasterized at the full target resolution** (based on user-selected width, height, and DPI)
-- **Anti-aliasing / supersampling** is applied before final downscaling
-- **JPEG quality** defaults to **90–100%** (or follows the user's quality selection)
-- **No compression artifacts** appear in flat-color or gradient areas
-- Output matches the **visual fidelity of the original SVG** as closely as possible
+- Rasterizes each SVG collage at the **full target resolution** (based on user-selected width, height, and DPI)
+- Applies **anti-aliasing / supersampling** before final downscaling
+- Encodes JPGs at **90–100% quality** by default (or follows the user's quality selection)
+- Shows **no compression artifacts** in flat-color or gradient areas
+- Matches the **visual fidelity of the original SVG collage** as closely as possible
+- Maintains **consistent quality across all collages** inside the ZIP
 
 ---
 
 ### 4. Additional Request — Real-Time File Size Display
-After the user makes a selection (resolution, DPI, quality, format, etc.), the **estimated file size** should be displayed in **real time**.
+After the user makes a selection (DPI, width, height, quality, format, etc.), the **estimated file size** should be displayed in **real time**.
 
 **Examples:**
 - `500 KB`
@@ -45,30 +50,30 @@ After the user makes a selection (resolution, DPI, quality, format, etc.), the *
 - Updates instantly when the user changes **DPI, width, height, quality, or format**
 - Clearly visible near the download/preview area
 - Accurate within a reasonable margin (±10%)
+- Applies to both **single collage** and **"All JPG Collages (ZIP)"** bulk download
 
 ---
 
 ### 5. Acceptance Criteria
 | # | Criteria | Status |
 |---|----------|--------|
-| 1 | JPG output is sharp, clean, and free of blur, noise, and pixelation | ☐ |
+| 1 | "All JPG Collages (ZIP)" output is sharp, clean, and free of blur, noise, and pixelation | ☐ |
 | 2 | Output respects user-selected DPI (100 / 150 / 300) | ☐ |
 | 3 | Output respects user-selected width and height | ☐ |
 | 4 | JPEG quality is high by default and user-adjustable | ☐ |
 | 5 | File size displays in real time after selection | ☐ |
-| 6 | Original filenames are preserved on download | ☐ |
+| 6 | Original filenames are preserved inside the ZIP | ☐ |
 | 7 | Batch/ZIP download works with high-quality JPGs | ☐ |
+| 8 | Quality is consistent across all collages in the ZIP | ☐ |
 
 ---
 
 ### 6. Priority
-**High** — This directly affects output usability and user trust in the tool.
+**High** — This directly affects output usability, user trust, and the commercial value of the tool.
 
 ---
 
-### 7. Suggested Label / Ticket Title
-> **Fix: Poor JPG Quality in Batch Preset Renderer + Add Real-Time File Size Display**
+### 7. Suggested Ticket Title
+> **Fix: Poor JPG Quality in "All JPG Collages (ZIP)" (Batch Preset Renderer – SVG Recolor) + Add Real-Time File Size Display**
 
----
 
-Would you like me to convert this into a **Jira ticket format**, **Trello card**, or **email to your developer**?
