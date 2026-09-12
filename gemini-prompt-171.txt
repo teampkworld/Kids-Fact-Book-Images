@@ -1,0 +1,47 @@
+In the **"SVG Recolor"** section of the website, within the **"Batch Preset Renderer"** feature, when the user selects a preset under **"Choose Preset Selection Mode"** (such as **"Dark Colors Presets (80)"**) and adjusts the **"Collage & Layout Options"** — specifically the **"Grid Rows"** and **"Grid Columns"** sliders — the system should dynamically calculate and display, in an **information box**, the exact number of output files that will be generated based on the user's selections. This information box should clearly show:
+
+- **Total uploaded SVG files** (e.g., 110 files)
+- **Number of selected presets** (e.g., 80 presets)
+- **Grid configuration** (e.g., 5 rows × 6 columns = 30 cells per collage)
+- **Total JPG files to be generated** (individual recolored outputs)
+- **Total JPG collages to be generated** (based on grid layout)
+- **Total SVG files to be generated** (individual vector outputs)
+- **Total SVG collages to be generated** (based on grid layout)
+- **Total number of collages needed** (auto-calculated to cover all selected presets based on grid size, when **"Number of Collages to Generate"** is set to **"Disabled (Auto)"**)
+
+The information box should update **live** as the user changes the preset selection mode, grid rows, grid columns, or toggles options like **"Shuffled Preset Map"**, **"Each Image Element Grid Background Color"**, or **"Number of Collages to Generate"**, so the user can instantly see how many JPG files, JPG collages, SVG files, and SVG collages will be produced before running the batch render. This ensures complete transparency and helps the user plan their output efficiently.
+
+---
+
+## QUICK SUMMARY BOX (For UI Implementation)
+
+```
+📊 OUTPUT SUMMARY
+
+Uploaded SVGs:        110 files
+Selected Presets:     80 presets
+Grid Layout:          5 rows × 6 columns (30 cells)
+Total Collages (Auto): 3 collages
+
+Will Generate:
+• JPG Files:          ___ files
+• JPG Collages:       ___ files
+• SVG Files:          ___ files
+• SVG Collages:       ___ files
+```
+
+---
+
+## KEY ELEMENTS TO DISPLAY IN THE INFO BOX
+
+| Item | Description |
+|------|-------------|
+| **Uploaded SVG Size** | Total files + total size (e.g., 110 files, 436.3 KB) |
+| **Output Size (300 DPI)** | Per image output dimensions (e.g., 3000 × 1999 px) |
+| **Collage Canvas (Grid)** | Full collage dimensions (e.g., 19600 × 11395 px) |
+| **Estimated File Size (Per Image)** | SVG, PNG, JPG estimates (e.g., 4.0 KB, 1.54 MB, 1.50 MB) |
+| **Total JPG Files** | Individual recolored JPG outputs |
+| **Total JPG Collages** | Combined JPG collage outputs |
+| **Total SVG Files** | Individual recolored SVG outputs |
+| **Total SVG Collages** | Combined SVG collage outputs |
+| **Number of Collages** | Auto-calculated or user-defined |
