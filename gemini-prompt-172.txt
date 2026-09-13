@@ -1,0 +1,36 @@
+Add the colors given in the list below as additional in the "SVG Recolor" section of the website in the "Batch Preset Renderer" option in the choose preset mode. Name that preset as Unique Dark Colors.
+
+|  # | Family    | One Dark Representative | HEX       |
+| -: | --------- | ----------------------- | --------- |
+|  1 | Black     | Obsidian                | `#101010` |
+|  2 | Gray      | Charcoal                | `#36454F` |
+|  3 | Brown     | Espresso                | `#3C1F1A` |
+|  4 | Red       | Oxblood                 | `#4A0000` |
+|  5 | Rose      | Deep Rose               | `#641A2B` |
+|  6 | Pink      | Dark Pink               | `#6B2948` |
+|  7 | Magenta   | Dark Magenta            | `#5B164E` |
+|  8 | Purple    | Eggplant                | `#311432` |
+|  9 | Violet    | Deep Violet             | `#2D1657` |
+| 10 | Indigo    | Indigo                  | `#1E1A4A` |
+| 11 | Blue      | Prussian Blue           | `#003153` |
+| 12 | Cyan      | Deep Cyan               | `#005D66` |
+| 13 | Teal      | Deep Teal               | `#064E40` |
+| 14 | Turquoise | Deep Turquoise          | `#075E63` |
+| 15 | Green     | Forest Green            | `#163A24` |
+| 16 | Emerald   | Deep Emerald            | `#075E3B` |
+| 17 | Olive     | Dark Olive              | `#3B3C18` |
+| 18 | Lime      | Dark Lime               | `#456000` |
+| 19 | Yellow    | Dark Yellow             | `#665A00` |
+| 20 | Gold      | Dark Gold               | `#6B4F00` |
+| 21 | Amber     | Deep Amber              | `#6B3E00` |
+| 22 | Orange    | Burnt Orange            | `#7E3300` |
+| 23 | Rust      | Rust                    | `#71300F` |
+| 24 | Copper    | Dark Copper             | `#6E3F2A` |
+| 25 | Bronze    | Bronze                  | `#5A431B` |
+| 26 | Ochre     | Dark Ochre              | `#604B19` |
+| 27 | Coral     | Dark Coral              | `#783D38` |
+| 28 | Peach     | Dark Peach              | `#795044` |
+| 29 | Beige     | Dark Beige              | `#5A4A3A` |
+| 30 | Taupe     | Dark Taupe              | `#483C32` |
+| 31 | Silver    | Dark Silver             | `#50565C` |
+| 32 | Slate     | Dark Slate              | `#405563` |
