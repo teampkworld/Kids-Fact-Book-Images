@@ -1,0 +1,320 @@
+### Expand the Color Family Palette System to Include Comprehensive Color Data
+
+The color-family functionality implemented above is currently incomplete. In both the **Recolor Artwork** and **Background** sections, only a limited number of color families and palette variations have been added.
+
+This needs to be expanded substantially.
+
+### 1. Research Comprehensive Color Families and Variations
+
+Search reliable color-reference resources on the internet and build a comprehensive color-family database rather than manually adding only a few common colors.
+
+There are established color-naming systems and databases containing hundreds or thousands of named colors. For example, current references include CSS/X11 colors, XKCD's approximately 950-color survey, Crayola colors, Resene colors, ISCC-NBS classifications, and other named-color databases. ([LangColor][1])
+
+Use these sources as references for identifying:
+
+* Major color families
+* Sub-families
+* Shades
+* Tints
+* Tones
+* Dark variations
+* Light variations
+* Deep variations
+* Muted variations
+* Bright variations
+* Named colors
+* Traditional color names
+* Standardized color names
+* Closely related color variations
+
+Do **not** assume that a family consists of only one or two shades.
+
+For example, the **Red** family should not contain only `Red`, `Dark Red`, and `Crimson`. Research and include the relevant recognized Red-family colors such as appropriate scarlet, ruby, crimson, carmine, vermilion, garnet, wine, burgundy, etc., where they genuinely belong to that family. Similar comprehensive treatment must be applied to every other family. ([Thesaurus.com][2])
+
+### 2. Do Not Use an Arbitrary Fixed Number
+
+Do **not** implement an arbitrary rule such as:
+
+> "Every color family gets 5, 10, or 20 colors."
+
+The number of colors must come from the available color data and the classification logic.
+
+Different families naturally contain different numbers of named colors. For example, one current color-family reference lists hundreds of named shades across individual families, while other naming systems contain thousands of colors overall. ([Color Finder][3])
+
+Therefore, the application should support a variable number of colors per family.
+
+### 3. Create a Proper Hierarchical Color Structure
+
+Build the color database using a structure similar to:
+
+**Color Families**
+→ **Primary Family**
+→ **Sub-Family**
+→ **Named Color**
+→ **HEX / RGB / HSL / other color values**
+→ **Color metadata**
+
+For example:
+
+**Red**
+
+* Crimson
+* Scarlet
+* Carmine
+* Vermilion
+* Ruby
+* Garnet
+* Burgundy
+* Maroon
+* Oxblood
+* Wine
+* and other verified Red-family colors
+
+**Blue**
+
+* Azure
+* Cobalt
+* Sapphire
+* Cerulean
+* Ultramarine
+* Navy
+* Royal Blue
+* Cornflower Blue
+* Prussian Blue
+* Lapis
+* Indigo where the classification system places it
+* and other verified Blue-family colors
+
+**Green**
+
+* Emerald
+* Jade
+* Forest Green
+* Fern
+* Moss
+* Olive where appropriate
+* Viridian
+* Mint
+* Kelly Green
+* Sea Green
+* and other verified Green-family colors
+
+The same comprehensive approach must be applied to **all supported color families**, not just Red, Blue, and Green.
+
+### 4. Avoid Incorrect Family Duplication
+
+Do not simply classify colors based on their names.
+
+For example, a color named "Blue Green" may fall between blue and green depending on the classification system. Likewise, names such as turquoise, teal, cyan, azure, indigo, violet, coral, rose, gold, and olive can overlap neighboring hue regions.
+
+The system should therefore use the actual color values and a consistent classification method rather than relying only on text names.
+
+Where appropriate, use perceptual color coordinates such as **CIELAB / LCh / OKLCH** or a clearly defined hue-based classification system to determine relationships between colors. Color-reference systems already provide perceptual classifications and coordinates that can be used for this purpose. ([LangColor][1])
+
+### 5. Preserve the "One Color Family Only Once" Rule
+
+The original requirement still applies:
+
+> **If a color family has been selected, related colors must be treated as members of that same family rather than appearing as separate independent families.**
+
+Do not create duplicate families such as:
+
+* Red
+* Dark Red
+* Deep Red
+* Crimson
+* Scarlet
+
+as five independent families.
+
+Instead:
+
+**Red FAMILY**
+→ Red
+→ Dark Red
+→ Deep Red
+→ Crimson
+→ Scarlet
+→ Ruby
+→ Carmine
+→ etc.
+
+The exact grouping must be based on the selected classification methodology.
+
+### 6. Apply the Complete Database to Recolor Artwork
+
+Under:
+
+**Single Preset Renderer → Recolor Artwork → Color Family Palettes**
+
+display the complete researched color-family database.
+
+The interface should allow:
+
+**Color Family → Sub-family/variation → Individual palette colors**
+
+The user must be able to select a family and access all valid palette members belonging to that family.
+
+Do not show only a small manually selected subset.
+
+### 7. Apply the Same Database to Background
+
+The identical centralized color database must also be available under:
+
+**Single Preset Renderer → Background → Color Family Palettes**
+
+The Background section must have access to the same comprehensive color-family hierarchy.
+
+For example:
+
+**Background → Color Family Palettes → Blue**
+
+should expose the complete supported Blue-family palette according to the application's classification/database.
+
+Do not maintain a separate incomplete background color list.
+
+### 8. Use One Centralized Color Database
+
+Create one authoritative color-data source, for example:
+
+`colorFamilies`
+
+or an equivalent centralized data structure.
+
+Both systems must consume this same source:
+
+```text
+colorFamilies
+    ↓
+Recolor Artwork
+    ↓
+Background
+```
+
+This prevents the Artwork and Background sections from becoming inconsistent.
+
+If a new color family or color variation is added to the database, it should automatically become available to both sections.
+
+### 9. Include Complete Color Metadata
+
+Each color entry should ideally contain:
+
+* `family`
+* `subFamily`
+* `name`
+* `hex`
+* `rgb`
+* `hsl`
+* `hsv`
+* `lab` where available
+* `lch` / `oklch` where available
+* `isDark`
+* `isLight`
+* `isMuted`
+* `isBright`
+* `source`
+* `sourceId` where applicable
+* `aliases`
+* `parentFamily`
+
+This will make the system scalable and allow future filtering without rebuilding the database.
+
+### 10. Research Multiple Color-Naming Systems
+
+Do not rely on a single website or a single list of color names.
+
+Cross-reference established systems such as:
+
+* CSS named colors
+* X11 colors
+* XKCD color survey
+* Crayola
+* Resene
+* ISCC-NBS
+* Other reputable color-reference databases
+
+For example, CSS provides a relatively small standardized set, while XKCD provides roughly 950 surveyed color names, and broader combined databases contain thousands of named colors. ([W3Schools][4])
+
+The objective is **comprehensive coverage**, not merely copying one website's list.
+
+### 11. Deduplicate the Final Database
+
+After collecting the color data:
+
+1. Normalize color names.
+2. Normalize HEX values.
+3. Detect duplicate HEX/RGB colors.
+4. Detect aliases.
+5. Detect near-identical colors where appropriate.
+6. Assign each color to one canonical family.
+7. Prevent the same color from appearing in multiple unrelated families.
+8. Preserve legitimate colors that are visually distinct.
+9. Do not delete legitimate variations merely because their names are similar.
+
+The database should therefore contain **unique usable color entries**, not repeated aliases of the same color.
+
+### 12. Do Not Claim "All Colors in the World"
+
+Do not hard-code a statement that the application contains literally every color that exists.
+
+There are effectively unlimited numerical colors, while named-color systems contain different sets and classifications. Current references range from standardized lists such as CSS to databases containing thousands of named colors. ([LangColor][1])
+
+Instead, implement a **comprehensive, extensible named-color database** based on multiple recognized/reference systems.
+
+### 13. UI Requirements
+
+The UI should make the hierarchy easy to navigate:
+
+**Color Family Palette**
+
+* Search
+* Color Family
+* Sub-Family
+* Shade/Variation
+* Color swatch
+* Color name
+* HEX value
+
+The user should be able to search for a color by name and immediately see its family and available variations.
+
+For example:
+
+```text
+Color Family Palette
+└── Red
+    ├── Crimson
+    ├── Scarlet
+    ├── Ruby
+    ├── Carmine
+    ├── Garnet
+    ├── Burgundy
+    └── ...
+```
+
+### 14. Final Acceptance Criteria
+
+The implementation is complete only when:
+
+* The current limited color list has been replaced by a comprehensive color database.
+* Major color families are represented.
+* Related shades and variations are represented.
+* Color families are classified consistently.
+* Duplicate families are prevented.
+* Duplicate colors are removed.
+* The one-family-only-once principle is preserved.
+* Recolor Artwork uses the complete database.
+* Background uses the same complete database.
+* Both sections remain synchronized.
+* The database is extensible.
+* Users can search and select colors easily.
+* Existing recoloring functionality continues to work.
+* Existing background functionality continues to work.
+* No existing presets are broken.
+* No arbitrary limit is imposed on the number of colors in a family.
+
+**Most importantly: do not simply add a few more colors to the existing implementation. Replace the incomplete color-family data with a properly structured, comprehensive, deduplicated, and extensible color-family system based on researched color-reference data.**
+
+[1]: https://langcolor.net/en/identify/color-namer?utm_source=chatgpt.com "Color Name Finder — CSS, XKCD & Crayola | LangColor"
+[2]: https://www.thesaurus.com/articles/colors?utm_source=chatgpt.com "Find The Right Shade With This Full List Of Colors | Thesaurus.com"
+[3]: https://www.colorxs.com/color-family?utm_source=chatgpt.com "Color Families | Browse 1,000+ Colors by Hue and Shade - colorxs.com"
+[4]: https://www.w3schools.com/colors/colors_xkcd.asp?utm_source=chatgpt.com "Colors - XKCD"
