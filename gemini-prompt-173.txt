@@ -1,0 +1,139 @@
+### Add a Color Family Palette Option to the Single Preset Renderer
+
+Under the **Recolor Artwork** section of the **Single Preset Renderer**, add a new option called **Color Family Palettes**.
+
+#### 1. Color Family Palettes — Recolor Artwork
+
+When the user selects **Color Family Palettes**, the system must display all available major color families, such as:
+
+* Red
+* Orange
+* Yellow
+* Green
+* Cyan
+* Teal
+* Blue
+* Indigo
+* Violet
+* Purple
+* Magenta
+* Pink
+* Brown
+* Gold
+* Bronze
+* Copper
+* Gray
+* Black
+* White
+* and all other distinct color families supported by the application.
+
+Each color family must contain **all of its related shades, tones, tints, and variations**.
+
+For example, when the user selects the **Red** family, the palette should display/use the complete Red color family, including appropriate variations such as:
+
+* Light Red
+* Dark Red
+* Crimson
+* Scarlet
+* Ruby
+* Burgundy
+* Maroon
+* Rose Red
+* Wine Red
+* and other valid Red-family variations.
+
+Likewise, selecting **Blue** must provide the complete Blue family, including its supported light, dark, muted, deep, and other variations.
+
+The same principle must apply to every available color family.
+
+#### 2. User Selection and Palette Application
+
+The user must be able to select any individual color family.
+
+Once a color family is selected:
+
+1. Load the complete palette belonging to that family.
+2. Include all supported shades, tones, tints, and variations within that family.
+3. Apply the selected family palette to the artwork according to the existing recoloring logic.
+4. Ensure the palette is applied consistently throughout the artwork.
+5. Do not limit the user to only one representative color when the selected option is **Color Family Palettes**.
+6. Preserve the existing artwork structure, SVG elements, transparency, gradients (if supported), and other artwork properties unless the existing recoloring rules specifically require modification.
+
+#### 3. Apply the Same Concept to Background
+
+Implement the **same Color Family Palettes functionality in the Background section**.
+
+Add a corresponding option under:
+
+**Background → Color Family Palettes**
+
+When the user selects this option, display the same complete collection of color families and their associated palettes.
+
+For example:
+
+**Background → Color Family Palettes → Red**
+
+should provide the complete Red-family background palette rather than only a single Red color.
+
+The same must work for Blue, Green, Yellow, Orange, Violet, Purple, Pink, Teal, Brown, Gray, Black, and every other supported color family.
+
+#### 4. Important Functional Requirement
+
+The **Artwork Color Family Palette** and **Background Color Family Palette** should be independent selections.
+
+The user should be able to:
+
+* Select a color family for the artwork.
+* Select a different color family for the background.
+* Apply the selected palettes independently.
+* Change either palette without unintentionally changing the other.
+
+#### 5. Color-Family Data Structure
+
+Do not hard-code only a few example colors. Build the system around a scalable **color-family → palette/variations** structure so additional color families and shades can be added later without rewriting the recoloring engine.
+
+Example conceptual structure:
+
+**Color Family**
+→ **Red**
+→ all Red-family variations
+
+**Color Family**
+→ **Blue**
+→ all Blue-family variations
+
+**Color Family**
+→ **Green**
+→ all Green-family variations
+
+**Color Family**
+→ **Yellow**
+→ all Yellow-family variations
+
+and so on.
+
+The application should maintain a centralized color-family palette definition so that the **Recolor Artwork** and **Background** sections use the same authoritative color-family data.
+
+#### 6. UI Requirement
+
+Clearly distinguish between:
+
+**Single Color**
+Select one specific color.
+
+**Color Family Palette**
+Select one color family and use all supported variations belonging to that family.
+
+The new option should integrate naturally with the existing **Single Preset Renderer** interface without breaking any existing recoloring or background functionality.
+
+#### 7. Final Expected Behavior
+
+The final system must allow the user to choose:
+
+**Recolor Artwork → Color Family Palettes → [Select Color Family] → [Use Complete Family Palette]**
+
+and independently:
+
+**Background → Color Family Palettes → [Select Color Family] → [Use Complete Family Palette]**
+
+The feature must support **all defined color families**, not merely Red, Yellow, Blue, Orange, Green, and Violet. The palette system should be extensible so new color families and variations can be added centrally in the future.
